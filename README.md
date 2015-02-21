@@ -1,5 +1,5 @@
 # Blocks
-A simple server management tool
+A simple Minecraft server management tool
 
 Ideas:
 - Minecraft
