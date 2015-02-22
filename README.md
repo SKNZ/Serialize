@@ -1,4 +1,5 @@
-# Blocks
+#
+Blocks
 A simple Minecraft server management tool
 
 Ideas:
@@ -20,8 +21,15 @@ Minecraft:
 	- pop up to say that a new server version is available (only support one server provider for easiness sakes
 - map of all users
 - edit server properties
+- edit users inventory
 - run commands directly
 - see console output (live ajax communication, websocket ? <3)
+- user management/file management ?
+- about menu
+- configuration of the application
+	- what notifications to receive
+		- on player connect/disconnect, on mod connect/disconnect
+	- on server shutdown
 
 GUI:
 - Regroup features in a side menu (that we could hide/show as necessary)
