@@ -1,4 +1,4 @@
-#
+
 Blocks
 A simple Minecraft server management tool
 
@@ -6,6 +6,14 @@ Ideas:
 - Minecraft
 - Teamspeak
 - World of Warcraft (private server)
+- Flashcards
+
+Flashcards:
+- Register and login
+- Box
+- Cards goes in a box
+- CRUD for cards & boxes
+- Run through a box and store the result
 
 Minecraft:
 - Do all the logic through the plugins, basically the web ui would just send commands to the plugins
