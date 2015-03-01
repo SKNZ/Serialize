@@ -42,3 +42,18 @@ Minecraft:
 GUI:
 - Regroup features in a side menu (that we could hide/show as necessary)
 
+Serialize:
+- search
+- follow
+- notifications
+	- when episode comes out
+	- weekly digest
+	- mail, sms, push ?
+- Rate and review episodes
+	- redirect to IMDB or sthg ?
+- share
+- see users profiles, add friends etc
+- contact/feedback form, with categories: feature request, bug report...
+- API hooks
+- RSS feed
+- external search (tpb ?)
