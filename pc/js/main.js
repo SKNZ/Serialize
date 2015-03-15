@@ -1,7 +1,3 @@
-/**
- * @author Floran NARENJI-SHESHKALANI
- */
-
 $(document).ready(function () {
-
+    new SerializeApp().run();
 });
