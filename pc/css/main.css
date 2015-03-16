@@ -95,7 +95,38 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.navbar-gravatar {
+    display: inline-block;
+    background-color: antiquewhite;
+}
 
+.navbar-collapsed-right-item {
+    display: inline;
+    margin-left: 10px;
+}
+
+body {
+    padding-bottom: 20px;
+    padding-top: 100px;
+}
+
+.page {
+    display: none;
+}
+
+#main-title {
+    font-size: 60px;
+}
+
+#block-welcome-register {
+    display: block;
+    margin-top: 20px;
+}
+
+.jumbotron {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
 
 
 

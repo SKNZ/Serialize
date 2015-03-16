@@ -57,3 +57,4 @@ Serialize:
 - API hooks
 - RSS feed
 - external search (tpb ?)
+- top series, nombre de vue par semaine ?

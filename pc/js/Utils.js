@@ -1,3 +1,17 @@
+var RuntimeException = (function () {
+    var _message;
+
+    function RuntimeException(message) {
+        _message = message;
+    }
+
+    RuntimeException.prototype.getMessage = function () {
+        return _message;
+    };
+
+    return RuntimeException;
+})();
+
 // Not used anymore, but still quite stylé !
 var dependencyInjector = (function () {
     var availableDependencies = {};
@@ -27,3 +41,10 @@ var dependencyInjector = (function () {
         return dependency;
     };
 })();
+
+// Closure factory
+var _bind = function (object, method) {
+    return function () {
+        method.apply(object, arguments);
+    };
+}
