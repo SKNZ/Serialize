@@ -107,8 +107,16 @@ textarea {
 
 body {
     padding-bottom: 20px;
-    padding-top: 100px;
+    margin-top: 90px;
+
 }
+
+@media (min-width: 767px) and (max-width: 992px) {
+    body {
+        margin-top: 142px;
+    }
+}
+
 
 .page {
     display: none;
@@ -128,16 +136,12 @@ body {
     padding-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
+.navbar-default img {
+    position: relative;
+    top: -5px;
+    float: left;
+    left: -5px;
+}
 
 
 
@@ -229,9 +233,9 @@ body {
 }
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -246,8 +250,9 @@ body {
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important;
+        /* Black prints faster:
+                                          http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -269,7 +274,6 @@ body {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -285,7 +289,6 @@ body {
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
     thead {
         display: table-header-group;
     }
