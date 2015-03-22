@@ -336,10 +336,8 @@ var DomInteraction = (function () {
         initializeDom: function () {
             $('[data-hide]').on('click', function () {
                 var target = $(this).attr('data-hide');
-                $(this).closest('.' + target).slideUp();
+                $(this).closest(target).slideUp();
             });
-
-            $('#alert-block').find('.alert').hide();
 
             $('#page-home').show('slide', 'slow', function () {
                 $('#main-title').animate({
