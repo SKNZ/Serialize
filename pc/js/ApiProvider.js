@@ -122,34 +122,39 @@ var ApiProvider = (function () {
                           response = {
                               latestShows: [
                                   {
+                                      id: 30,
                                       date: '12/10/2015',
                                       name: 'Game of Thrones',
                                       season: 'S03',
                                       episode: 'E05'
                                   },
                                   {
+                                      id: 29,
                                       date: '06/10/2015',
                                       name: 'Game of Thrones',
                                       season: 'S03',
                                       episode: 'E04'
                                   },
                                   {
+                                      id: 28,
                                       date: '02/10/2015',
                                       name: 'Game of Thrones',
                                       season: 'S03',
                                       episode: 'E03'
                                   },
                                   {
+                                      id: 27,
                                       date: '28/09/2015',
                                       name: 'Game of Thrones',
                                       season: 'S03',
                                       episode: 'E02'
                                   },
                                   {
+                                      id: 26,
                                       date: '22/10/2015',
                                       name: 'Game of Thrones',
                                       season: 'S03',
-                                      episode: 'E03'
+                                      episode: 'E01'
                                   }
                               ]
                           };

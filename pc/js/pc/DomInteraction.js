@@ -1,5 +1,8 @@
 var DomInteraction = (function () {
     var _loadLatestShows = (function () {
+        const _btdiggURL = 'http://btdigg.org/search?q=';
+        const _subsceneURL = 'http://subscene.com/subtitles/release?q=';
+
         var _tbody = $('#home-latest-shows-table').find('tbody');
 
         var _addShow = function (show) {
@@ -17,7 +20,7 @@ var DomInteraction = (function () {
                             .addClass('btn btn-sm btn-primary btn-block')
                             .text('Yaaaarrr !')
                             .attr('href',
-                                  encodeURI('http://btdigg.org/search?info_hash=&q=' +
+                                  encodeURI(_btdiggURL +
                                             show.name +
                                             ' ' +
                                             show.season +
@@ -29,7 +32,7 @@ var DomInteraction = (function () {
                             .addClass('btn btn-sm btn-info  btn-block')
                             .text('Subs !')
                             .attr('href',
-                                  encodeURI('http://subscene.com/subtitles/release?q=' +
+                                  encodeURI(_subsceneURL +
                                             show.name +
                                             ' ' +
                                             show.season +
@@ -39,15 +42,27 @@ var DomInteraction = (function () {
                         .append(
                         $('<button>')
                             .addClass('btn btn-sm btn-success btn-block')
-                            .text('Comment !')
+                            .text('Comment')
                             .click(function () {
                                        if (ApiProvider.isLoggedIn()) {
                                            $('#comment-modal').modal();
                                        } else {
-                                           $('#registration-modal').modal();
+                                           $('#comment-modal').modal();
+                                           return;
+                                           var alertRequiresLogin =
+                                               $('#alert-requires-login');
+
+                                           alertRequiresLogin
+                                               .slideDown();
+
+                                           setTimeout(
+                                               _bind(alertRequiresLogin,
+                                                     $.prototype.slideUp),
+                                               5000
+                                           );
                                        }
                                    })))
-                    .fadeIn('slow'));
+                    .fadeIn('fast'));
         };
 
 
@@ -105,6 +120,9 @@ var DomInteraction = (function () {
 
             // Set up login form hooks
             DomLoginForm.initialize();
+
+            // Set up comment form hooks
+            DomCommentForm.initialize();
         }
     };
 })

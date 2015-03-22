@@ -70,7 +70,15 @@
          class="alert alert-success alert-dismissible no-display">
         <button type="button" class="close" data-hide=".alert">
             <span>&times;</span></button>
-        <strong>Welcome back !</strong> You've successfully
+        <strong>Welcome back !</strong> I missed you
+        <span class="glyphicon glyphicon-heart"></span>&nbsp;!
+    </div>
+    <div id="alert-requires-login"
+         class="alert alert-warning alert-dismissible no-display">
+        <button type="button" class="close" data-hide=".alert">
+            <span>&times;</span></button>
+        <strong>This feature requires authentication !</strong>
+        You might either log in or create an account.
     </div>
 </div>
 
@@ -79,11 +87,12 @@
     <!-- Welcome block thingy -->
     <div id="home-welcome" class="jumbotron">
         <div class="container">
-            <h1 id="home-welcome-title" class="text-center">Welcome to Serialize !</h1>
+            <h1 id="home-welcome-title"
+                class="text-center">Welcome to Serialize !</h1>
 
             <p id="home-welcome-text" class="invisible text-center">
                 <b>Never</b> miss an episode again !
-                Serialize <b>will</b> keep you <b>up to date</b> with your
+                Serialize will <b>keep you up to date</b> with your
                 <b>favorite shows</b> !
                         <span id="home-welcome-register">
                             <button type="button"
@@ -101,7 +110,8 @@
         <h1>Latest shows</h1>
 
         <div class="table-responsive">
-            <table id="home-latest-shows-table" class="table table-striped table-hover table-condensed">
+            <table id="home-latest-shows-table"
+                   class="table table-striped table-hover table-condensed">
                 <thead>
                 <tr>
                     <th class="col-xs-1">Date</th>
@@ -245,7 +255,7 @@
 
                             <div class="col-sm-9">
                                 <textarea class="form-control" rows="3"
-                              id="registration-input-description"></textarea>
+                                          id="registration-input-description"></textarea>
 
                                 <span class="help-block">Serialize is a
                                     community. Allowing others to get to know
@@ -343,6 +353,92 @@
     </div>
 </div>
 
+
+<!-- Comment form modal -->
+<div class="modal fade" id="comment-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span></button>
+                <h4 class="modal-title">Comment form</h4>
+            </div>
+            <div id="comment-body" class="modal-body">
+                <div id="comment-errors"
+                     class="alert alert-dismissible alert-danger no-display">
+                    <button type="button" class="close" data-hide=".alert">×
+                    </button>
+                    <strong>The following errors happened:</strong>
+
+                    <p id="comment-error-messages">
+                        - Swag overload.
+                    </p>
+                </div>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="comment-input-subject"
+                                   class="col-sm-3 control-label">Subject</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"
+                                       name="subject"
+                                       id="comment-input-subject"
+                                       placeholder="Bloody awesome, that's what it was !"
+                                       required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment-input-rating"
+                                   class="col-sm-3 control-label">Your
+                                rating</label>
+
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control"
+                                       name="subject"
+                                       id="comment-input-rating"
+                                       hidden/>
+
+                                <span class="comment-input-rating-star btn btn-default glyphicon glyphicon-star-empty"></span>
+                                <span class="comment-input-rating-star rating btn btn-default glyphicon glyphicon-star-empty"></span>
+                                <span class="comment-input-rating-star rating btn btn-default glyphicon glyphicon-star-empty"></span>
+                                <span class="comment-input-rating-star rating btn btn-default glyphicon glyphicon-star-empty"></span>
+                                <span class="comment-input-rating-star rating btn btn-default glyphicon glyphicon-star-empty"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comment-input-message"
+                                   class="col-sm-3 control-label">Your
+                                message</label>
+
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="3"
+                                          id="comment-input-message"></textarea>
+
+                                <span class="help-block">
+                                    For everyone's sake, the following rules must be adhered to: <br/>
+                                    - no spoilers<br/>
+                                    - no offensive language<br/>
+                                    - no flaming<br/>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button id="comment-submit" type="submit"
+                                    class="btn btn-success">
+                                Post it !
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- jQuery -->
 <script
     src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -372,6 +468,7 @@
 <script src="js/pc/DomLoginStatus.js"></script>
 <script src="js/pc/DomRegistrationForm.js"></script>
 <script src="js/pc/DomLoginForm.js"></script>
+<script src="js/pc/DomCommentForm.js"></script>
 <script src="js/pc/DomInteraction.js"></script>
 <script src="js/SerializeApp.js"></script>
 <script src="js/main.js"></script>

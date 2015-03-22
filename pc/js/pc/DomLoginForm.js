@@ -92,6 +92,12 @@ var DomLoginForm = (function () {
                                   // forms. Source:
                                   // http://stackoverflow.com/a/6364313
                                   $('#login-body').find('form')[0].reset();
+
+                                  var alertLoggedIn = $('#alert-logged-in');
+                                  alertLoggedIn.slideDown();
+                                  setTimeout(
+                                      _bind(alertLoggedIn, $.prototype.slideUp),
+                                      3000);
                               })
                         .fail(function (response) {
                                   // Re-enable submit button if there were
