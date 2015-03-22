@@ -1,4 +1,71 @@
 var DomInteraction = (function () {
+    var _loadLatestShows = (function () {
+        var _tbody = $('#home-latest-shows-table').find('tbody');
+
+        var _addShow = function (show) {
+            _tbody.append(
+                $('<tr>')
+                    .hide()
+                    .append($('<td>').text(show.date))
+                    .append($('<td>').text(show.name))
+                    .append($('<td>').text(show.season))
+                    .append($('<td>').text(show.episode))
+                    .append(
+                    $('<td>')
+                        .append(
+                        $('<a>')
+                            .addClass('btn btn-sm btn-primary')
+                            .text('Yaaaarrr !')
+                            .attr('href',
+                                  encodeURI('http://btdigg.org/search?info_hash=&q=' +
+                                            show.name +
+                                            ' ' +
+                                            show.season +
+                                            show.episode))))
+                    .append(
+                    $('<td>')
+                        .append(
+                        $('<a>')
+                            .addClass('btn btn-sm btn-info')
+                            .text('Subs !')
+                            .attr('href',
+                                  encodeURI('http://subscene.com/subtitles/release?q=' +
+                                            show.name +
+                                            ' ' +
+                                            show.season +
+                                            show.episode))))
+                    .append(
+                    $('<td>')
+                        .append(
+                        $('<button>')
+                            .addClass('btn btn-sm btn-success')
+                            .text('Comment !')
+                            .click(function () {
+                                       if (ApiProvider.isLoggedIn()) {
+                                           $('#comment-modal').modal();
+                                       } else {
+                                           $('#registration-modal').modal();
+                                       }
+                                   })))
+                    .fadeIn('slow'));
+        };
+
+
+        return function () {
+            ApiProvider
+                .latestShows()
+                .done(function (latestShows) {
+                          for (var i = 0; i < latestShows.length;
+                               ++i) {
+                              _addShow(latestShows[i]);
+                          }
+                      })
+                .fail(function () {
+
+                      });
+        }
+    })();
+
     return {
         initialize: function () {
             // data-hide is a property you put on a clickable
@@ -12,15 +79,15 @@ var DomInteraction = (function () {
             });
 
             // Slide the home page in
-            $('#page-home').show('slide', 'slow', function () {
+            $('#home-body').show('slide', 'slow', function () {
                 // Animate the title so that it moves up
-                $('#main-title').animate({
-                                             marginTop: '0px',
-                                             marginBottom: '20.100px'
-                                         }, 'slow', function () {
+                $('#home-welcome-title').animate({
+                                                     marginTop: '0px',
+                                                     marginBottom: '20.100px'
+                                                 }, 'slow', function () {
 
                     // Show welcome text
-                    $('#text-welcome')
+                    $('#home-welcome-text')
                         .removeClass('invisible')
                         .hide()
                         .show('fade', 'slow');
@@ -28,6 +95,8 @@ var DomInteraction = (function () {
                     // Check if user is authenticated, update the page
                     // accordingly.
                     DomLoginStatus.updateLoginStatus(true);
+
+                    _loadLatestShows();
                 });
             });
 

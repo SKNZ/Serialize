@@ -86,12 +86,12 @@ var DomLoginStatus = (function () {
     };
 
     var _buildSearchForm = function () {
-        $('#block-welcome-register').empty();
+        $('#home-welcome-register').empty();
 
     };
 
     var _buildRegisterNowButton = function () {
-        $('#block-welcome-register')
+        $('#home-welcome-register')
             .empty()
             .append(
             $('<span>')
@@ -102,8 +102,7 @@ var DomLoginStatus = (function () {
                     .addClass('btn')
                     .addClass('btn-primary')
                     .addClass('center-block')
-                    .click(_bind($('#registration-modal'),
-                                 $.prototype.modal))
+                    .click(_bind($('#registration-modal'), $.prototype.modal))
                     .text('Register now !')
             ));
     };

@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/pc/DomLoginForm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/pc/DomRegistrationForm.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/DomInteraction.js" afterPath="$PROJECT_DIR$/js/pc/DomInteraction.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ApiProvider.js" afterPath="$PROJECT_DIR$/js/ApiProvider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/SerializeApp.js" afterPath="$PROJECT_DIR$/js/SerializeApp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomInteraction.js" afterPath="$PROJECT_DIR$/js/pc/DomInteraction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomLoginStatus.js" afterPath="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pc.iws" />
@@ -33,33 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.9583335" vertical-offset="4042" max-vertical-offset="6255">
-              <caret line="279" column="30" selection-start-line="279" selection-start-column="30" selection-end-line="279" selection-end-column="30" />
-              <folding>
-                <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="5010">
-              <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="5040">
+              <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiProvider.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApiProvider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/ApiProvider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28125" vertical-offset="1485" max-vertical-offset="2535">
-              <caret line="117" column="40" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2535">
+              <caret line="131" column="62" selection-start-line="131" selection-start-column="62" selection-end-line="131" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -68,18 +54,30 @@
       <file leaf-file-name="DomLoginStatus.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pc/DomLoginStatus.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="1995">
-              <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1980">
+              <caret line="104" column="78" selection-start-line="104" selection-start-column="78" selection-end-line="104" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DomInteraction.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.458333" vertical-offset="1477" max-vertical-offset="5775">
+              <caret line="112" column="48" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
+              <folding>
+                <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomInteraction.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/pc/DomInteraction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.3858521" vertical-offset="0" max-vertical-offset="1755">
+              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -88,7 +86,7 @@
       <file leaf-file-name="DomLoginForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pc/DomLoginForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="1995">
+            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1995">
               <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
               <folding />
             </state>
@@ -98,7 +96,7 @@
       <file leaf-file-name="DomRegistrationForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pc/DomRegistrationForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4335">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4215" max-vertical-offset="4335">
               <caret line="281" column="6" selection-start-line="281" selection-start-column="6" selection-end-line="281" selection-end-column="6" />
               <folding />
             </state>
@@ -121,15 +119,15 @@
         <option value="$PROJECT_DIR$/js/DOMInteraction.js" />
         <option value="$PROJECT_DIR$/js/plugins.js" />
         <option value="$PROJECT_DIR$/js/Utils.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/DomInteraction.js" />
-        <option value="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
         <option value="$PROJECT_DIR$/js/pc/RegistrationForm.js" />
-        <option value="$PROJECT_DIR$/js/pc/DomInteraction.js" />
         <option value="$PROJECT_DIR$/js/pc/DomLoginForm.js" />
         <option value="$PROJECT_DIR$/js/pc/DomRegistrationForm.js" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
         <option value="$PROJECT_DIR$/js/ApiProvider.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/pc/DomInteraction.js" />
       </list>
     </option>
   </component>
@@ -326,14 +324,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="956" height="1055" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2332636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -371,12 +369,52 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/ApiProvider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2535">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc/DomLoginStatus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="1995">
+          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc/DomInteraction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="720">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc/DomLoginForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="1995">
+          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc/DomRegistrationForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4215" max-vertical-offset="4335">
+          <caret line="281" column="6" selection-start-line="281" selection-start-column="6" selection-end-line="281" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1785" max-vertical-offset="4890">
           <caret line="170" column="73" selection-start-line="170" selection-start-column="73" selection-end-line="170" selection-end-column="73" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -401,7 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="840">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -418,7 +455,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3105" max-vertical-offset="3990">
           <caret line="221" column="42" selection-start-line="221" selection-start-column="42" selection-end-line="221" selection-end-column="42" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -443,7 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="840">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -460,7 +496,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1455" max-vertical-offset="2355">
           <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -494,7 +530,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -520,7 +556,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -546,7 +582,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="70" column="14" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -572,7 +608,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="65" column="106" selection-start-line="65" selection-start-column="106" selection-end-line="65" selection-end-column="106" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -606,7 +642,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -639,7 +675,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -693,23 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.79197466" vertical-offset="0" max-vertical-offset="947">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="5010">
-          <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomLoginStatus.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="1995">
-          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -721,36 +740,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomLoginForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="1995">
-          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.9583335" vertical-offset="4042" max-vertical-offset="6255">
-          <caret line="279" column="30" selection-start-line="279" selection-start-column="30" selection-end-line="279" selection-end-column="30" />
+        <state vertical-scroll-proportion="-8.458333" vertical-offset="1477" max-vertical-offset="5775">
+          <caret line="112" column="48" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
           <folding>
-            <marker date="1427037023848" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1427051494894" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomInteraction.js">
+    <entry file="file://$PROJECT_DIR$/js/pc/DomLoginForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1995">
+          <caret line="30" column="68" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ApiProvider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28125" vertical-offset="1485" max-vertical-offset="2535">
-          <caret line="117" column="40" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1588" max-vertical-offset="2535">
+          <caret line="131" column="62" selection-start-line="131" selection-start-column="62" selection-end-line="131" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc/DomLoginStatus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1980">
+          <caret line="104" column="78" selection-start-line="104" selection-start-column="78" selection-end-line="104" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="5040">
+          <caret line="158" column="23" selection-start-line="158" selection-start-column="23" selection-end-line="158" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc/DomInteraction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3858521" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
           <folding />
         </state>
       </provider>

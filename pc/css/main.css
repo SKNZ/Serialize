@@ -121,11 +121,11 @@ body {
     display: none;
 }
 
-#main-title {
+#home-welcome-title {
     font-size: 60px;
 }
 
-#block-welcome-register {
+#home-welcome-register {
     display: block;
     margin-top: 20px;
 }
@@ -156,7 +156,9 @@ body {
     display: none;
 }
 
-
+.table tbody > tr > td {
+    vertical-align: middle;
+}
 
 /* ==========================================================================
    Helper classes

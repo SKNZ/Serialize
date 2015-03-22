@@ -114,46 +114,46 @@ var ApiProvider = (function () {
 
             return deferred.promise();
         },
-        latestShow: function () {
+        latestShows: function () {
             var deferred = $.Deferred();
 
             _apiRequest("shows/latest", "get")
                 .done(function (response) {
                           response = {
-                              latest: [
+                              latestShows: [
                                   {
                                       date: '12/10/2015',
-                                      name: 'Gamotron',
-                                      season: 'S05',
+                                      name: 'Game of Thrones',
+                                      season: 'S03',
                                       episode: 'E05'
                                   },
                                   {
                                       date: '06/10/2015',
-                                      name: 'Gamotron',
-                                      season: 'S05',
+                                      name: 'Game of Thrones',
+                                      season: 'S03',
                                       episode: 'E04'
                                   },
                                   {
                                       date: '02/10/2015',
-                                      name: 'Gamotron',
-                                      season: 'S05',
+                                      name: 'Game of Thrones',
+                                      season: 'S03',
                                       episode: 'E03'
                                   },
                                   {
                                       date: '28/09/2015',
-                                      name: 'Gamotron',
-                                      season: 'S05',
+                                      name: 'Game of Thrones',
+                                      season: 'S03',
                                       episode: 'E02'
                                   },
                                   {
                                       date: '22/10/2015',
-                                      name: 'Gamotron',
-                                      season: 'S05',
+                                      name: 'Game of Thrones',
+                                      season: 'S03',
                                       episode: 'E03'
                                   }
                               ]
                           };
-                          deferred.resolve(response);
+                          deferred.resolve(response.latestShows);
                       });
 
             return deferred.promise();
