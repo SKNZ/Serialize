@@ -46,7 +46,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" class="#">Serialize</a>
+            <a class="navbar-brand" href="#">Serialize</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -58,12 +58,19 @@
     </div>
 </nav>
 
-<div id="alert-block" class="container">
-    <div id="alert-mail-sent" class="alert alert-info alert-dismissible no-display">
+<div id="alert-block" class="container-fluid">
+    <div id="alert-mail-sent"
+         class="alert alert-info alert-dismissible no-display">
         <button type="button" class="close" data-hide=".alert">
             <span>&times;</span></button>
         <strong>Check your emails!</strong> A validation token has been sent to
         you by email !
+    </div>
+    <div id="alert-logged-in"
+         class="alert alert-success alert-dismissible no-display">
+        <button type="button" class="close" data-hide=".alert">
+            <span>&times;</span></button>
+        <strong>Welcome back !</strong> You've successfully
     </div>
 </div>
 
@@ -157,8 +164,8 @@
             </div>
             <div id="registration-body" class="modal-body">
                 <div id="registration-errors"
-                     class="alert alert-dismissible alert-danger">
-                    <button type="button" class="close" data-hide="alert">×
+                     class="alert alert-dismissible alert-danger no-display">
+                    <button type="button" class="close" data-hide=".alert">×
                     </button>
                     <strong>The following errors happened:</strong>
 
@@ -186,7 +193,8 @@
                                     Gravatar
                                     <a href="https://en.gravatar.com/support/what-is-gravatar/">
                                         here</a>.<br/>
-                                    <span id="registration-input-email-ajax">
+                                    <span id="registration-input-email-ajax"
+                                          class="no-display">
                                         <img src="img/loading.gif">&nbsp;Validating your email address with the server...
                                     </span>
                                 </p>
@@ -269,8 +277,7 @@
 
                             <div class="col-sm-9">
                                 <textarea class="form-control" rows="3"
-                                          id="registration-input-description">
-                                </textarea>
+                              id="registration-input-description"></textarea>
 
                                 <span class="help-block">Serialize is a
                                     community. Allowing others to get to know
@@ -306,6 +313,68 @@
     </div>
 </div>
 
+<!-- Login form modal -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span></button>
+                <h4 class="modal-title">Login form</h4>
+            </div>
+            <div id="login-body" class="modal-body">
+                <div id="login-errors"
+                     class="alert alert-dismissible alert-danger no-display">
+                    <button type="button" class="close" data-hide=".alert">×
+                    </button>
+                    <strong>The following errors happened:</strong>
+
+                    <p id="login-error-messages">
+                        - Swag overload.
+                    </p>
+                </div>
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="login-input-email"
+                                   class="col-sm-3 control-label">Email</label>
+
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control"
+                                       name="email"
+                                       id="login-input-email"
+                                       placeholder="Email"
+                                       required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-input-password"
+                                   class="col-sm-3 control-label">Password
+                            </label>
+
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control"
+                                       id="login-input-password"
+                                       name="password"
+                                       placeholder="Password"
+                                       required/>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button id="login-submit" type="submit"
+                                    class="btn btn-success">
+                                Onwards !
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- jQuery -->
 <script
     src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -329,10 +398,13 @@
 <script src="js/plugins.js"></script>
 
 <!-- Serialize -->
-<!-- All these should minified for production use -->
+<!-- All these should minified together for production use -->
 <script src="js/Utils.js"></script>
 <script src="js/ApiProvider.js"></script>
-<script src="js/DomInteraction.js"></script>
+<script src="js/pc/DomLoginStatus.js"></script>
+<script src="js/pc/DomRegistrationForm.js"></script>
+<script src="js/pc/DomLoginForm.js"></script>
+<script src="js/pc/DomInteraction.js"></script>
 <script src="js/SerializeApp.js"></script>
 <script src="js/main.js"></script>
 </body>

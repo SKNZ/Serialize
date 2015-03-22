@@ -3,7 +3,7 @@ var SerializeApp = (function () {
     }
 
     SerializeApp.prototype.run = function () {
-        DomInteraction.initializeDom();
+        DomInteraction.initialize();
     };
 
     return SerializeApp;
