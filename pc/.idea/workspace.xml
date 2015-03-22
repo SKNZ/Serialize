@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ApiProvider.js" afterPath="$PROJECT_DIR$/js/ApiProvider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomInteraction.js" afterPath="$PROJECT_DIR$/js/pc/DomInteraction.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomLoginStatus.js" afterPath="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,8 +71,8 @@
       <file leaf-file-name="DomInteraction.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/pc/DomInteraction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3858521" vertical-offset="0" max-vertical-offset="1755">
-              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.9517685" vertical-offset="8" max-vertical-offset="1755">
+              <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -784,8 +779,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/pc/DomInteraction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3858521" vertical-offset="0" max-vertical-offset="1755">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.9517685" vertical-offset="8" max-vertical-offset="1755">
+          <caret line="40" column="71" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
           <folding />
         </state>
       </provider>
