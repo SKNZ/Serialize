@@ -47,4 +47,4 @@ var _bind = function (object, method) {
     return function () {
         method.apply(object, arguments);
     };
-}
+};

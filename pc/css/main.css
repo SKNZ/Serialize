@@ -107,16 +107,15 @@ textarea {
 
 body {
     padding-bottom: 20px;
-    margin-top: 90px;
+    /*margin-top: 90px;*/
 
 }
 
-@media (min-width: 767px) and (max-width: 992px) {
+/*@media (min-width: 767px) and (max-width: 992px) {
     body {
         margin-top: 142px;
     }
-}
-
+}*/
 
 .page {
     display: none;
@@ -143,6 +142,15 @@ body {
     left: -5px;
 }
 
+.error-highlight {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #31708f;
+}
+
+#registration-input-email-ajax {
+    height: 21px;
+}
 
 
 

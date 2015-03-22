@@ -1,151 +1,320 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Serialize</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Serialize</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-        <!-- jQuery UI -->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <!-- jQuery UI -->
+    <link rel="stylesheet"
+          href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css"/>
 
-        <!-- Normalize -->
-        <link rel="stylesheet" href="css/normalize.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
 
-        <!-- Serialize -->
-        <link rel="stylesheet" href="css/main.css">
+    <!-- Serialize -->
+    <link rel="stylesheet" href="css/main.css">
 
-         <!-- Modernizr -->
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">
-                You are using an <strong>outdated</strong> browser.
-                Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
-            </p>
-        <![endif]-->
+    <!-- Modernizr -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">
+    You are using an <strong>outdated</strong> browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+    your experience.
+</p>
+<![endif]-->
 
-        <!-- Navigation bar, mostly taken from Bootstrap examples -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" class="#">Serialize</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#about">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<!-- Navigation bar, mostly taken from Bootstrap examples -->
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" class="#">Serialize</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-        <div id="page-home" class="page container-fluid">
-            <div id="block-welcome" class="jumbotron">
-                <div class="container">
-                    <h1 id="main-title" class="text-center">Welcome to Serialize !</h1>
-                    <p id="text-welcome" class="invisible text-center">
-                        <b>Never</b> miss an episode again !
-                        Serialize <b>will</b> keep you <b>up to date</b> with your <b>favorite shows</b> !
+<!-- Home page -->
+<div id="page-home" class="page container-fluid">
+    <!-- Welcome block thingy -->
+    <div id="block-welcome" class="jumbotron">
+        <div class="container">
+            <h1 id="main-title" class="text-center">Welcome to Serialize !</h1>
+
+            <p id="text-welcome" class="invisible text-center">
+                <b>Never</b> miss an episode again !
+                Serialize <b>will</b> keep you <b>up to date</b> with your
+                <b>favorite shows</b> !
                         <span id="block-welcome-register">
-                            <button type="button" class="button-register btn btn-primary center-block">Register now !</button>
+                            <button type="button"
+                                    class="button-register btn
+                                    btn-primary center-block">
+                                Register now !
+                            </button>
                         </span>
-                    </p>
-                </div>
+            </p>
+        </div>
+    </div>
+
+    <!-- Lastest shows -->
+    <div class="container-fluid center-block">
+        <h1>Latest shows</h1>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-condensed">
+                <thead>
+                <tr>
+                    <th class="col-xs-1">Date</th>
+                    <th class="col-xs-3">Show</th>
+                    <th class="col-xs-1">Season</th>
+                    <th class="col-xs-1">Episode</th>
+                    <th class="col-xs-1">Action</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>10/12/2015</td>
+                    <td>Gamotron</td>
+                    <td>S05</td>
+                    <td>E10</td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="http://btdigg.org/search?info_hash=&q=Game%20of%20Thrones%20S04E10"><span
+                                class="glyphicon glyphicon-arrow-down"></span></a>
+                            <a href=""><span
+                                class="glyphicon glyphicon-text-background"></span></a>
+                            <a href=""><span
+                                onclick="alert('Such comment')"
+                                class="glyphicon glyphicon-comment"></span></a>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>07/12/2015</td>
+                    <td>Gamotron</td>
+                    <td>S05</td>
+                    <td>E09</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>01/12/2015</td>
+                    <td>Gamotron</td>
+                    <td>S05</td>
+                    <td>E01</td>
+                    <td></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Registration form modal -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span></button>
+                <h4 class="modal-title">Registration form</h4>
             </div>
+            <div id="registration-body" class="modal-body">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="registration-input-email"
+                                   class="col-sm-3 control-label">Email</label>
 
-            <div class="container center-block">
-                <table class="table table-striped table-hover table-responsive">
-                    <thead>
-                    <tr>
-                        <th class="col-xs-1">Date</th>
-                        <th class="col-xs-4">Show</th>
-                        <th class="col-xs-1">Season</th>
-                        <th class="col-xs-1">Episode</th>
-                        <th class="col-xs-1">Action</th>
-                    </tr>
-                    </thead>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control"
+                                       name="email"
+                                       id="registration-input-email"
+                                       placeholder="Email"
+                                       required/>
 
-                    <tbody>
-                        <tr>
-                            <td>10/12/2015</td>
-                            <td>Gamotron</td>
-                            <td>S05</td>
-                            <td>E10</td>
-                            <td>
-                                <div class="btn-group">
-                                    <a class="btn btn-primary btn-sm" href="http://btdigg.org/search?info_hash=&q=Game%20of%20Thrones%20S04E10">
-                                        <span 
-                                           class="glyphicon glyphicon-arrow-down"></span>
-                                    </a>
+                                <p class="help-block">
+                                    Your mail address will be used to fetch your
+                                    profile picture from Gravatar.<br/> Learn
+                                    more about
+                                    Gravatar
+                                    <a href="https://en.gravatar.com/support/what-is-gravatar/">
+                                        here</a>.<br/>
+                                    <span id="registration-input-email-ajax">
+                                        <img src="img/loading.gif">&nbsp;Validating your email address with the server...
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
 
-                                    <a class="btn btn-primary btn-sm">
-                                        <span 
-                                           class="glyphicon glyphicon-text-background"></span>
-                                    </a>
+                        <div class="form-group">
+                            <label for="registration-input-password"
+                                   class="col-sm-3 control-label">Password
+                            </label>
 
-                                    <a class="btn btn-primary btn-sm">
-                                        <span
-                                           onclick="alert('Such comment')"
-                                           class="glyphicon glyphicon-comment"><span>
-                                    </a>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control"
+                                       id="registration-input-password"
+                                       name="password"
+                                       placeholder="Password"
+                                       required/>
+
+                                <p class="help-block">
+                                    Your password must contain at least
+                                    <span id="registration-error-uppercase">
+                                        one uppercase character</span>,
+                                    <span id="registration-error-lowercase">
+                                        one lowercase character</span>,
+                                    <span id="registration-error-numeric">
+                                        one numeric character</span> and be
+                                    <span id="registration-error-length">
+                                        at least 8 characters long</span>.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                for="registration-input-password-confirmation"
+                                class="col-sm-3 control-label">Confirmation
+                            </label>
+
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control"
+                                       id="registration-input-password-confirmation"
+                                       name="passwordConfirmation"
+                                       placeholder="Password confirmation"
+                                       required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registration-input-first-name"
+                                   class="col-sm-3 control-label">First name
+                            </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"
+                                       id="registration-input-first-name"
+                                       name="firstName"
+                                       placeholder="First Name"
+                                       required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registration-input-last-name"
+                                   class="col-sm-3 control-label">Last name
+                            </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"
+                                       id="registration-input-last-name"
+                                       name="lastName"
+                                       placeholder="Last Name"
+                                       required/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registration-input-description"
+                                   class="col-sm-3 control-label">A bit about
+                                yourself ?</label>
+
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="3"
+                                          id="registration-input-description"
+                                          name="description"></textarea>
+
+                                <span class="help-block">Serialize is a
+                                    community. Allowing others to get to know
+                                    you will help you fit in !</span>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="newsletter"
+                                               type="checkbox">Receive weekly
+                                        summary by mail on Sundays ?
+                                    </label>
                                 </div>
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <td>07/12/2015</td>
-                            <td>Gamotron</td>
-                            <td>S05</td>
-                            <td>E09</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>01/12/2015</td>
-                            <td>Gamotron</td>
-                            <td>S05</td>
-                            <td>E01</td>
-                            <td></td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="newsletter"
+                                               type="checkbox"> Receive spam
+                                        from @NedSeb ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button id="registration-submit" type="submit"
+                                    class="btn btn-success disabled">
+                                Pitch me in !
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
             </div>
         </div>
+    </div>
+</div>
 
-        <!-- jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+<!-- jQuery -->
+<script
+    src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    window.jQuery ||
+    document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+</script>
 
-        <!-- Bootstrap -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- jQuery UI -->
+<script
+    src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+</script>
 
-        <!-- html5boilerplate -->
-        <script src="js/plugins.js"></script>
 
-        <!-- Serialize -->
-        <!-- All these should minified for production use -->
-        <script src="js/Utils.js"></script>
-        <script src="js/ApiProvider.js"></script>
-        <script src="js/DomInteraction.js"></script>
-        <script src="js/SerializeApp.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+<!-- Bootstrap -->
+<script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+</script>
+
+<!-- html5boilerplate -->
+<script src="js/plugins.js"></script>
+
+<!-- Serialize -->
+<!-- All these should minified for production use -->
+<script src="js/Utils.js"></script>
+<script src="js/ApiProvider.js"></script>
+<script src="js/DomInteraction.js"></script>
+<script src="js/SerializeApp.js"></script>
+<script src="js/main.js"></script>
+</body>
 </html>
