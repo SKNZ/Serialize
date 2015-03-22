@@ -26,7 +26,7 @@ var DomInteraction = (function () {
                 .attr('type', 'reset')
                 .addClass('btn')
                 .addClass('button-register')
-                .click(_bind($('#registrationModal'), $.prototype.modal))
+                .click(_bind($('#registration-modal'), $.prototype.modal))
                 .html('Register'); // @todo Replace html() with text()
 
             $('#navbar').append(
@@ -128,7 +128,7 @@ var DomInteraction = (function () {
                         .addClass('btn')
                         .addClass('btn-primary')
                         .addClass('center-block')
-                        .click(_bind($('#registrationModal'),
+                        .click(_bind($('#registration-modal'),
                                      $.prototype.modal))
                         .text('Register now !')
                 ));
@@ -181,8 +181,9 @@ var DomInteraction = (function () {
                     .length;
 
             $("#registration-submit")
-                .toggleClass('disabled', invalidInputCount > 0);
+                .prop('disabled', invalidInputCount > 0);
         };
+        _updateSubmitButtonStatus();
 
         $('#registration-input-email-ajax').hide();
         $('#registration-input-email').on('change input', function () {
@@ -210,10 +211,7 @@ var DomInteraction = (function () {
             }
 
             emailAvailabilityCheck = setTimeout(function (that) {
-                $('#registration-input-email-ajax')
-                    .hide()
-                    .removeClass('invisible')
-                    .fadeIn('fast');
+                $('#registration-input-email-ajax').fadeIn('fast');
 
                 ApiProvider.isEmailInUse(value)
                     .done(function () {
@@ -289,10 +287,60 @@ var DomInteraction = (function () {
                     $(this).data('invalid', !$(this).val());
                     _updateSubmitButtonStatus();
                 });
+
+        $('#registration-errors').hide();
+        $('#registration-body')
+            .find('form')
+            .submit(
+            function () {
+                $("#registration-errors").fadeOut(function () {
+                    $("#registration-error-messages").empty();
+                });
+
+                var accountInformation = {
+                    email: $('#registration-input-email').val(),
+                    password: $('#registration-input-password').val(),
+                    passwordConfirmation: $('#registration-input-password-confirmation').val(),
+                    firstName: $('#registration-input-first-name').val(),
+                    lastName: $('#registration-input-last-name').val(),
+                    description: $('#registration-input-description').val(),
+                    weeklyDigest: $('#registration-weekly-digest').is(':checked'),
+                    newsletter: $('#registration-newsletter').is(':checked')
+                };
+
+                ApiProvider
+                    .tryRegister(accountInformation)
+                    .done(function (response) {
+                              $('#registration-modal').modal('hide');
+                              $('#alert-mail-sent').slideDown();
+                          })
+                    .fail(function (response) {
+                              $("#registration-errors").fadeIn();
+
+                              var errors = response.errors;
+
+                              for (var i = 0; i < errors.length; ++i) {
+                                  $("#registration-error-messages")
+                                      .append("- ",
+                                              errors[i],
+                                              ".",
+                                              $('<br/>'));
+                              }
+                          });
+
+                event.preventDefault();
+            });
     };
 
     return {
         initializeDom: function () {
+            $('[data-hide]').on('click', function () {
+                var target = $(this).attr('data-hide');
+                $(this).closest('.' + target).slideUp();
+            });
+
+            $('#alert-block').find('.alert').hide();
+
             $('#page-home').show('slide', 'slow', function () {
                 $('#main-title').animate({
                                              marginTop: '0px',
@@ -309,4 +357,5 @@ var DomInteraction = (function () {
             _registrationFormValidation();
         }
     };
-})();
+})
+();

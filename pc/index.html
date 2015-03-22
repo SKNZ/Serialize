@@ -58,6 +58,15 @@
     </div>
 </nav>
 
+<div id="alert-block" class="container">
+    <div id="alert-mail-sent" class="alert alert-info alert-dismissible">
+        <button type="button" class="close" data-hide="alert">
+            <span>&times;</span></button>
+        <strong>Check your emails!</strong> A validation token has been sent to
+        you by email !
+    </div>
+</div>
+
 <!-- Home page -->
 <div id="page-home" class="page container-fluid">
     <!-- Welcome block thingy -->
@@ -138,7 +147,7 @@
 </div>
 
 <!-- Registration form modal -->
-<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog">
+<div class="modal fade" id="registration-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -147,6 +156,16 @@
                 <h4 class="modal-title">Registration form</h4>
             </div>
             <div id="registration-body" class="modal-body">
+                <div id="registration-errors"
+                     class="alert alert-dismissible alert-danger">
+                    <button type="button" class="close" data-hide="alert">×
+                    </button>
+                    <strong>The following errors happened:</strong>
+
+                    <p id="registration-error-messages">
+                        - Swag overload.
+                    </p>
+                </div>
                 <form class="form-horizontal">
                     <fieldset>
                         <div class="form-group">
@@ -250,8 +269,8 @@
 
                             <div class="col-sm-9">
                                 <textarea class="form-control" rows="3"
-                                          id="registration-input-description"
-                                          name="description"></textarea>
+                                          id="registration-input-description">
+                                </textarea>
 
                                 <span class="help-block">Serialize is a
                                     community. Allowing others to get to know
@@ -259,7 +278,7 @@
 
                                 <div class="checkbox">
                                     <label>
-                                        <input name="newsletter"
+                                        <input id="registration-weekly-digest"
                                                type="checkbox">Receive weekly
                                         summary by mail on Sundays ?
                                     </label>
@@ -267,7 +286,7 @@
 
                                 <div class="checkbox">
                                     <label>
-                                        <input name="newsletter"
+                                        <input id="registration-newsletter"
                                                type="checkbox"> Receive spam
                                         from @NedSeb ?
                                     </label>
@@ -276,7 +295,7 @@
                         </div>
                         <div class="text-center">
                             <button id="registration-submit" type="submit"
-                                    class="btn btn-success disabled">
+                                    class="btn btn-success">
                                 Pitch me in !
                             </button>
                         </div>

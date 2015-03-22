@@ -2,12 +2,7 @@ var ApiProvider = (function () {
     var _loggedIn = false;
     var _baseURI = "/api/";
 
-    var _currentUser = {
-        email: "florandara@gmail.com",
-        emailHash: "e00cf05e1611a154bc3f5764cebbc822",
-        firstName: "Floran",
-        lastName: "NARENJI-SHESHKALANI"
-    };
+    var _currentUser;
 
     var _apiRequest = function (call, method, data) {
         var deferred = $.Deferred();
@@ -42,6 +37,12 @@ var ApiProvider = (function () {
                             if (authCredentials.email == "azerty") {
                                 _loggedIn = true;
                                 deferred.resolve(_currentUser);
+                                _currentUser = {
+                                    email: "florandara@gmail.com",
+                                    emailHash: "e00cf05e1611a154bc3f5764cebbc822",
+                                    firstName: "Floran",
+                                    lastName: "NARENJI-SHESHKALANI"
+                                };
                             }
                             else {
                                 deferred.reject(false);
@@ -63,6 +64,7 @@ var ApiProvider = (function () {
                 function (response) {
                     _loggedIn = false;
                     deferred.resolve(_currentUser);
+                    _currentUser = {};
                 });
 
             return deferred.promise();
@@ -73,12 +75,31 @@ var ApiProvider = (function () {
         isEmailInUse: function (email) {
             var deferred = $.Deferred();
 
-            _apiRequest("user/exists", "post", {
-                email: email
-            }).always(function (reponse) {
+            _apiRequest("user/" + email, "get").always(function (reponse) {
                 email != "florandara@gmail.com"
-                ? deferred.resolve()
-                : deferred.reject();
+                    ? deferred.resolve()
+                    : deferred.reject();
+            });
+
+            return deferred.promise();
+        },
+        tryRegister: function (accountInformation) {
+            var deferred = $.Deferred();
+
+            _apiRequest("user/", "put", {
+                accountInformation: accountInformation
+            }).always(function (response) {
+                if (accountInformation.firstName != "Floran") {
+                    deferred.resolve(accountInformation);
+                } else {
+                    response = {
+                        errors: [
+                            "Couldn't reach the database.",
+                            "Your first name is invalid."
+                        ]
+                    };
+                    deferred.reject(response);
+                }
             });
 
             return deferred.promise();

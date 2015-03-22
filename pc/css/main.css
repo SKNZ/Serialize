@@ -145,7 +145,7 @@ body {
 .error-highlight {
     font-weight: bold;
     text-decoration: underline;
-    color: #31708f;
+    color: #e74c3c;
 }
 
 #registration-input-email-ajax {
