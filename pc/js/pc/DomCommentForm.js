@@ -1,7 +1,7 @@
 var DomCommentForm = (function () {
     return {
         initialize: function () {
-            $('.comment-input-rating-star').hover(function () {
+            $('.comment-input-rating-star').click(function () {
                 var selectedStars = $(this)
                     .prevAll('.comment-input-rating-star')
                     .addBack();
