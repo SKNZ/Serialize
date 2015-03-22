@@ -3,7 +3,7 @@ var DomCommentForm = (function () {
         initialize: function () {
             $('.comment-input-rating-star').hover(function () {
                 $(this)
-                    .prevAll('.comment-input-rating-start')
+                    .prevAll('.comment-input-rating-star')
                     .addBack()
                     .removeClass('glyphicon-star-empty')
                     .addClass('glyphicon-star');
