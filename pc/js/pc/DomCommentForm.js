@@ -2,9 +2,11 @@ var DomCommentForm = (function () {
     return {
         initialize: function () {
             $('.comment-input-rating-star').hover(function () {
-                $(this)
+                var selectedStars = $(this)
                     .prevAll('.comment-input-rating-star')
-                    .addBack()
+                    .addBack();
+
+                selectedStars
                     .removeClass('glyphicon-star-empty')
                     .addClass('glyphicon-star');
 
@@ -13,8 +15,7 @@ var DomCommentForm = (function () {
                     .removeClass('glyphicon-star')
                     .addClass('glyphicon-star-empty');
 
-                $('#comment-input-rating')
-                    .val($('.comment-input-rating-star.glyphicon-star').length);
+                $('#comment-input-rating').val(selectedStars.length);
             });
         }
     };
