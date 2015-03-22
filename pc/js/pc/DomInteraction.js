@@ -74,6 +74,7 @@ var DomInteraction = (function () {
                                ++i) {
                               _addShow(latestShows[i]);
                           }
+                          $('#home-latest-shows-sample').remove();
                       })
                 .fail(function () {
 
