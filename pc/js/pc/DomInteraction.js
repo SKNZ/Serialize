@@ -14,7 +14,7 @@ var DomInteraction = (function () {
                     $('<td>')
                         .append(
                         $('<a>')
-                            .addClass('btn btn-xs btn-primary btn-block')
+                            .addClass('btn btn-sm btn-primary btn-block')
                             .text('Yaaaarrr !')
                             .attr('href',
                                   encodeURI('http://btdigg.org/search?info_hash=&q=' +
@@ -26,7 +26,7 @@ var DomInteraction = (function () {
                     $('<td>')
                         .append(
                         $('<a>')
-                            .addClass('btn btn-xs btn-info  btn-block')
+                            .addClass('btn btn-sm btn-info  btn-block')
                             .text('Subs !')
                             .attr('href',
                                   encodeURI('http://subscene.com/subtitles/release?q=' +
@@ -38,7 +38,7 @@ var DomInteraction = (function () {
                     $('<td>')
                         .append(
                         $('<button>')
-                            .addClass('btn btn-xs btn-success btn-block')
+                            .addClass('btn btn-sm btn-success btn-block')
                             .text('Comment !')
                             .click(function () {
                                        if (ApiProvider.isLoggedIn()) {
