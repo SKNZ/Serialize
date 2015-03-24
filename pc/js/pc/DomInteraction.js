@@ -17,7 +17,10 @@ var DomInteraction = (function () {
                     $('<td>')
                         .append(
                         $('<a>')
-                            .addClass('btn btn-sm btn-primary btn-block')
+                            .addClass('btn ')
+                            .addClass('btn-sm')
+                            .addClass('btn-primary')
+                            .addClass('btn-block')
                             .text('Yaaaarrr !')
                             .attr('href',
                                   encodeURI(_btdiggURL +
@@ -29,7 +32,10 @@ var DomInteraction = (function () {
                     $('<td>')
                         .append(
                         $('<a>')
-                            .addClass('btn btn-sm btn-info  btn-block')
+                            .addClass('btn')
+                            .addClass('btn-sm')
+                            .addClass('btn-info')
+                            .addClass('btn-block')
                             .text('Subs !')
                             .attr('href',
                                   encodeURI(_subsceneURL +
@@ -41,7 +47,11 @@ var DomInteraction = (function () {
                     $('<td>')
                         .append(
                         $('<button>')
-                            .addClass('btn btn-sm btn-success btn-block')
+                            .addClass('btn')
+                            .addClass('btn-sm')
+                            .addClass('btn-success')
+                            .addClass('btn-block')
+                            .attr('data-episode', show.id)
                             .text('Comment')
                             .click(function () {
                                        if (ApiProvider.isLoggedIn()) {
@@ -64,7 +74,6 @@ var DomInteraction = (function () {
                                    })))
                     .fadeIn('fast'));
         };
-
 
         return function () {
             ApiProvider

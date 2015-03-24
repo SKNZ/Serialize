@@ -117,7 +117,7 @@ var ApiProvider = (function () {
         latestShows: function () {
             var deferred = $.Deferred();
 
-            _apiRequest("shows/latest", "get")
+            _apiRequest("show/latest", "get")
                 .done(function (response) {
                           response = {
                               latestShows: [
@@ -162,6 +162,61 @@ var ApiProvider = (function () {
                       });
 
             return deferred.promise();
+        },
+        commentsForEpisode: function (episode) {
+            var _deferred = $.Deferred();
+
+            _apiRequest('episode/' + episode + '/comments', "get")
+                .always(function (response) {
+                    var response = {
+                        comments: [
+                            {
+                                id: 14,
+                                date: '12/10/2015',
+                                user: {
+                                    firstName: "Floran",
+                                    lastName: "NARENJI"
+                                },
+                                rating: 3,
+                                message: "Coucou, je suis le vomi."
+                            },
+                            {
+                                id: 13,
+                                date: '12/10/2015',
+                                user: {
+                                    firstName: "Floran",
+                                    lastName: "NARENJI"
+                                },
+                                rating: 3,
+                                message: "J'AIME LES PATES, SURTOUT AVEC DE LA SAUCE AUX PATES."
+                            },
+                            {
+                                id: 12,
+                                date: '12/10/2015',
+                                user: {
+                                    firstName: "Floran",
+                                    lastName: "NARENJI"
+                                },
+                                rating: 3,
+                                message: "SALUT C COOL LE SON SORS DES ENCEINTES."
+                            },
+                            {
+                                id: 11,
+                                date: '12/10/2015',
+                                user: {
+                                    firstName: "Floran",
+                                    lastName: "NARENJI"
+                                },
+                                rating: 3,
+                                message: "Salut j'ai le swag, je suis un hipster mdr swag yolo. Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo."
+                            }
+                        ]
+                    };
+
+                    _deferred.resolve(response.comments);
+                });
+
+            return _deferred;
         }
     };
 })
