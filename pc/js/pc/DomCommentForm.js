@@ -1,7 +1,7 @@
 var DomCommentForm = (function () {
     return {
         initialize: function () {
-            // When modal opens
+            // When modal opens, load comments
             $('#comment-modal').on('shown.bs.modal', function (event) {
                 // Autofocus on subject field
                 $('#comment-input-subject').focus();
@@ -9,8 +9,8 @@ var DomCommentForm = (function () {
                 // Fetch content according to id
                 var episode = $(event.relatedTarget).data('episode');
 
+                // Show the loading circle
                 $('#comment-loading').fadeIn();
-                $('#comment-comments').empty();
 
                 var _makeRatingStar = function (empty) {
                     return $('<span>')
@@ -22,9 +22,7 @@ var DomCommentForm = (function () {
 
                 ApiProvider
                     .commentsForEpisode(episode)
-                    .always(function () {
-                        $('#comment-loading').hide();
-                    })
+                    .always(_bind($('#comment-loading'), $.prototype.hide))
                     .done(function (comments) {
                         for (var i = 0; i < comments.length; ++i) {
                             var comment = comments[i];
@@ -35,30 +33,46 @@ var DomCommentForm = (function () {
                                     .append(
                                     $('<p>')
                                         .append(
-                                        _makeRatingStar(comment.rating <= 1),
-                                        _makeRatingStar(comment.rating <= 2),
-                                        _makeRatingStar(comment.rating <= 3),
-                                        _makeRatingStar(comment.rating <= 4),
-                                        _makeRatingStar(comment.rating <= 5),
+                                        _makeRatingStar(comment.rating < 1),
+                                        _makeRatingStar(comment.rating < 2),
+                                        _makeRatingStar(comment.rating < 3),
+                                        _makeRatingStar(comment.rating < 4),
+                                        _makeRatingStar(comment.rating < 5),
                                         '&nbsp;',
                                         comment.message,
                                         $('<span>')
                                             .addClass('h6')
                                             .addClass('text-muted')
-                                            .text(' posted by ')
                                             .append(
+                                            ' posted by ',
                                             $('<a>')
                                                 .text(comment.user.firstName +
                                                       ' ' +
                                                       comment.user.lastName),
-                                            ' on',
-                                            comment.date))));
+                                            ' on ',
+                                            comment.date))),
+                                $('<hr/>'));
+
+                            $('#comment-modal').data('bs.modal').handleUpdate();
+                        }
+                    })
+                    .fail(function (response) {
+                        var errors = response.errors;
+
+                        // Append errors to DOM
+                        for (var i = 0; i < errors.length; ++i) {
+                            $('#comment-messages-errors')
+                                .append('- ',
+                                errors[i],
+                                $('<br/>'));
                         }
 
+                        // Display errors
+                        $('#login-errors').fadeIn();
                     })
-                    .fail(function () {
+            }).on('hide.bs.modal', function () {
+                $('#comment-comments').empty();
 
-                    });
             });
 
             $('.comment-input-rating-star').click(function () {

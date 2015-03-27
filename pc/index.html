@@ -109,9 +109,13 @@
     <div class="container-fluid center-block">
         <h1>Latest shows</h1>
 
+        <div id="home-latest-shows-loading">
+            <img class="center-block" src="img/loading2.gif"/>
+        </div>
+
         <div class="table-responsive">
             <table id="home-latest-shows-table"
-                   class="table table-striped table-hover table-condensed">
+                   class="table table-striped table-hover table-condensed hidden">
                 <thead>
                 <tr>
                     <th class="col-xs-1">Date</th>
@@ -287,7 +291,7 @@
                                 <div class="checkbox">
                                     <label>
                                         <input id="registration-newsletter"
-                                               type="checkbox"> Receive spam
+                                               type="checkbox" checked> Receive spam
                                         from @NedSeb ?
                                     </label>
                                 </div>
@@ -368,8 +372,7 @@
     </div>
 </div>
 
-
-<!-- Comment form modal -->
+<!-- Comments modal -->
 <div class="modal fade" id="comment-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -379,7 +382,7 @@
                 <h4 class="modal-title">Comment form</h4>
             </div>
             <div id="comment-body" class="modal-body">
-                <div id="comment-errors"
+                <div id="comment-post-errors"
                      class="alert alert-dismissible alert-danger no-display">
                     <button type="button" class="close" data-hide=".alert">×
                     </button>
@@ -455,37 +458,23 @@
 
                 <hr/>
 
+                <div id="comment-messages-errors"
+                     class="alert alert-dismissible alert-danger no-display">
+                    <button type="button" class="close" data-hide=".alert">×
+                    </button>
+                    <strong>The following errors happened:</strong>
+
+                    <p id="comment-messages-messages">
+                        - Swag overload.
+                    </p>
+                </div>
+
                 <div id="comment-loading">
-                    <img class="center-block" src="img/loading2.gif" />
+                    <img class="center-block" src="img/loading2.gif"/>
                 </div>
 
                 <div id="comment-comments">
-                    &nbsp;
                 </div>
-<!--
-
-                <div class="comment-block">
-                    <p><span
-                        class="text-warning comment-block-rating-star glyphicon glyphicon-star"></span>
-                        <span
-                            class="text-warning comment-block-rating-star glyphicon glyphicon-star-empty"></span>
-                        <span
-                            class="text-warning comment-block-rating-star glyphicon glyphicon-star-empty"></span>
-                        <span
-                            class="text-warning comment-block-rating-star glyphicon glyphicon-star-empty"></span>
-                        <span
-                            class="text-warning comment-block-rating-star glyphicon glyphicon-star-empty"></span>&nbsp;Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat malesuada ornare. Proin
-                        imperdiet, enim et hendrerit gravida, lacus felis molestie urna, ut fermentum nulla velit nec
-                        velit. Vivamus diam nunc, vehicula vitae tortor id, sodales cursus tellus. Duis vel interdum
-                        odio, nec iaculis diam. Etiam sed lectus turpis. Donec sed aliquet eros. Proin tincidunt orci et
-                        fermentum vulputate. Aenean at iaculis urna.
-                        <span class="h6 text-muted">posted by <a>SKNZ</a> on 10/12/2015</span>
-                    </p>
-                </div>
-                <hr/>
--->
-
             </div>
         </div>
     </div>

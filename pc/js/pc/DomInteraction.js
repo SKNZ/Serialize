@@ -8,12 +8,11 @@ var DomInteraction = (function () {
         var _addShow = function (show) {
             _tbody.append(
                 $('<tr>')
-                    .hide()
-                    .append($('<td>').text(show.date))
-                    .append($('<td>').text(show.name))
-                    .append($('<td>').text(show.season))
-                    .append($('<td>').text(show.episode))
                     .append(
+                    $('<td>').text(show.date),
+                    $('<td>').text(show.name),
+                    $('<td>').text(show.season),
+                    $('<td>').text(show.episode),
                     $('<td>')
                         .append(
                         $('<a>')
@@ -23,12 +22,11 @@ var DomInteraction = (function () {
                             .addClass('btn-block')
                             .text('Yaaaarrr !')
                             .attr('href',
-                                  encodeURI(_btdiggURL +
-                                            show.name +
-                                            ' ' +
-                                            show.season +
-                                            show.episode))))
-                    .append(
+                            encodeURI(_btdiggURL +
+                                      show.name +
+                                      ' ' +
+                                      show.season +
+                                      show.episode))),
                     $('<td>')
                         .append(
                         $('<a>')
@@ -38,12 +36,11 @@ var DomInteraction = (function () {
                             .addClass('btn-block')
                             .text('Subs !')
                             .attr('href',
-                                  encodeURI(_subsceneURL +
-                                            show.name +
-                                            ' ' +
-                                            show.season +
-                                            show.episode))))
-                    .append(
+                            encodeURI(_subsceneURL +
+                                      show.name +
+                                      ' ' +
+                                      show.season +
+                                      show.episode))),
                     $('<td>')
                         .append(
                         $('<button>')
@@ -52,42 +49,45 @@ var DomInteraction = (function () {
                             .addClass('btn-success')
                             .addClass('btn-block')
                             .attr('data-episode', show.id)
-                            .text('Comment')
+                            .text('Comments')
                             .click(function () {
-                                       if (ApiProvider.isLoggedIn()) {
-                                           $('#comment-modal').modal();
-                                       } else {
-                                           $('#comment-modal').modal();
-                                           return;
-                                           var alertRequiresLogin =
-                                               $('#alert-requires-login');
+                                if (ApiProvider.isLoggedIn()) {
+                                    $('#comment-modal').modal();
+                                } else {
+                                    $('#comment-modal').modal();
+                                    return;
+                                    var alertRequiresLogin =
+                                        $('#alert-requires-login');
 
-                                           alertRequiresLogin
-                                               .slideDown();
+                                    alertRequiresLogin
+                                        .slideDown();
 
-                                           setTimeout(
-                                               _bind(alertRequiresLogin,
-                                                     $.prototype.slideUp),
-                                               5000
-                                           );
-                                       }
-                                   })))
-                    .fadeIn('fast'));
+                                    setTimeout(
+                                        _bind(alertRequiresLogin,
+                                            $.prototype.slideUp),
+                                        5000
+                                    );
+                                }
+                            }))));
         };
 
         return function () {
             ApiProvider
                 .latestShows()
+                .always(_bind($('#home-latest-shows-loading'),
+                    $.prototype.hide))
                 .done(function (latestShows) {
-                          for (var i = 0; i < latestShows.length;
-                               ++i) {
-                              _addShow(latestShows[i]);
-                          }
-                          $('#home-latest-shows-sample').remove();
-                      })
+                    for (var i = 0; i < latestShows.length; ++i)
+                    {
+                        _addShow(latestShows[i]);
+                    }
+
+                    $('#home-latest-shows-table').show('fast');
+                    $('#home-latest-shows-sample').remove();
+                })
                 .fail(function () {
 
-                      });
+                });
         }
     })();
 
@@ -103,13 +103,15 @@ var DomInteraction = (function () {
                 $(this).closest(target).slideUp();
             });
 
+            $('#home-latest-shows-table').hide().removeClass('hidden');
+
             // Slide the home page in
             $('#home-body').show('slide', 'slow', function () {
                 // Animate the title so that it moves up
                 $('#home-welcome-title').animate({
-                                                     marginTop: '0px',
-                                                     marginBottom: '20.100px'
-                                                 }, 'slow', function () {
+                    marginTop: '0px',
+                    marginBottom: '20.100px'
+                }, 'slow', function () {
 
                     // Show welcome text
                     $('#home-welcome-text')
@@ -133,6 +135,19 @@ var DomInteraction = (function () {
 
             // Set up comment form hooks
             DomCommentForm.initialize();
+
+            // Modals when their content is modified do not automatically
+            // recalculate the backdrop's height. As such, we recalculate it
+            // regularly as long as the modal is open.
+            var updateModalDropbackInterval;
+            $(document).on('shown.bs.modal', function (e) {
+                updateModalDropbackInterval = setInterval(function () {
+                    $(e.target).data('bs.modal').handleUpdate();
+                }, 100);
+            }).on('hidden.bs.modal', function () {
+                clearInterval(updateModalDropbackInterval);
+            });
+
         }
     };
 })
