@@ -9,15 +9,54 @@ var DomCommentForm = (function () {
                 // Fetch content according to id
                 var episode = $(event.relatedTarget).data('episode');
 
+                $('#comment-loading').fadeIn();
+                $('#comment-comments').empty();
+
+                var _makeRatingStar = function (empty) {
+                    return $('<span>')
+                        .addClass('text-warning')
+                        .addClass('comment-block-rating-star')
+                        .addClass('glyphicon')
+                        .addClass('glyphicon-star' + (empty ? '-empty' : ''));
+                };
+
                 ApiProvider
                     .commentsForEpisode(episode)
                     .always(function () {
                         $('#comment-loading').hide();
                     })
                     .done(function (comments) {
+                        for (var i = 0; i < comments.length; ++i) {
+                            var comment = comments[i];
+
+                            $('#comment-comments')
+                                .append(
+                                $('<div>')
+                                    .append(
+                                    $('<p>')
+                                        .append(
+                                        _makeRatingStar(comment.rating <= 1),
+                                        _makeRatingStar(comment.rating <= 2),
+                                        _makeRatingStar(comment.rating <= 3),
+                                        _makeRatingStar(comment.rating <= 4),
+                                        _makeRatingStar(comment.rating <= 5),
+                                        '&nbsp;',
+                                        comment.message,
+                                        $('<span>')
+                                            .addClass('h6')
+                                            .addClass('text-muted')
+                                            .text(' posted by ')
+                                            .append(
+                                            $('<a>')
+                                                .text(comment.user.firstName +
+                                                      ' ' +
+                                                      comment.user.lastName),
+                                            ' on',
+                                            comment.date))));
+                        }
 
                     })
-                    .fail(function() {
+                    .fail(function () {
 
                     });
             });
