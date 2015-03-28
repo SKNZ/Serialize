@@ -54,8 +54,6 @@ var DomInteraction = (function () {
                                 if (ApiProvider.isLoggedIn()) {
                                     $('#comment-modal').modal();
                                 } else {
-                                    $('#comment-modal').modal();
-                                    return;
                                     var alertRequiresLogin =
                                         $('#alert-requires-login');
 
@@ -103,6 +101,18 @@ var DomInteraction = (function () {
                 $(this).closest(target).slideUp();
             });
 
+            // Modals when their content is modified do not automatically
+            // recalculate the backdrop's height. As such, we recalculate it
+            // regularly as long as the modal is open.
+            var updateModalDropbackInterval;
+            $(document).on('shown.bs.modal', function (e) {
+                updateModalDropbackInterval = setInterval(function () {
+                    $(e.target).data('bs.modal').handleUpdate();
+                }, 100);
+            }).on('hidden.bs.modal', function () {
+                clearInterval(updateModalDropbackInterval);
+            });
+
             $('#home-latest-shows-table').hide().removeClass('hidden');
 
             // Slide the home page in
@@ -135,18 +145,6 @@ var DomInteraction = (function () {
 
             // Set up comment form hooks
             DomCommentForm.initialize();
-
-            // Modals when their content is modified do not automatically
-            // recalculate the backdrop's height. As such, we recalculate it
-            // regularly as long as the modal is open.
-            var updateModalDropbackInterval;
-            $(document).on('shown.bs.modal', function (e) {
-                updateModalDropbackInterval = setInterval(function () {
-                    $(e.target).data('bs.modal').handleUpdate();
-                }, 100);
-            }).on('hidden.bs.modal', function () {
-                clearInterval(updateModalDropbackInterval);
-            });
 
         }
     };
