@@ -107,7 +107,7 @@
     </div>
 
     <!-- Search results -->
-    <div id="home-search" class="container-fluid center-block">
+    <div id="home-search" class="container-fluid center-block no-display">
         <h2>Search results</h2>
 
         <div id="home-search-errors"
@@ -121,20 +121,26 @@
             </p>
         </div>
 
+        <div id="home-search-subscribe-errors"
+             class="alert alert-dismissible alert-danger no-display">
+            <button type="button" class="close" data-hide=".alert">×
+            </button>
+            <strong>The following errors happened:</strong>
+
+            <p id="home-search-subscribe-error-messages">
+                - Swag overload.
+            </p>
+        </div>
+
         <div id="home-search-noresults" class="alert alert-info  no-display">
             <strong>Your search request returned empty.</strong>
         </div>
 
-        <!--<div id="home-search-loading">
+        <div id="home-search-loading">
             <img class="center-block" src="img/loading2.gif"/>
-        </div>-->
+        </div>
 
-        <div id="home-search-results" class="container-fluid">
-            <div class="row">
-                <div class="col-md-4 btn btn-default">Game of Yolo</div>
-                <div class="col-md-4 btn btn-default">Swag of Cards</div>
-                <div class="col-md-4 btn btn-default">Hipster of Interest</div>
-            </div>
+        <div id="home-search-results" class="container-fluid row">
         </div>
     </div>
 

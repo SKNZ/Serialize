@@ -58,7 +58,8 @@ var DomShows = (function () {
                                     .slideDown();
 
                                 setTimeout(
-                                    _bind(alertRequiresLogin,
+                                    _bind(
+                                        alertRequiresLogin,
                                         $.prototype.slideUp),
                                     5000);
                             }

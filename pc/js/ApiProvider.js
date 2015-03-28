@@ -272,20 +272,59 @@ var ApiProvider = (function () {
                         shows: (search == "qsd" ? [] : [
                             {
                                 id: 12,
-                                name: 'Game of Thrones'
+                                name: 'Game of Thrones',
+                                subscribed: false
                             },
                             {
                                 id: 13,
-                                name: 'House of Cards'
+                                name: 'House of Cards',
+                                subscribed: true
                             },
                             {
                                 id: 15,
-                                name: 'NCIS'
+                                name: 'NCIS',
+                                subscribed: true
                             },
                             {
                                 id: 16,
-                                name: 'Person of Interest'
-                            }
+                                name: 'Person of Interest',
+                                subscribed: false
+                            },
+                            {
+                                id: 15,
+                                name: 'Person of Swagterest',
+                                subscribed: false
+                            },
+                            {
+                                id: 14,
+                                name: 'Tards of Interest',
+                                subscribed: false
+                            },
+                            {
+                                id: 13,
+                                name: 'Les hipsters a Miami',
+                                subscribed: false
+                            },
+                            {
+                                id: 13,
+                                name: 'Les hipsters a Miami',
+                                subscribed: false
+                            },
+                            {
+                                id: 13,
+                                name: 'Les hipsters a Miami',
+                                subscribed: false
+                            },
+                            {
+                                id: 13,
+                                name: 'Les hipsters a Miami',
+                                subscribed: false
+                            },
+                            {
+                                id: 13,
+                                name: 'Les hipsters a Miami',
+                                subscribed: false
+                            },
                         ])
                     };
                     deferred.resolve(response);
@@ -294,6 +333,30 @@ var ApiProvider = (function () {
                         errors: [
                             "Couldn't reach the database",
                             "Your search request was invalid"
+                        ]
+                    };
+                    deferred.reject(response);
+                }
+            });
+
+            return deferred.promise();
+        },
+        subscribe: function (showId) {
+            var deferred = $.Deferred();
+
+            _apiRequest("show/subscribe", "post", {
+                show: showId
+            }).always(function (response) {
+                if (showId != 12) {
+                    response = {
+                        subscribed: showId != 15
+                    };
+                    deferred.resolve(response);
+                } else {
+                    response = {
+                        errors: [
+                            "Couldn't reach the database",
+                            "Your didn't pay for this DLC m8"
                         ]
                     };
                     deferred.reject(response);

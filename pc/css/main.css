@@ -97,7 +97,7 @@ textarea {
 
 .navbar-gravatar {
     display: inline-block;
-    background-color: antiquewhite;
+    background-color: white;
 }
 
 .navbar-collapsed-right-item {
@@ -161,6 +161,9 @@ body {
     vertical-align: middle;
 }
 
+.loading {
+    background-image: url('../img/loading.gif');
+}
 
 /* ==========================================================================
    Helper classes

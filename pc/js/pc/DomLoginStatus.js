@@ -98,38 +98,9 @@ var DomLoginStatus = (function () {
                     .attr('type', 'text')
                     .attr('placeholder', 'Search')
                     .addClass('form-control')
-                    .on('change input', (function () {
-                        var _searchTimer;
-                        var _lastVal;
-
-                        return function () {
-                            var val = $(this).val();
-
-                            if (val == _lastVal) {
-                                return;
-                            }
-
-                            if (!!val) {
-                                $('#home-search').slideDown();
-                                $('#home-search-noresults').fadeOut();
-                                $('#home-search-errors')
-                                    .fadeOut(
-                                    _bind(
-                                        $('#home-search-error-messages'),
-                                        $.prototype.empty));
-                                $('#home-search-loading').fadeIn();
-
-                                clearTimeout(_searchTimer);
-                                _searchTimer = setTimeout(function () {
-                                    DomSearch.doSearch(val);
-                                }, 1000);
-                            } else {
-                                $('#home-search').slideUp();
-                            }
-
-                            _lastVal = val;
-                        };
-                    })()))
+                    .on('change input', function () {
+                        DomSearch.inputSearch($(this).val());
+                    }))
                 .fadeIn('slow'));
     };
 
