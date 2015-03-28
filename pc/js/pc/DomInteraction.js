@@ -1,94 +1,4 @@
 var DomInteraction = (function () {
-    var _loadLatestShows = (function () {
-        const _btdiggURL = 'http://btdigg.org/search?q=';
-        const _subsceneURL = 'http://subscene.com/subtitles/release?q=';
-
-        var _tbody = $('#home-latest-shows-table').find('tbody');
-
-        var _addShow = function (show) {
-            _tbody.append(
-                $('<tr>')
-                    .append(
-                    $('<td>').text(show.date),
-                    $('<td>').text(show.name),
-                    $('<td>').text(show.season),
-                    $('<td>').text(show.episode),
-                    $('<td>')
-                        .append(
-                        $('<a>')
-                            .addClass('btn ')
-                            .addClass('btn-sm')
-                            .addClass('btn-primary')
-                            .addClass('btn-block')
-                            .text('Yaaaarrr !')
-                            .attr('href',
-                            encodeURI(_btdiggURL +
-                                      show.name +
-                                      ' ' +
-                                      show.season +
-                                      show.episode))),
-                    $('<td>')
-                        .append(
-                        $('<a>')
-                            .addClass('btn')
-                            .addClass('btn-sm')
-                            .addClass('btn-info')
-                            .addClass('btn-block')
-                            .text('Subs !')
-                            .attr('href',
-                            encodeURI(_subsceneURL +
-                                      show.name +
-                                      ' ' +
-                                      show.season +
-                                      show.episode))),
-                    $('<td>')
-                        .append(
-                        $('<button>')
-                            .addClass('btn')
-                            .addClass('btn-sm')
-                            .addClass('btn-success')
-                            .addClass('btn-block')
-                            .attr('data-episode', show.id)
-                            .text('Comments')
-                            .click(function () {
-                                if (ApiProvider.isLoggedIn()) {
-                                    $('#comment-modal').modal();
-                                } else {
-                                    var alertRequiresLogin =
-                                        $('#alert-requires-login');
-
-                                    alertRequiresLogin
-                                        .slideDown();
-
-                                    setTimeout(
-                                        _bind(alertRequiresLogin,
-                                            $.prototype.slideUp),
-                                        5000
-                                    );
-                                }
-                            }))));
-        };
-
-        return function () {
-            ApiProvider
-                .latestShows()
-                .always(_bind($('#home-latest-shows-loading'),
-                    $.prototype.hide))
-                .done(function (latestShows) {
-                    for (var i = 0; i < latestShows.length; ++i)
-                    {
-                        _addShow(latestShows[i]);
-                    }
-
-                    $('#home-latest-shows-table').show('fast');
-                    $('#home-latest-shows-sample').remove();
-                })
-                .fail(function () {
-
-                });
-        }
-    })();
-
     return {
         initialize: function () {
             // data-hide is a property you put on a clickable
@@ -113,7 +23,8 @@ var DomInteraction = (function () {
                 clearInterval(updateModalDropbackInterval);
             });
 
-            $('#home-latest-shows-table').hide().removeClass('hidden');
+            //// Hide latest shows until its loaded.
+            //$('#home-latest-shows-table').hide().removeClass('hidden');
 
             // Slide the home page in
             $('#home-body').show('slide', 'slow', function () {
@@ -132,8 +43,6 @@ var DomInteraction = (function () {
                     // Check if user is authenticated, update the page
                     // accordingly.
                     DomLoginStatus.updateLoginStatus(true);
-
-                    _loadLatestShows();
                 });
             });
 
@@ -146,6 +55,8 @@ var DomInteraction = (function () {
             // Set up comment form hooks
             DomCommentForm.initialize();
 
+            // Load shows
+            DomShows.initialize();
         }
     };
 })

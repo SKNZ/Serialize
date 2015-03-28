@@ -43,9 +43,9 @@ var DomLoginStatus = (function () {
                     .addClass('glyphicon')
                     .addClass('glyphicon-' + glyphicon)
                     .append($('<div>')
-                                .addClass('navbar-collapsed-right-item')
-                                .addClass('hidden-sm hidden-md hidden-lg')
-                                .text(text)));
+                        .addClass('navbar-collapsed-right-item')
+                        .addClass('hidden-sm hidden-md hidden-lg')
+                        .text(text)));
         };
 
         $('#navbar').append(
@@ -60,10 +60,10 @@ var DomLoginStatus = (function () {
                 .append(
                 _makeGlyphicon('off', 'Disconnect')
                     .click(function () {
-                               ApiProvider
-                                   .logOut()
-                                   .always(DomLoginStatus.updateLoginStatus);
-                           }))
+                        ApiProvider
+                            .logOut()
+                            .always(DomLoginStatus.updateLoginStatus);
+                    }))
                 .append(
                 $('<li>')
                     .addClass('hidden-xs')
@@ -75,8 +75,8 @@ var DomLoginStatus = (function () {
                             .addClass('img-circle')
                             .addClass('navbar-gravatar')
                             .attr('src', 'http://www.gravatar.com/avatar/' +
-                                         currentUser.emailHash +
-                                         '.jpg?s=35')
+                            currentUser.emailHash +
+                            '.jpg?s=35')
                             .load(
                             // We wait for the gravatar image to be loaded,
                             // so the effect looks better
@@ -86,12 +86,55 @@ var DomLoginStatus = (function () {
     };
 
     var _buildSearchForm = function () {
-        $('#home-welcome-register').empty();
+        $('#home-welcome-action')
+            .empty()
+            .append(
+            $('<div>')
+                .hide()
+                .addClass('form-group')
+                .append(
+                $('<input>')
+                    .attr('id', 'home-welcome-search')
+                    .attr('type', 'text')
+                    .attr('placeholder', 'Search')
+                    .addClass('form-control')
+                    .on('change input', (function () {
+                        var _searchTimer;
+                        var _lastVal;
 
+                        return function () {
+                            var val = $(this).val();
+
+                            if (val == _lastVal) {
+                                return;
+                            }
+
+                            if (!!val) {
+                                $('#home-search').slideDown();
+                                $('#home-search-noresults').fadeOut();
+                                $('#home-search-errors')
+                                    .fadeOut(
+                                    _bind(
+                                        $('#home-search-error-messages'),
+                                        $.prototype.empty));
+                                $('#home-search-loading').fadeIn();
+
+                                clearTimeout(_searchTimer);
+                                _searchTimer = setTimeout(function () {
+                                    DomSearch.doSearch(val);
+                                }, 1000);
+                            } else {
+                                $('#home-search').slideUp();
+                            }
+
+                            _lastVal = val;
+                        };
+                    })()))
+                .fadeIn('slow'));
     };
 
     var _buildRegisterNowButton = function () {
-        $('#home-welcome-register')
+        $('#home-welcome-action')
             .empty()
             .append(
             $('<span>')

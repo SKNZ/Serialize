@@ -84,30 +84,70 @@
 
 <!-- Home page -->
 <div id="home-body" class="page container-fluid">
-    <!-- Welcome block thingy -->
+    <!-- Welcome block -->
     <div id="home-welcome" class="jumbotron">
         <div class="container">
             <h1 id="home-welcome-title"
                 class="text-center">Welcome to Serialize !</h1>
 
             <p id="home-welcome-text" class="invisible text-center">
-                <b>Never</b> miss an episode again !
-                Serialize will <b>keep you up to date</b> with your
-                <b>favorite shows</b> !
-                        <span id="home-welcome-register">
-                            <button type="button"
-                                    class="button-register btn
-                                    btn-primary center-block">
-                                Register now !
-                            </button>
-                        </span>
+                <b>Never</b> miss an episode again !<br/>
+                Serialize will keep you <b>up to date</b> with <b>your
+                favorite shows</b> !
+
+                <span id="home-welcome-action">
+                    <button type="button"
+                            class="button-register btn
+                                btn-primary center-block">
+                        Register now !
+                    </button>
+                </span>
             </p>
+        </div>
+    </div>
+
+    <!-- Search results -->
+    <div id="home-search" class="container-fluid center-block">
+        <h2>Search results</h2>
+
+        <div id="home-search-errors"
+             class="alert alert-dismissible alert-danger no-display">
+            <button type="button" class="close" data-hide=".alert">×
+            </button>
+            <strong>The following errors happened:</strong>
+
+            <p id="home-search-error-messages">
+                - Swag overload.
+            </p>
+        </div>
+
+        <div id="home-search-noresults" class="alert alert-info  no-display">
+            <strong>Your search request returned empty.</strong>
+        </div>
+
+        <!--<div id="home-search-loading">
+            <img class="center-block" src="img/loading2.gif"/>
+        </div>-->
+
+        <div id="home-search-results" class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 btn btn-default">Game of Yolo</div>
+                <div class="col-md-4 btn btn-default">Swag of Cards</div>
+                <div class="col-md-4 btn btn-default">Hipster of Interest</div>
+            </div>
         </div>
     </div>
 
     <!-- Latest shows -->
     <div class="container-fluid center-block">
-        <h1>Latest shows</h1>
+        <h2>Latest shows</h2>
+
+        <div id="home-latest-shows-error"
+             class="alert alert-danger alert-dismissible no-display">
+            <button type="button" class="close" data-hide=".alert">
+                <span>&times;</span></button>
+            <strong>An unknown error happened.</strong>
+        </div>
 
         <div id="home-latest-shows-loading">
             <img class="center-block" src="img/loading2.gif"/>
@@ -115,7 +155,7 @@
 
         <div class="table-responsive">
             <table id="home-latest-shows-table"
-                   class="table table-striped table-hover table-condensed hidden">
+                   class="table table-striped table-hover table-condensed no-display">
                 <thead>
                 <tr>
                     <th class="col-xs-1">Date</th>
@@ -291,7 +331,8 @@
                                 <div class="checkbox">
                                     <label>
                                         <input id="registration-newsletter"
-                                               type="checkbox" checked> Receive spam
+                                               type="checkbox" checked> Receive
+                                        spam
                                         from @NedSeb ?
                                     </label>
                                 </div>
@@ -503,13 +544,15 @@
 <script src="js/plugins.js"></script>
 
 <!-- Serialize -->
-<!-- All these should minified together for production use -->
+<!-- All these should be minified together for production use -->
 <script src="js/Utils.js"></script>
 <script src="js/ApiProvider.js"></script>
 <script src="js/pc/DomLoginStatus.js"></script>
 <script src="js/pc/DomRegistrationForm.js"></script>
 <script src="js/pc/DomLoginForm.js"></script>
 <script src="js/pc/DomCommentForm.js"></script>
+<script src="js/pc/DomShows.js"></script>
+<script src="js/pc/DomSearch.js"></script>
 <script src="js/pc/DomInteraction.js"></script>
 <script src="js/SerializeApp.js"></script>
 <script src="js/main.js"></script>

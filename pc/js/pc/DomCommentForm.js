@@ -62,12 +62,14 @@ var DomCommentForm = (function () {
                 }
 
                 // Display errors
-                $('#login-errors').fadeIn();
+                $('#comment-messages-errors').fadeIn();
             });
     };
 
     var _handleOpenAndClose = function () {// When modal opens, load comments
         $('#comment-modal').on('shown.bs.modal', function (event) {
+            $('#comment-comments').empty();
+
             // Autofocus on subject field
             $('#comment-input-subject').focus();
 
@@ -76,8 +78,10 @@ var DomCommentForm = (function () {
 
             _loadComments();
 
-            var commentErrors = $('#comment-messages-errors');
-            commentErrors.fadeOut(_bind(commentErrors, $.prototype.empty));
+            $('#comment-messages-errors')
+                .fadeOut(
+                _bind($('#comment-messages-error-messages'),
+                    $.prototype.empty));
         }).on('hide.bs.modal',
             _bind($('#comment-comments'), $.prototype.empty));
     };

@@ -1,8 +1,13 @@
 var ApiProvider = (function () {
-    var _loggedIn = false;
+    var _loggedIn = true;
     var _baseURI = "/api/";
 
-    var _currentUser;
+    var _currentUser = {
+        email: "florandara@gmail.com",
+        emailHash: "e00cf05e1611a154bc3f5764cebbc822",
+        firstName: "Floran",
+        lastName: "NARENJI-SHESHKALANI"
+    };
 
     var _apiRequest = function (call, method, data) {
         var deferred = $.Deferred();
@@ -35,30 +40,31 @@ var ApiProvider = (function () {
              // @TODO parse user from response
              }).fail(_bind(deferred, deferred.fail))*/
                 .always(function (response) {
-                            if (authCredentials.email ==
-                                "florandara@gmail.com") {
-                                _loggedIn = true;
+                    if (authCredentials.email ==
+                        "florandara@gmail.com")
+                    {
+                        _loggedIn = true;
 
-                                _currentUser = {
-                                    email: "florandara@gmail.com",
-                                    emailHash: "e00cf05e1611a154bc3f5764cebbc822",
-                                    firstName: "Floran",
-                                    lastName: "NARENJI-SHESHKALANI"
-                                };
+                        _currentUser = {
+                            email: "florandara@gmail.com",
+                            emailHash: "e00cf05e1611a154bc3f5764cebbc822",
+                            firstName: "Floran",
+                            lastName: "NARENJI-SHESHKALANI"
+                        };
 
-                                deferred.resolve(_currentUser);
-                            }
-                            else {
-                                response = {
-                                    errors: [
-                                        "You fucked up mate !",
-                                        "Alright mate, cheers mate !"
-                                    ]
-                                };
-                                deferred.reject(response);
-                                _loggedIn = false;
-                            }
-                        });
+                        deferred.resolve(_currentUser);
+                    }
+                    else {
+                        response = {
+                            errors: [
+                                "You fucked up mate !",
+                                "Alright mate, cheers mate !"
+                            ]
+                        };
+                        deferred.reject(response);
+                        _loggedIn = false;
+                    }
+                });
 
             return deferred.promise();
         },
@@ -119,47 +125,47 @@ var ApiProvider = (function () {
 
             _apiRequest("show/latest", "get")
                 .done(function (response) {
-                          response = {
-                              latestShows: [
-                                  {
-                                      id: 30,
-                                      date: '12/10/2015',
-                                      name: 'Game of Thrones',
-                                      season: 'S03',
-                                      episode: 'E05'
-                                  },
-                                  {
-                                      id: 29,
-                                      date: '06/10/2015',
-                                      name: 'Game of Thrones',
-                                      season: 'S03',
-                                      episode: 'E04'
-                                  },
-                                  {
-                                      id: 28,
-                                      date: '02/10/2015',
-                                      name: 'Game of Thrones',
-                                      season: 'S03',
-                                      episode: 'E03'
-                                  },
-                                  {
-                                      id: 27,
-                                      date: '28/09/2015',
-                                      name: 'Game of Thrones',
-                                      season: 'S03',
-                                      episode: 'E02'
-                                  },
-                                  {
-                                      id: 26,
-                                      date: '22/10/2015',
-                                      name: 'Game of Thrones',
-                                      season: 'S03',
-                                      episode: 'E01'
-                                  }
-                              ]
-                          };
-                          deferred.resolve(response.latestShows);
-                      });
+                    response = {
+                        latestShows: [
+                            {
+                                id: 30,
+                                date: '12/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E05'
+                            },
+                            {
+                                id: 29,
+                                date: '06/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E04'
+                            },
+                            {
+                                id: 28,
+                                date: '02/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E03'
+                            },
+                            {
+                                id: 27,
+                                date: '28/09/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E02'
+                            },
+                            {
+                                id: 26,
+                                date: '22/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E01'
+                            }
+                        ]
+                    };
+                    deferred.resolve(response.latestShows);
+                });
 
             return deferred.promise();
         },
@@ -224,6 +230,12 @@ var ApiProvider = (function () {
                     };
 
                     _deferred.resolve(response.comments);
+                    //_deferred.reject({
+                    //    errors: [
+                    //        "You fucked up m8",
+                    //        "Your SWAG is underwhelming"
+                    //    ]
+                    //});
                 });
 
             return _deferred;
@@ -241,6 +253,47 @@ var ApiProvider = (function () {
                         errors: [
                             "Couldn't reach the database",
                             "Your subject is invalid"
+                        ]
+                    };
+                    deferred.reject(response);
+                }
+            });
+
+            return deferred.promise();
+        },
+        search: function (search) {
+            var deferred = $.Deferred();
+
+            _apiRequest("show/search", "post", {
+                search: search
+            }).always(function (response) {
+                if (search != "aze") {
+                    response = {
+                        shows: (search == "qsd" ? [] : [
+                            {
+                                id: 12,
+                                name: 'Game of Thrones'
+                            },
+                            {
+                                id: 13,
+                                name: 'House of Cards'
+                            },
+                            {
+                                id: 15,
+                                name: 'NCIS'
+                            },
+                            {
+                                id: 16,
+                                name: 'Person of Interest'
+                            }
+                        ])
+                    };
+                    deferred.resolve(response);
+                } else {
+                    response = {
+                        errors: [
+                            "Couldn't reach the database",
+                            "Your search request was invalid"
                         ]
                     };
                     deferred.reject(response);
