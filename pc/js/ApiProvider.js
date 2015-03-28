@@ -227,6 +227,27 @@ var ApiProvider = (function () {
                 });
 
             return _deferred;
+        },
+        commentEpisode: function (episode, comment) {
+            var deferred = $.Deferred();
+
+            _apiRequest("episode/" + episode + "/", "post", {
+                comment: comment
+            }).always(function (response) {
+                if (comment.subject != "cool") {
+                    deferred.resolve(comment);
+                } else {
+                    response = {
+                        errors: [
+                            "Couldn't reach the database",
+                            "Your subject is invalid"
+                        ]
+                    };
+                    deferred.reject(response);
+                }
+            });
+
+            return deferred.promise();
         }
     };
 })

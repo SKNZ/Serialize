@@ -9,14 +9,14 @@ var DomLoginStatus = (function () {
             .addClass('btn')
             .addClass('btn-success')
             .click(_bind($('#login-modal'), $.prototype.modal))
-            .html('Sign in'); // @todo Replace html() with text()
+            .text('Sign in');
 
         var registerButton = $('<button>')
             .attr('type', 'button')
             .addClass('btn')
             .addClass('button-register')
             .click(_bind($('#registration-modal'), $.prototype.modal))
-            .html('Register'); // @todo Replace html() with text()
+            .text('Register');
 
         $('#navbar').append(
             $('<div>')

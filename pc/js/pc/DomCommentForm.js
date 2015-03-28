@@ -1,96 +1,228 @@
 var DomCommentForm = (function () {
-    return {
-        initialize: function () {
-            // When modal opens, load comments
-            $('#comment-modal').on('shown.bs.modal', function (event) {
-                // Autofocus on subject field
-                $('#comment-input-subject').focus();
+    var _makeRatingStar = function (empty) {
+        return $('<span>')
+            .addClass('text-warning')
+            .addClass('comment-block-rating-star')
+            .addClass('glyphicon')
+            .addClass('glyphicon-star' + (empty ? '-empty' : ''));
+    };
 
-                // Fetch content according to id
-                var episode = $(event.relatedTarget).data('episode');
+    var _loadingImage = $('#comment-loading');
+    var _episode;
 
-                // Show the loading circle
-                $('#comment-loading').fadeIn();
+    var _loadComments = function () {
+        // Show the loading circle
+        _loadingImage.fadeIn();
 
-                var _makeRatingStar = function (empty) {
-                    return $('<span>')
-                        .addClass('text-warning')
-                        .addClass('comment-block-rating-star')
-                        .addClass('glyphicon')
-                        .addClass('glyphicon-star' + (empty ? '-empty' : ''));
+        ApiProvider
+            .commentsForEpisode(_episode)
+            .always(_bind(_loadingImage, $.prototype.hide))
+            .done(function (comments) {
+                comments.forEach(function (comment, i) {
+                    $('#comment-comments')
+                        .append(
+                        $('<div>')
+                            .append(
+                            $('<p>')
+                                .append(
+                                _makeRatingStar(comment.rating < 1),
+                                _makeRatingStar(comment.rating < 2),
+                                _makeRatingStar(comment.rating < 3),
+                                _makeRatingStar(comment.rating < 4),
+                                _makeRatingStar(comment.rating < 5),
+                                '&nbsp;',
+                                comment.message,
+                                $('<span>')
+                                    .addClass('h6')
+                                    .addClass('text-muted')
+                                    .append(
+                                    ' posted by ',
+                                    $('<a>')
+                                        .text(comment.user.firstName +
+                                              ' ' +
+                                              comment.user.lastName),
+                                    ' on ',
+                                    comment.date))));
+
+                    if (i != comments.length - 1) {
+                        $('#comment-comments')
+                            .append($('<hr/>'));
+                    }
+
+                    $('#comment-modal').data('bs.modal').handleUpdate();
+                });
+            })
+            .fail(function (response) {
+                var errors = response.errors;
+
+                // Append errors to DOM
+                for (var i = 0; i < errors.length; ++i) {
+                    $('#comment-messages-error-messages')
+                        .append('- ', errors[i], $('<br/>'));
+                }
+
+                // Display errors
+                $('#login-errors').fadeIn();
+            });
+    };
+
+    var _handleOpenAndClose = function () {// When modal opens, load comments
+        $('#comment-modal').on('shown.bs.modal', function (event) {
+            // Autofocus on subject field
+            $('#comment-input-subject').focus();
+
+            // Fetch content according to id
+            _episode = $(event.relatedTarget).data('episode');
+
+            _loadComments();
+
+            var commentErrors = $('#comment-messages-errors');
+            commentErrors.fadeOut(_bind(commentErrors, $.prototype.empty));
+        }).on('hide.bs.modal',
+            _bind($('#comment-comments'), $.prototype.empty));
+    };
+
+    var _handleRating = function () {
+        $('.comment-input-rating-star').click(function () {
+            var selectedStars = $(this)
+                .prevAll('.comment-input-rating-star')
+                .addBack();
+
+            selectedStars
+                .removeClass('glyphicon-star-empty')
+                .addClass('glyphicon-star');
+
+            $(this)
+                .nextAll('.comment-input-rating-star')
+                .removeClass('glyphicon-star')
+                .addClass('glyphicon-star-empty');
+
+            $('#comment-input-rating').val(selectedStars.length);
+        });
+    };
+
+    var _postButtonOriginalText = $('#comment-submit').text();
+
+    var _updateSubmitButtonStatus = function () {
+        var invalidInputCount =
+            $('#comment-body')
+                .find(':data(invalid)')
+                .length;
+
+        $('#comment-submit')
+            .prop('disabled', invalidInputCount > 0);
+    };
+
+    var _handleInputs = function () {
+        // Check if first name/last name are specified
+        $('#comment-input-subject')
+            .on('change input', function () {
+                $(this).data('invalid', !$(this).val());
+                _updateSubmitButtonStatus();
+            });
+
+        $('#comment-input-message')
+            .on('propertchange input', function () {
+                $(this).data('invalid', !$(this).val());
+                _updateSubmitButtonStatus();
+            });
+
+        $('#comment-body')
+            .find('form')
+            .submit(
+            function () {
+                // Disable submit button to avoid multiple submissions
+                $('#comment-submit')
+                    .prop('disabled', 'true')
+                    .text('Working...');
+
+                // Hide any previous error messages
+                $('#comment-post-errors').fadeOut(function () {
+                    // Clear them out from DOM
+                    $('#comment-post-error-messages').empty();
+                });
+
+                // Build comment request
+                var comment = {
+                    subject: $('#comment-input-subject').val(),
+                    rating: $(this).find('comment-input-rating-star').length,
+                    message: $('#comment-input-message').val()
                 };
 
+                // Send comment request, handle result
                 ApiProvider
-                    .commentsForEpisode(episode)
-                    .always(_bind($('#comment-loading'), $.prototype.hide))
-                    .done(function (comments) {
-                        for (var i = 0; i < comments.length; ++i) {
-                            var comment = comments[i];
+                    .commentEpisode(_episode, comment)
+                    .done(function (response) {
+                        // Let's reset the form
+                        var commentModal =
+                            $('#comment-modal');
 
-                            $('#comment-comments')
-                                .append(
-                                $('<div>')
-                                    .append(
-                                    $('<p>')
-                                        .append(
-                                        _makeRatingStar(comment.rating < 1),
-                                        _makeRatingStar(comment.rating < 2),
-                                        _makeRatingStar(comment.rating < 3),
-                                        _makeRatingStar(comment.rating < 4),
-                                        _makeRatingStar(comment.rating < 5),
-                                        '&nbsp;',
-                                        comment.message,
-                                        $('<span>')
-                                            .addClass('h6')
-                                            .addClass('text-muted')
-                                            .append(
-                                            ' posted by ',
-                                            $('<a>')
-                                                .text(comment.user.firstName +
-                                                      ' ' +
-                                                      comment.user.lastName),
-                                            ' on ',
-                                            comment.date))),
-                                $('<hr/>'));
+                        //commentModal.modal('hide')
 
-                            $('#comment-modal').data('bs.modal').handleUpdate();
-                        }
+                        // Vanilla JS is easier than jQuery when it
+                        // comes to resetting forms. Source:
+                        // http://stackoverflow.com/a/6364313
+                        commentModal.find('form')[0].reset();
+
+                        commentModal
+                            .find('.comment-input-rating-star:not(:first)')
+                            .removeClass('glyphicon-star')
+                            .addClass('glyphicon-star-empty');
+
+                        // Remove all comments & reload comments
+                        $('#comment-comments').empty();
+                        _loadComments();
+
+                        // Remark all the input fields as invalid,
+                        // since they are now empty again
+                        $('#comment-input-message, #comment-input-subject')
+                            .data('invalid', true);
+
+                        _updateSubmitButtonStatus();
                     })
                     .fail(function (response) {
+                        // Re-enable submit button if there were
+                        // errors
+                        $('#comment-submit')
+                            .prop('disabled', false)
+                            .text('Pitch me in !');
+
                         var errors = response.errors;
 
                         // Append errors to DOM
                         for (var i = 0; i < errors.length; ++i) {
-                            $('#comment-messages-errors')
+                            $('#comment-post-error-messages')
                                 .append('- ',
                                 errors[i],
                                 $('<br/>'));
                         }
 
                         // Display errors
-                        $('#login-errors').fadeIn();
+                        $('#comment-post-errors').fadeIn();
                     })
-            }).on('hide.bs.modal', function () {
-                $('#comment-comments').empty();
+                    // Reset the text to what it was back
+                    // originally
+                    .always(function () {
+                        $('#comment-submit').text(_postButtonOriginalText);
+                    });
 
+                event.preventDefault();
             });
+    };
 
-            $('.comment-input-rating-star').click(function () {
-                var selectedStars = $(this)
-                    .prevAll('.comment-input-rating-star')
-                    .addBack();
+    return {
+        initialize: function () {
+            // Initialize all fields as input as 'invalid', meaning that their
+            // content is not fit to be sent to the server, which is true
+            // since they are empty
+            $('#comment-input-message, #comment-input-subject')
+                .data('invalid', true);
 
-                selectedStars
-                    .removeClass('glyphicon-star-empty')
-                    .addClass('glyphicon-star');
+            _updateSubmitButtonStatus();
 
-                $(this)
-                    .nextAll('.comment-input-rating-star')
-                    .removeClass('glyphicon-star')
-                    .addClass('glyphicon-star-empty');
-
-                $('#comment-input-rating').val(selectedStars.length);
-            });
+            _handleOpenAndClose();
+            _handleRating();
+            _handleInputs();
         }
     };
 })();
