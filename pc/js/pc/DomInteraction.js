@@ -25,7 +25,7 @@ var DomInteraction = (function () {
 
             $('#footer-to-top')
                 .click(function (event) {
-                    $('html, body').animate({scrollTop: 0}, "slow");
+                    $('html, body').animate({scrollTop: 0}, 'slow');
                     event.preventDefault();
                 });
 
@@ -43,6 +43,42 @@ var DomInteraction = (function () {
                         .hide()
                         .show('fade', 'slow');
                 });
+            });
+
+            $('#navbar-go-about').click(function (event) {
+                $('#home-body')
+                    .hide('slide', {direction: 'right'},
+                    function () {
+                        $('#about-body')
+                            .show('slide', {direction: 'left'});
+                    });
+
+                $('#navbar-go-home')
+                    .closest('li')
+                    .removeClass('active');
+
+                $(this)
+                    .closest('li')
+                    .addClass('active');
+
+                event.preventDefault();
+            });
+
+            $('#navbar-go-home, .navbar-brand').click(function (event) {
+                $('#about-body').hide('slide', {direction: 'left'},
+                    function () {
+                        $('#home-body').show('slide', {direction: 'right'});
+                    });
+
+                $('#navbar-go-about')
+                    .closest('li')
+                    .removeClass('active');
+
+                $('#navbar-go-home')
+                    .closest('li')
+                    .addClass('active');
+
+                event.preventDefault();
             });
 
             // Check if user is authenticated, update the page
