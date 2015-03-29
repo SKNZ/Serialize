@@ -25,6 +25,10 @@ var DomShowList = (function () {
                         .addClass('btn-sm')
                         .addClass('btn-primary')
                         .addClass('btn-block')
+                        .addClass(
+                        Date.parse(show.date) > new Date()
+                            ? 'disabled'
+                            : '')
                         .text('Yaaaarrr !')
                         .attr('href',
                         encodeURI(_btdiggURL +
@@ -39,6 +43,10 @@ var DomShowList = (function () {
                         .addClass('btn-sm')
                         .addClass('btn-info')
                         .addClass('btn-block')
+                        .addClass(
+                        Date.parse(show.date) > new Date()
+                            ? 'disabled'
+                            : '')
                         .text('Subs !')
                         .attr('href',
                         encodeURI(_subsceneURL +
@@ -53,8 +61,10 @@ var DomShowList = (function () {
                         .addClass('btn-sm')
                         .addClass('btn-success')
                         .addClass('btn-block')
-                        .addClass(Date.parse(show.date) >
-                        new Date() ? 'disabled' : '')
+                        .addClass(
+                        Date.parse(show.date) > new Date()
+                            ? 'disabled'
+                            : '')
                         .attr('data-episode', show.id)
                         .text('Comments')
                         .click(function () {
@@ -108,7 +118,7 @@ var DomShowList = (function () {
 
             ApiProvider
                 .yourShows()
-                .always(function ()  {
+                .always(function () {
                     $('#home-your-shows-loading').hide();
                 })
                 .done(function (latestShows) {
