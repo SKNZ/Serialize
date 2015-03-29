@@ -127,7 +127,7 @@ var DomCommentForm = (function () {
             });
 
         $('#comment-input-message')
-            .on('propertchange input', function () {
+            .on('propertychange input', function () {
                 $(this).data('invalid', !$(this).val());
                 _updateSubmitButtonStatus();
             });

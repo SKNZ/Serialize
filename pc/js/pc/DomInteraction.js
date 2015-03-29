@@ -17,14 +17,17 @@ var DomInteraction = (function () {
             var updateModalDropbackInterval;
             $(document).on('shown.bs.modal', function (e) {
                 updateModalDropbackInterval = setInterval(function () {
-                    var modal = $(e.target).data('bs.modal');
-                    if (modal != undefined) {
-                        modal.handleUpdate();
-                    }
+                    $(e.target).data('bs.modal').handleUpdate();
                 }, 100);
             }).on('hidden.bs.modal', function () {
                 clearInterval(updateModalDropbackInterval);
             });
+
+            $('#footer-to-top')
+                .click(function (event) {
+                    $('html, body').animate({scrollTop: 0}, "slow");
+                    event.preventDefault();
+                });
 
             // Slide the home page in
             $('#home-body').show('slide', 'slow', function () {
@@ -60,7 +63,9 @@ var DomInteraction = (function () {
 
             // Set up show modal hooks
             DomShow.initialize();
+
+            // Set up contact form hooks
+            DomContact.initialize();
         }
     };
-})
-();
+})();

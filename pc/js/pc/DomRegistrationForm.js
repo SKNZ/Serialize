@@ -11,6 +11,10 @@ var DomRegistrationForm = function () {
             .prop('disabled', invalidInputCount > 0);
     };
 
+    // Email validation regex
+    // Taken from http://www.regular-expressions.info/email.html
+    var _emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
     return {
         initialize: function () {
             // Initialize all fields as input as 'invalid', meaning that their
@@ -25,10 +29,6 @@ var DomRegistrationForm = function () {
                 _bind(
                     $('#registration-input-email'),
                     $.prototype.focus));
-
-            // Email validation regex
-            // Taken from http://www.regular-expressions.info/email.html
-            var emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
             // Every time the user enters a valid email address, we're going to
             // check with the server if it's already registered or not.
@@ -49,7 +49,7 @@ var DomRegistrationForm = function () {
                 _updateSubmitButtonStatus();
 
                 var value = $(this).val();
-                var valid = emailRegex.test(value);
+                var valid = _emailRegex.test(value);
 
                 $(this).closest('.form-group')
                     .removeClass('has-error')
@@ -103,7 +103,7 @@ var DomRegistrationForm = function () {
                                     // Refresh submit button
                                     _updateSubmitButtonStatus();
                                 });
-                }, 1000, this);
+                }, 1000);
             });
 
             // These regexes represent the four conditions necessary for a

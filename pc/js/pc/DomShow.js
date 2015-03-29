@@ -2,11 +2,17 @@ var DomShow = (function () {
 
     return {
         initialize: function () {
+            var closedByThis = false;
+
             $('#show-modal').on('show.bs.modal', function (event) {
                 $('#show-shows-table').hide();
                 $('#show-shows-sample').hide();
                 $('#show-subscribe').hide();
                 $('#show-loading').fadeIn();
+                $('#show-errors').fadeOut(
+                    _bind(
+                        $('#show-error-messages'),
+                        $.prototype.empty));
 
                 var relatedTarget = $(event.relatedTarget);
 
@@ -88,14 +94,22 @@ var DomShow = (function () {
                         $('#show-errors').fadeIn();
                     });
 
-                $('#comment-modal').on('show.bs.modal', function () {
-                    $('#show-modal').addClass('hidden');
-                }).on('hide.bs.modal', function () {
-                    $('#show-modal').removeClass('hidden');
+                $('#comment-modal').on('show.bs.modal.fromShow', function () {
+                    $('#show-modal').modal('hide');
+                    closedByThis = true;
+                }).on('hide.bs.modal.fromShow', function () {
+                    relatedTarget.click();
+                    closedByThis = false;
                 });
             }).on('hidden.bs.modal', function () {
                 $('#show-shows-sample')
                     .show();
+
+                if (!closedByThis) {
+                    $('#comment-modal')
+                        .off('show.bs.modal.fromShow')
+                        .off('hide.bs.modal.fromShow');
+                }
 
                 $(this)
                     .find('tr:not(:first)')

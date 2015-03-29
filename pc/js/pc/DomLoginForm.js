@@ -11,6 +11,10 @@ var DomLoginForm = (function () {
             .prop('disabled', invalidInputCount > 0);
     };
 
+    // Email validation regex
+    // Taken from http://www.regular-expressions.info/email.html
+    var _emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+
     return {
         initialize: function () {
             // Initialize all fields as input as 'invalid', meaning that their
@@ -26,15 +30,12 @@ var DomLoginForm = (function () {
                     $('#login-input-email'),
                     $.prototype.focus));
 
-            // Email validation regex
-            // Taken from http://www.regular-expressions.info/email.html
-            var emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
             $('#login-input-email').on('change input', function () {
                 _updateSubmitButtonStatus();
 
                 var value = $(this).val();
-                var valid = emailRegex.test(value);
+                var valid = _emailRegex.test(value);
 
                 $(this).closest('.form-group')
                     .toggleClass('has-success', valid)

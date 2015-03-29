@@ -57,8 +57,8 @@ var DomLoginStatus = (function () {
                 .addClass('nav')
                 .addClass('navbar-nav')
                 .addClass('navbar-right')
-                .append(_makeGlyphicon('envelope', 'Notifications'))
-                .append(_makeGlyphicon('cog', 'Account'))
+                //.append(_makeGlyphicon('envelope', 'Notifications'))
+                //.append(_makeGlyphicon('cog', 'Account'))
                 .append(
                 _makeGlyphicon('off', 'Disconnect')
                     .click(function () {

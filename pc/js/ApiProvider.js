@@ -28,9 +28,9 @@ var ApiProvider = (function () {
         },
         tryLogin: function (authCredentials) {
             console.log("attempting login for user " +
-                        authCredentials.email +
-                        ":" +
-                        authCredentials.password);
+            authCredentials.email +
+            ":" +
+            authCredentials.password);
 
             var deferred = $.Deferred();
 
@@ -429,46 +429,71 @@ var ApiProvider = (function () {
 
             _apiRequest("show/" + showId, "get")
                 .always(function (response) {
-                if (showId != 13) {
-                    response = {
-                        show: {
-                            id: showId,
-                            name: 'Game of thrones',
-                            subscribed: true,
-                            episodes: [
-                                {
-                                    id: 15,
-                                    name: 'Gamotron',
-                                    season: 'S03',
-                                    episode: 'E05',
-                                    episodeName: 'TopKek',
-                                    date: '26/12/2015'
-                                },
-                                {
-                                    id: 16,
-                                    name: 'Gamotron',
-                                    season: 'S03',
-                                    episode: 'E04',
-                                    episodeName: 'Swaggens',
-                                    date: '25/12/2015'
-                                },
-                                {
-                                    id: 17,
-                                    name: 'Gamotron',
-                                    season: 'S03',
-                                    episode: 'E03',
-                                    episodeName: 'Hipster',
-                                    date: '24/12/2015'
-                                }
+                    if (showId != 13) {
+                        response = {
+                            show: {
+                                id: showId,
+                                name: 'Game of thrones',
+                                subscribed: true,
+                                episodes: [
+                                    {
+                                        id: 15,
+                                        name: 'Gamotron',
+                                        season: 'S03',
+                                        episode: 'E05',
+                                        episodeName: 'TopKek',
+                                        date: '26/12/2015'
+                                    },
+                                    {
+                                        id: 16,
+                                        name: 'Gamotron',
+                                        season: 'S03',
+                                        episode: 'E04',
+                                        episodeName: 'Swaggens',
+                                        date: '25/12/2015'
+                                    },
+                                    {
+                                        id: 17,
+                                        name: 'Gamotron',
+                                        season: 'S03',
+                                        episode: 'E03',
+                                        episodeName: 'Hipster',
+                                        date: '24/12/2015'
+                                    }
+                                ]
+                            }
+                        };
+                        deferred.resolve(response.show);
+                    } else {
+                        response = {
+                            errors: [
+                                "Couldn't reach the database",
+                                "Your didn't pay for this DLC m8"
                             ]
-                        }
+                        };
+                        deferred.reject(response);
+                    }
+                });
+
+            return deferred.promise();
+        },
+        contact: function (messageInformation) {
+            var deferred = $.Deferred();
+
+            _apiRequest("contact", "post", {
+                messageInformation: messageInformation
+            })
+            .always(function (response) {
+                if (messageInformation.subject != "aze") {
+                    response = {
+                        success: true
                     };
-                    deferred.resolve(response.show);
+                    deferred.resolve(response.success);
                 } else {
                     response = {
                         errors: [
                             "Couldn't reach the database",
-                            "Your didn't pay for this DLC m8"
+                            "Get your wallet out, this mail gonna cost you shit"
                         ]
                     };
                     deferred.reject(response);
