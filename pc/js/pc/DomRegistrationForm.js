@@ -20,9 +20,11 @@ var DomRegistrationForm = function () {
             _updateSubmitButtonStatus();
 
             // Autofocus on email field when modal opens
-            $('#registration-modal').on('shown.bs.modal', function () {
-                $('#registration-input-email').focus();
-            });
+            $('#registration-modal').on(
+                'shown.bs.modal',
+                _bind(
+                    $('#registration-input-email'),
+                    $.prototype.focus));
 
             // Email validation regex
             // Taken from http://www.regular-expressions.info/email.html

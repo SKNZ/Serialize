@@ -161,9 +161,12 @@ body {
     vertical-align: middle;
 }
 
-.loading {
-    background-image: url('../img/loading.gif');
+#show-shows-table {
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
+
+
 
 /* ==========================================================================
    Helper classes

@@ -8,14 +8,16 @@ var DomLoginStatus = (function () {
             .attr('type', 'button')
             .addClass('btn')
             .addClass('btn-success')
-            .click(_bind($('#login-modal'), $.prototype.modal))
+            .attr('data-toggle', 'modal')
+            .attr('href', '#login-modal')
             .text('Sign in');
 
         var registerButton = $('<button>')
             .attr('type', 'button')
             .addClass('btn')
             .addClass('button-register')
-            .click(_bind($('#registration-modal'), $.prototype.modal))
+            .attr('data-toggle', 'modal')
+            .attr('href', '#registration-modal')
             .text('Register');
 
         $('#navbar').append(
@@ -101,6 +103,12 @@ var DomLoginStatus = (function () {
                     .on('change input', function () {
                         DomSearch.inputSearch($(this).val());
                     }))
+                .on("remove", function () {
+                    $('#home-search')
+                        .fadeOut(_bind(
+                            $('#home-search-results'),
+                            $.prototype.empty));
+                })
                 .fadeIn('slow'));
     };
 
@@ -112,11 +120,12 @@ var DomLoginStatus = (function () {
                 .append(
                 $('<button>')
                     .attr('type', 'button')
+                    .attr('data-toggle', 'modal')
+                    .attr('href', '#registration-modal')
                     .addClass('button-register')
                     .addClass('btn')
                     .addClass('btn-primary')
                     .addClass('center-block')
-                    .click(_bind($('#registration-modal'), $.prototype.modal))
                     .text('Register now !')
             ));
     };
@@ -133,6 +142,7 @@ var DomLoginStatus = (function () {
             // Build right side of navbar
             loggedIn ? _buildProfileBar() : _buildLoginForm();
             loggedIn ? _buildSearchForm() : _buildRegisterNowButton();
+            loggedIn ? DomShowList.loadYourShows() : DomShowList.hideYourShows();
 
             _wasLoggedIn = loggedIn;
         }

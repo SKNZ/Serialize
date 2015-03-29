@@ -17,14 +17,14 @@ var DomInteraction = (function () {
             var updateModalDropbackInterval;
             $(document).on('shown.bs.modal', function (e) {
                 updateModalDropbackInterval = setInterval(function () {
-                    $(e.target).data('bs.modal').handleUpdate();
+                    var modal = $(e.target).data('bs.modal');
+                    if (modal != undefined) {
+                        modal.handleUpdate();
+                    }
                 }, 100);
             }).on('hidden.bs.modal', function () {
                 clearInterval(updateModalDropbackInterval);
             });
-
-            //// Hide latest shows until its loaded.
-            //$('#home-latest-shows-table').hide().removeClass('hidden');
 
             // Slide the home page in
             $('#home-body').show('slide', 'slow', function () {
@@ -39,12 +39,12 @@ var DomInteraction = (function () {
                         .removeClass('invisible')
                         .hide()
                         .show('fade', 'slow');
-
-                    // Check if user is authenticated, update the page
-                    // accordingly.
-                    DomLoginStatus.updateLoginStatus(true);
                 });
             });
+
+            // Check if user is authenticated, update the page
+            // accordingly.
+            DomLoginStatus.updateLoginStatus(true);
 
             // Set up registration form hooks
             DomRegistrationForm.initialize();
@@ -56,7 +56,10 @@ var DomInteraction = (function () {
             DomCommentForm.initialize();
 
             // Load shows
-            DomShows.initialize();
+            DomShowList.initialize();
+
+            // Set up show modal hooks
+            DomShow.initialize();
         }
     };
 })

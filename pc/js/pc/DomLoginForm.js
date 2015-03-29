@@ -20,9 +20,11 @@ var DomLoginForm = (function () {
             _updateSubmitButtonStatus();
 
             // Autofocus on email field when modal opens
-            $('#login-modal').on('shown.bs.modal', function () {
-                $('#login-input-email').focus();
-            });
+            $('#login-modal').on(
+                'shown.bs.modal',
+                _bind(
+                    $('#login-input-email'),
+                    $.prototype.focus));
 
             // Email validation regex
             // Taken from http://www.regular-expressions.info/email.html
@@ -70,61 +72,61 @@ var DomLoginForm = (function () {
                     ApiProvider
                         .tryLogin(authCredentials)
                         .done(function () {
-                                  var loginModal = $('#login-modal');
-                                  loginModal.modal('hide');
+                            var loginModal = $('#login-modal');
+                            loginModal.modal('hide');
 
-                                  loginModal
-                                      .find('.form-group')
-                                      .removeClass('has-success')
-                                      .removeClass('has-error')
-                                      .removeClass('has-warning');
+                            loginModal
+                                .find('.form-group')
+                                .removeClass('has-success')
+                                .removeClass('has-error')
+                                .removeClass('has-warning');
 
-                                  // Remark all the input fields as invalid,
-                                  // since they are now empty again
-                                  $('[id^="login-input-"]')
-                                      .data('invalid', true);
+                            // Remark all the input fields as invalid,
+                            // since they are now empty again
+                            $('[id^="login-input-"]')
+                                .data('invalid', true);
 
-                                  _updateSubmitButtonStatus();
+                            _updateSubmitButtonStatus();
 
-                                  // Vanilla JS is easier
-                                  // than jQuery when it
-                                  // comes to resetting
-                                  // forms. Source:
-                                  // http://stackoverflow.com/a/6364313
-                                  $('#login-body').find('form')[0].reset();
+                            // Vanilla JS is easier
+                            // than jQuery when it
+                            // comes to resetting
+                            // forms. Source:
+                            // http://stackoverflow.com/a/6364313
+                            $('#login-body').find('form')[0].reset();
 
-                                  var alertLoggedIn = $('#alert-logged-in');
-                                  alertLoggedIn.slideDown();
-                                  setTimeout(
-                                      _bind(alertLoggedIn, $.prototype.slideUp),
-                                      3000);
-                              })
+                            var alertLoggedIn = $('#alert-logged-in');
+                            alertLoggedIn.slideDown();
+                            setTimeout(
+                                _bind(alertLoggedIn, $.prototype.slideUp),
+                                3000);
+                        })
                         .fail(function (response) {
-                                  // Re-enable submit button if there were
-                                  // errors
-                                  $('#login-submit')
-                                      .prop('disabled', false)
-                                      .text('Pitch me in !');
+                            // Re-enable submit button if there were
+                            // errors
+                            $('#login-submit')
+                                .prop('disabled', false)
+                                .text('Pitch me in !');
 
-                                  var errors = response.errors;
+                            var errors = response.errors;
 
-                                  // Append errors to DOM
-                                  for (var i = 0; i < errors.length; ++i) {
-                                      $('#login-error-messages')
-                                          .append('- ',
-                                                  errors[i],
-                                                  $('<br/>'));
-                                  }
+                            // Append errors to DOM
+                            for (var i = 0; i < errors.length; ++i) {
+                                $('#login-error-messages')
+                                    .append('- ',
+                                    errors[i],
+                                    $('<br/>'));
+                            }
 
-                                  // Display errors
-                                  $('#login-errors').fadeIn();
-                                  $('#login-submit').prop('disabled', false);
-                              })
+                            // Display errors
+                            $('#login-errors').fadeIn();
+                            $('#login-submit').prop('disabled', false);
+                        })
                         .always(function () {
-                                    $('#login-submit')
-                                        .text(_loginButtonOriginalText);
-                                    DomLoginStatus.updateLoginStatus();
-                                });
+                            $('#login-submit')
+                                .text(_loginButtonOriginalText);
+                            DomLoginStatus.updateLoginStatus();
+                        });
 
                     event.preventDefault();
                 });

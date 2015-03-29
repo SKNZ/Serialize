@@ -132,35 +132,94 @@ var ApiProvider = (function () {
                                 date: '12/10/2015',
                                 name: 'Game of Thrones',
                                 season: 'S03',
-                                episode: 'E05'
+                                episode: 'E05',
+                                episodeName: 'Swag'
                             },
                             {
                                 id: 29,
                                 date: '06/10/2015',
                                 name: 'Game of Thrones',
                                 season: 'S03',
-                                episode: 'E04'
+                                episode: 'E04',
+                                episodeName: 'Swag'
                             },
                             {
                                 id: 28,
                                 date: '02/10/2015',
                                 name: 'Game of Thrones',
                                 season: 'S03',
-                                episode: 'E03'
+                                episode: 'E03',
+                                episodeName: 'CupidityAzerty'
                             },
                             {
                                 id: 27,
                                 date: '28/09/2015',
                                 name: 'Game of Thrones',
                                 season: 'S03',
-                                episode: 'E02'
+                                episode: 'E02',
+                                episodeName: 'Aazekpqsdk'
                             },
                             {
                                 id: 26,
                                 date: '22/10/2015',
                                 name: 'Game of Thrones',
                                 season: 'S03',
-                                episode: 'E01'
+                                episode: 'E01',
+                                episodeName: 'Hipster'
+                            }
+                        ]
+                    };
+                    deferred.resolve(response.latestShows);
+                });
+
+            return deferred.promise();
+        },
+        yourShows: function () {
+            var deferred = $.Deferred();
+
+            _apiRequest("show/latest", "get")
+                .done(function (response) {
+                    response = {
+                        latestShows: [
+                            {
+                                id: 30,
+                                date: '12/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E05',
+                                episodeName: 'SwagNpLelTopKek'
+                            },
+                            {
+                                id: 29,
+                                date: '06/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E04',
+                                episodeName: 'SwagNpLelTopKek'
+                            },
+                            {
+                                id: 28,
+                                date: '02/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E03',
+                                episodeName: 'SwagNpLelTopKek'
+                            },
+                            {
+                                id: 27,
+                                date: '28/09/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E02',
+                                episodeName: 'SwagNpLelTopKek'
+                            },
+                            {
+                                id: 26,
+                                date: '22/10/2015',
+                                name: 'Game of Thrones',
+                                season: 'S03',
+                                episode: 'E01',
+                                episodeName: 'SwagNpLelTopKek'
                             }
                         ]
                     };
@@ -324,7 +383,7 @@ var ApiProvider = (function () {
                                 id: 13,
                                 name: 'Les hipsters a Miami',
                                 subscribed: false
-                            },
+                            }
                         ])
                     };
                     deferred.resolve(response);
@@ -341,7 +400,7 @@ var ApiProvider = (function () {
 
             return deferred.promise();
         },
-        subscribe: function (showId) {
+        toggleSubscription: function (showId) {
             var deferred = $.Deferred();
 
             _apiRequest("show/subscribe", "post", {
@@ -349,9 +408,62 @@ var ApiProvider = (function () {
             }).always(function (response) {
                 if (showId != 12) {
                     response = {
-                        subscribed: showId != 15
+                        subscribed: false
                     };
-                    deferred.resolve(response);
+                    deferred.resolve(response.subscribed);
+                } else {
+                    response = {
+                        errors: [
+                            "Couldn't reach the database",
+                            "Your didn't pay for this DLC m8"
+                        ]
+                    };
+                    deferred.reject(response.errors);
+                }
+            });
+
+            return deferred.promise();
+        },
+        showData: function (showId) {
+            var deferred = $.Deferred();
+
+            _apiRequest("show/" + showId, "get")
+                .always(function (response) {
+                if (showId != 13) {
+                    response = {
+                        show: {
+                            id: showId,
+                            name: 'Game of thrones',
+                            subscribed: true,
+                            episodes: [
+                                {
+                                    id: 15,
+                                    name: 'Gamotron',
+                                    season: 'S03',
+                                    episode: 'E05',
+                                    episodeName: 'TopKek',
+                                    date: '26/12/2015'
+                                },
+                                {
+                                    id: 16,
+                                    name: 'Gamotron',
+                                    season: 'S03',
+                                    episode: 'E04',
+                                    episodeName: 'Swaggens',
+                                    date: '25/12/2015'
+                                },
+                                {
+                                    id: 17,
+                                    name: 'Gamotron',
+                                    season: 'S03',
+                                    episode: 'E03',
+                                    episodeName: 'Hipster',
+                                    date: '24/12/2015'
+                                }
+                            ]
+                        }
+                    };
+                    deferred.resolve(response.show);
                 } else {
                     response = {
                         errors: [

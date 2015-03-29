@@ -7,6 +7,7 @@ var DomSearch = (function () {
             .search(search)
             .always(_bind($('#home-search-results'), $.prototype.empty))
             .done(function (results) {
+                $('#home-search-loading').hide();
                 if (!results.shows.length) {
                     $('#home-search-noresults').fadeIn();
                     return;
@@ -18,67 +19,23 @@ var DomSearch = (function () {
                         $('<span>')
                             .addClass('col-md-2')
                             .addClass('btn')
+                            .attr('data-toggle', 'modal')
+                            .attr('href', '#show-modal')
                             .css('display', 'inline-block')
                             .text(show.name)
+                            .data('show-id', show.id)
+                            .data('show-name', show.name)
                             .append(
                             '&nbsp;',
                             (show.subscribed
                                 ? $('<span>')
                                 .addClass('subscribeState')
                                 .addClass('glyphicon glyphicon-ok')
-                                : ''))
-                            .click(function () {
-                                var that = $(this);
-
-                                that.find('.subscribeState')
-                                    .remove();
-
-                                that.append(
-                                    $('<img>')
-                                        .addClass('subscribeState')
-                                        .attr('src', 'img/loading.gif'));
-
-                                $('#home-search-subscribe-errors')
-                                    .fadeOut(
-                                    _bind(
-                                        $('#home-search-subscribe-error-messages'),
-                                        $.prototype.empty));
-
-                                ApiProvider
-                                    .subscribe(show.id)
-                                    .always(function () {
-                                        that.find('.subscribeState').remove();
-                                    })
-                                    .done(function (response) {
-                                        if (response.subscribed) {
-                                            that.append(
-                                                $('<span>')
-                                                    .addClass('subscribeState')
-                                                    .addClass('glyphicon')
-                                                    .addClass('glyphicon-ok'));
-                                        }
-                                    })
-                                    .fail(function (response) {
-                                        var errors = response.errors;
-
-                                        // Append errors to DOM
-                                        for (var i = 0;
-                                            i < errors.length;
-                                            ++i)
-                                        {
-                                            $('#home-search-subscribe-error-messages')
-                                                .append('- ',
-                                                errors[i],
-                                                $('<br/>'));
-                                        }
-
-                                        $('#home-search-subscribe-errors').fadeIn();
-                                    });
-                            })
-                            .fadeIn());
+                                : '')));
                 });
             })
             .fail(function (response) {
+                $('#home-search-loading').hide();
                 var errors = response.errors;
 
                 // Append errors to DOM
@@ -90,8 +47,7 @@ var DomSearch = (function () {
                 }
 
                 $('#home-search-errors').fadeIn();
-            })
-            .always(_bind($('#home-search-loading'), $.prototype.hide));
+            });
     };
     return {
         inputSearch: function (search) {

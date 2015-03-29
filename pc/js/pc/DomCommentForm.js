@@ -67,20 +67,21 @@ var DomCommentForm = (function () {
     };
 
     var _handleOpenAndClose = function () {// When modal opens, load comments
-        $('#comment-modal').on('shown.bs.modal', function (event) {
+        $('#comment-modal').on('show.bs.modal', function (event) {
             $('#comment-comments').empty();
+            // Fetch content according to id
+            _episode = $(event.relatedTarget).data('episode');
+            _loadComments();
+        });
 
+        $('#comment-modal').on('shown.bs.modal', function (event) {
             // Autofocus on subject field
             $('#comment-input-subject').focus();
 
-            // Fetch content according to id
-            _episode = $(event.relatedTarget).data('episode');
-
-            _loadComments();
-
             $('#comment-messages-errors')
                 .fadeOut(
-                _bind($('#comment-messages-error-messages'),
+                _bind(
+                    $('#comment-messages-error-messages'),
                     $.prototype.empty));
         }).on('hide.bs.modal',
             _bind($('#comment-comments'), $.prototype.empty));
