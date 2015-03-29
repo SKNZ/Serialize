@@ -1,453 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/.idea/Serialize.iml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/.tmp/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/.tmp/public/js/dependencies/sails.io.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/.tmp/public/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/.tmp/public/styles/importer.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/.env.example" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Commands/Command.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Console/Commands/Inspire.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Console/Kernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Events/Event.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Exceptions/Handler.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Handlers/Commands/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Handlers/Events/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Controllers/Auth/AuthController.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Controllers/Auth/PasswordController.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Controllers/Controller.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Controllers/HomeController.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Controllers/UserController.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Controllers/WelcomeController.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Kernel.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Middleware/Authenticate.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Middleware/RedirectIfAuthenticated.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Middleware/VerifyCsrfToken.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/Requests/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Http/routes.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Providers/AppServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Providers/BusServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Providers/ConfigServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Providers/EventServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Providers/RouteServiceProvider.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/Services/Registrar.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/app/User.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/artisan" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/bootstrap/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/bootstrap/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/app.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/auth.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/cache.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/compile.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/database.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/filesystems.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/mail.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/queue.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/services.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/session.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/config/view.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/database/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/database/migrations/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/database/migrations/2014_10_12_000000_create_users_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/database/seeds/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/database/seeds/DatabaseSeeder.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/phpspec.yml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/phpunit.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/public/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/app.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/badges.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/breadcrumbs.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/button-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/carousel.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/close.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/code.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/component-animations.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/dropdowns.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/glyphicons.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/input-groups.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/jumbotron.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/media.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/alerts.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/background-variant.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/border-radius.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/buttons.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/center-block.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/gradients.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/grid-framework.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/grid.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/hide-text.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/image.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/list-group.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/nav-divider.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/nav-vertical-align.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/opacity.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/progress-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/reset-filter.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/resize.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/responsive-visibility.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/size.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/tab-focus.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/table-row.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/text-emphasis.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/text-overflow.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/mixins/vendor-prefixes.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/modals.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/navbar.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/navs.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/normalize.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/pager.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/pagination.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/panels.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/popovers.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/print.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/progress-bars.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/responsive-embed.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/responsive-utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/tables.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/theme.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/thumbnails.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/tooltip.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/type.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/utilities.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/assets/less/bootstrap/wells.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/lang/en/pagination.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/lang/en/passwords.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/lang/en/validation.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/app.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/auth/login.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/auth/password.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/auth/register.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/auth/reset.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/emails/password.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/errors/503.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/home.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/vendor/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/resources/views/welcome.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/server.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/storage/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/storage/app/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/storage/framework/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/storage/framework/cache/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/storage/framework/sessions/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/storage/framework/views/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/storage/logs/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/tests/ExampleTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/api/tests/TestCase.php" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/config/local.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/laravel_6534c9df9aec5d20654ff78eb536761b.zip" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-clean" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-coffee" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-concat" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-copy" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-cssmin" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-jst" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-uglify" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-contrib-watch" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-sails-linker" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/grunt-sync" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/include-all" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/rc" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/sails" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/api/node_modules/sails-disk" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/deployment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/dictionaries/sknz.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/pc.iml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/apple-touch-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/browserconfig.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/crossdomain.xml" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/css/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/TOC.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/css.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/extend.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/faq.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/html.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/js.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/misc.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/doc/usage.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist.zip" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/bootstrap-3.3.2-dist/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0.zip" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/animated.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/font-awesome-4.3.0/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/humans.txt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/img/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/img/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/img/loading2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/ApiProvider.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/SerializeApp.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/Utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomCommentForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomContact.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomInteraction.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomLoginForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomLoginStatus.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomRegistrationForm.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomSearch.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomShow.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/pc/DomShowList.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/plugins.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/vendor/jquery-1.11.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/js/vendor/modernizr-2.8.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/tile-wide.png" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/pc/tile.png" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/.sailsrc" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/controllers/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/controllers/ShowController.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/controllers/SubscriptionsController.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/controllers/UserController.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/models/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/models/Show.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/models/Subscription.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/models/User.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/policies/sessionAuth.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/responses/badRequest.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/responses/forbidden.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/responses/notFound.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/responses/ok.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/responses/serverError.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/api/services/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/assets/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/assets/images/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/assets/js/dependencies/sails.io.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/assets/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/assets/styles/importer.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/assets/templates/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/blueprints.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/connections.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/cors.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/csrf.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/env/development.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/env/production.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/globals.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/http.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/i18n.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/locales/_README.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/locales/de.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/locales/en.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/locales/es.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/locales/fr.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/log.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/models.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/policies.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/routes.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/session.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/sockets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/config/views.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/clean.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/coffee.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/copy.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/cssmin.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/jst.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/less.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/sails-linker.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/uglify.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/config/watch.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/pipeline.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/build.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/buildProd.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/compileAssets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/linkAssets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/linkAssetsBuild.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/linkAssetsBuildProd.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/prod.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/tasks/register/syncAssets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/views/403.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/views/404.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/views/500.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/views/homepage.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/sailsapi/views/layout.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/.sailsrc" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/controllers/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/controllers/UserController.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/models/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/models/User.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/policies/sessionAuth.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/responses/badRequest.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/responses/forbidden.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/responses/notFound.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/responses/ok.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/responses/serverError.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/api/services/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/assets/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/assets/images/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/assets/js/dependencies/sails.io.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/assets/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/assets/styles/importer.less" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/assets/templates/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/blueprints.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/connections.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/cors.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/csrf.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/env/development.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/env/production.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/globals.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/http.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/i18n.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/locales/_README.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/locales/de.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/locales/en.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/locales/es.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/locales/fr.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/log.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/models.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/policies.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/routes.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/session.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/sockets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/config/views.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/clean.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/coffee.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/concat.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/copy.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/cssmin.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/jst.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/less.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/sails-linker.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/sync.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/uglify.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/config/watch.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/pipeline.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/build.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/buildProd.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/compileAssets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/linkAssets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/linkAssetsBuild.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/linkAssetsBuildProd.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/prod.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/tasks/register/syncAssets.js" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/views/403.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/views/404.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/views/500.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/views/homepage.ejs" afterPath="" />
-      <change type="DELETED" beforePath="$USER_HOME$/Development/Serialize/test/views/layout.ejs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Development/Serialize/.idea/.name" afterPath="$USER_HOME$/Development/Serialize/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Development/Serialize/.idea/codeStyleSettings.xml" afterPath="$USER_HOME$/Development/Serialize/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Development/Serialize/.idea/modules.xml" afterPath="$USER_HOME$/Development/Serialize/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Development/Serialize/.idea/vcs.xml" afterPath="$USER_HOME$/Development/Serialize/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/Development/Serialize/.idea/workspace.xml" afterPath="$USER_HOME$/Development/Serialize/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="" />
     <ignored path="pc.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -472,35 +26,35 @@
     <leaf />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Development/Serialize" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/Development/Serialize/pc/js/main.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/SerializeApp.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/DependencyInjector.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/APIProvider.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/RuntimeException.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/DOMInteraction.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/plugins.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/DomInteraction.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/RegistrationForm.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/SerializeApp.js" />
+        <option value="$PROJECT_DIR$/js/DependencyInjector.js" />
+        <option value="$PROJECT_DIR$/js/APIProvider.js" />
+        <option value="$PROJECT_DIR$/js/RuntimeException.js" />
+        <option value="$PROJECT_DIR$/js/DOMInteraction.js" />
+        <option value="$PROJECT_DIR$/js/plugins.js" />
+        <option value="$PROJECT_DIR$/js/DomInteraction.js" />
+        <option value="$PROJECT_DIR$/js/pc/RegistrationForm.js" />
         <option value="ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/Utils.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomShows.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomSearch.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomShow.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomLoginStatus.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/css/main.css" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomRegistrationForm.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomLoginForm.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomCommentForm.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/ApiProvider.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomContact.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomInteraction.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/js/pc/DomShowList.js" />
-        <option value="$USER_HOME$/Development/Serialize/pc/index.html" />
+        <option value="$PROJECT_DIR$/js/Utils.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomShows.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomSearch.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomShow.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/pc/DomRegistrationForm.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomLoginForm.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomCommentForm.js" />
+        <option value="$PROJECT_DIR$/js/ApiProvider.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomContact.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomInteraction.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomShowList.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -633,7 +187,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Development/Serialize/pc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
     <property name="LayoutCode.rearrangeEntriesJavaScript 1.5" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.JavaScript" />
@@ -644,10 +198,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/Development/Serialize/pc/js/pc" />
+      <recent name="$PROJECT_DIR$/js/pc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/Development/Serialize/pc/js/pc" />
+      <recent name="$PROJECT_DIR$/js/pc" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
