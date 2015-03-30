@@ -2,7 +2,7 @@
 
 require 'vendor/autoload.php';
 
-$app = new Slim(array(
+$app = new \Slim\Slim(array(
     'debug' => true
 ));
 
