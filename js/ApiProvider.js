@@ -1,6 +1,6 @@
 var ApiProvider = (function () {
-    var _loggedIn = true;
-    var _baseURI = "/api/";
+    var _loggedIn = false;
+    var _baseURI = "api/";
 
     var _currentUser = {
         email: "florandara@gmail.com",

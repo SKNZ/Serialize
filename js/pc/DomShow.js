@@ -24,7 +24,7 @@ var DomShow = (function () {
                     .click(function () {
                         var that = $(this);
 
-                        that.text('Working')
+                        that.text('Working...')
                             .addClass('disabled');
 
                         $('#show-errors').fadeOut(
