@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Serialize</title>
+    <link rel="stylesheet"
+          href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<!-- Main page -->
+<div data-role="page" id="one">
+
+    <div data-role="header">
+        <h1>Serialize</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <p><a href="#latest-shows" class="ui-btn ui-shadow ui-corner-all">Latest shows</a></p>
+        <p><a href="#login" class="ui-btn ui-shadow ui-corner-all">Log in</a></p>
+        <p><a href="#register" class="ui-btn ui-shadow ui-corner-all">Registration</a></p>
+
+
+    </div>
+
+    <div data-role="footer" data-theme="a">
+        <h4>Page Footer</h4>
+    </div>
+</div>
+
+<!-- Latest shows -->
+<div data-role="page" id="two" data-theme="a">
+    <div data-role="header">
+        <h1>Two</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2></h2>
+
+        <p>I have an id of "two" on my page container. I'm the second page
+            container in this multi-page template.</p>
+
+        <p>Notice that the theme is different for this page because we've added
+            a few <code>data-theme</code> swatch assigments here to show off how
+            flexible it is. You can add any content or widget to these pages,
+            but we're keeping these simple.</p>
+
+        <p><a href="#one" data-direction="reverse"
+              class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to page
+            "one"</a></p>
+
+    </div>
+
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div>
+</div>
+</body>
+</html>

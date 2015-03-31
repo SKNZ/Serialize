@@ -25,10 +25,9 @@ var DomLoginForm = (function () {
 
             // Autofocus on email field when modal opens
             $('#login-modal').on(
-                'shown.bs.modal',
-                _bind(
-                    $('#login-input-email'),
-                    $.prototype.focus));
+                'shown.bs.modal', function () {
+                    $('#login-input-email').focus()
+                });
 
 
             $('#login-input-email').on('change input', function () {

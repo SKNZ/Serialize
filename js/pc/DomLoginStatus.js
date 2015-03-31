@@ -102,14 +102,17 @@ var DomLoginStatus = (function () {
                     .addClass('form-control')
                     .on('change input', function () {
                         DomSearch.inputSearch($(this).val());
-                    }))
+                    })
+                    .focus())
                 .on("remove", function () {
                     $('#home-search')
                         .fadeOut(_bind(
                             $('#home-search-results'),
                             $.prototype.empty));
                 })
-                .fadeIn('slow'));
+                .fadeIn('slow', function () {
+                    $('#home-welcome-search').focus();
+                }));
     };
 
     var _buildRegisterNowButton = function () {

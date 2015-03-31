@@ -25,10 +25,9 @@ var DomRegistrationForm = function () {
 
             // Autofocus on email field when modal opens
             $('#registration-modal').on(
-                'shown.bs.modal',
-                _bind(
-                    $('#registration-input-email'),
-                    $.prototype.focus));
+                'shown.bs.modal', function () {
+                    $('#registration-input-email').focus();
+                });
 
             // Every time the user enters a valid email address, we're going to
             // check with the server if it's already registered or not.
@@ -79,30 +78,30 @@ var DomRegistrationForm = function () {
                     // Send request to server
                     ApiProvider.isEmailInUse(value)
                         .done(function () {
-                                  // Error state if email in use
-                                  $(that).data('invalid', true)
-                                      .closest('.form-group')
-                                      .addClass('has-error');
-                              })
+                            // Error state if email in use
+                            $(that).data('invalid', true)
+                                .closest('.form-group')
+                                .addClass('has-error');
+                        })
                         .fail(function () {
-                                  // Success state if email not in use
-                                  $(that).data('invalid', false)
-                                      .closest('.form-group')
-                                      .addClass('has-success');
-                              })
+                            // Success state if email not in use
+                            $(that).data('invalid', false)
+                                .closest('.form-group')
+                                .addClass('has-success');
+                        })
                         .always(function () {
-                                    // Remove warning state
-                                    $(that)
-                                        .closest('.form-group')
-                                        .removeClass('has-warning');
+                            // Remove warning state
+                            $(that)
+                                .closest('.form-group')
+                                .removeClass('has-warning');
 
-                                    // Hide helper text
-                                    $('#registration-input-email-ajax')
-                                        .fadeOut('fast');
+                            // Hide helper text
+                            $('#registration-input-email-ajax')
+                                .fadeOut('fast');
 
-                                    // Refresh submit button
-                                    _updateSubmitButtonStatus();
-                                });
+                            // Refresh submit button
+                            _updateSubmitButtonStatus();
+                        });
                 }, 1000);
             });
 
@@ -157,36 +156,36 @@ var DomRegistrationForm = function () {
             // Password confirmation check
             $('#registration-input-password-confirmation')
                 .on('change input', function () {
-                        var passwordConfirmation =
-                            $('#registration-input-password-confirmation')
-                                .val();
-
-                        var password = $('#registration-input-password').val();
-
-                        // If either is empty, stop here, no error messages
-                        // until the user types something
-                        if (!password || !passwordConfirmation) {
-                            return;
-                        }
-
-                        var valid = passwordConfirmation == password;
-
-                        // Visual error state
+                    var passwordConfirmation =
                         $('#registration-input-password-confirmation')
-                            .closest('.form-group')
-                            .toggleClass('has-success', valid)
-                            .toggleClass('has-error', !valid);
+                            .val();
 
-                        $(this).data('invalid', !valid);
-                        _updateSubmitButtonStatus();
-                    });
+                    var password = $('#registration-input-password').val();
+
+                    // If either is empty, stop here, no error messages
+                    // until the user types something
+                    if (!password || !passwordConfirmation) {
+                        return;
+                    }
+
+                    var valid = passwordConfirmation == password;
+
+                    // Visual error state
+                    $('#registration-input-password-confirmation')
+                        .closest('.form-group')
+                        .toggleClass('has-success', valid)
+                        .toggleClass('has-error', !valid);
+
+                    $(this).data('invalid', !valid);
+                    _updateSubmitButtonStatus();
+                });
 
             // Check if first name/last name are specified
             $('#registration-input-first-name, #registration-input-last-name')
                 .on('change input', function () {
-                        $(this).data('invalid', !$(this).val());
-                        _updateSubmitButtonStatus();
-                    });
+                    $(this).data('invalid', !$(this).val());
+                    _updateSubmitButtonStatus();
+                });
 
             // Save the button text
             var registrationButtonOriginalText =
@@ -224,59 +223,59 @@ var DomRegistrationForm = function () {
                     ApiProvider
                         .tryRegister(accountInformation)
                         .done(function (response) {
-                                  // Let's reset the form
-                                  var registrationModal =
-                                      $('#registration-modal');
+                            // Let's reset the form
+                            var registrationModal =
+                                $('#registration-modal');
 
-                                  registrationModal.modal('hide');
+                            registrationModal.modal('hide');
 
-                                  // Vanilla JS is easier than jQuery when it
-                                  // comes to resetting forms. Source:
-                                  // http://stackoverflow.com/a/6364313
-                                  registrationModal.find('form')[0].reset();
+                            // Vanilla JS is easier than jQuery when it
+                            // comes to resetting forms. Source:
+                            // http://stackoverflow.com/a/6364313
+                            registrationModal.find('form')[0].reset();
 
-                                  registrationModal
-                                      .find('.form-group')
-                                      .removeClass('has-success')
-                                      .removeClass('has-error')
-                                      .removeClass('has-warning');
+                            registrationModal
+                                .find('.form-group')
+                                .removeClass('has-success')
+                                .removeClass('has-error')
+                                .removeClass('has-warning');
 
-                                  // Remark all the input fields as invalid,
-                                  // since they are now empty again
-                                  $('[id^="registration-input-"]')
-                                      .data('invalid', true);
+                            // Remark all the input fields as invalid,
+                            // since they are now empty again
+                            $('[id^="registration-input-"]')
+                                .data('invalid', true);
 
-                                  _updateSubmitButtonStatus();
+                            _updateSubmitButtonStatus();
 
-                                  // Show the alert about mail confirmation
-                                  $('#alert-mail-sent').slideDown();
-                              })
+                            // Show the alert about mail confirmation
+                            $('#alert-mail-sent').slideDown();
+                        })
                         .fail(function (response) {
-                                  // Re-enable submit button if there were
-                                  // errors
-                                  $('#registration-submit')
-                                      .prop('disabled', false)
-                                      .text('Pitch me in !');
+                            // Re-enable submit button if there were
+                            // errors
+                            $('#registration-submit')
+                                .prop('disabled', false)
+                                .text('Pitch me in !');
 
-                                  var errors = response.errors;
+                            var errors = response.errors;
 
-                                  // Append errors to DOM
-                                  for (var i = 0; i < errors.length; ++i) {
-                                      $('#registration-error-messages')
-                                          .append('- ',
-                                                  errors[i],
-                                                  $('<br/>'));
-                                  }
+                            // Append errors to DOM
+                            for (var i = 0; i < errors.length; ++i) {
+                                $('#registration-error-messages')
+                                    .append('- ',
+                                    errors[i],
+                                    $('<br/>'));
+                            }
 
-                                  // Display errors
-                                  $('#registration-errors').fadeIn();
-                              })
+                            // Display errors
+                            $('#registration-errors').fadeIn();
+                        })
                         .always(function () {
-                                    // Reset the text to what it was back
-                                    // originally
-                                    $('#registration-submit')
-                                        .text(registrationButtonOriginalText);
-                                });
+                            // Reset the text to what it was back
+                            // originally
+                            $('#registration-submit')
+                                .text(registrationButtonOriginalText);
+                        });
 
                     event.preventDefault();
                 });
