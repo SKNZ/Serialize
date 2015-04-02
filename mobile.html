@@ -9,7 +9,9 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script
+        src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/const.js"></script>
     <script src="js/Utils.js"></script>
     <script src="js/ApiProvider.js"></script>
     <script src="js/mobile/DomStorage.js"></script>
@@ -26,9 +28,14 @@
     </div>
 
     <div role="main" class="ui-content">
-        <p><a href="#latest-shows" class="ui-btn ui-shadow ui-corner-all">Latest shows</a></p>
-        <p><a href="#login" class="ui-btn ui-shadow ui-corner-all">Log in</a></p>
-        <p><a href="#register" class="ui-btn ui-shadow ui-corner-all">Registration</a></p>
+        <p><a href="#latest-shows" class="ui-btn ui-shadow ui-corner-all">Latest
+            shows</a></p>
+
+        <p><a href="#login" class="ui-btn ui-shadow ui-corner-all">Log in</a>
+        </p>
+
+        <p><a href="#register" class="ui-btn ui-shadow ui-corner-all">Registration</a>
+        </p>
     </div>
 
     <div data-role="footer" data-theme="a">
@@ -44,10 +51,10 @@
 
     <div role="main" class="ui-content">
         <ul data-role="listview">
-            <li><a href="#show">Game of Thrones S03E05</a></li>
-            <li><a href="#">House of Cards S02E05</a></li>
-            <li><a href="#">Person of Interest S04E08</a></li>
-            <li><a href="#">Game of Thrones S01E01</a></li>
+            <li><a href="#episode">Game of Thrones S03E05</a></li>
+            <li><a href="#episode">House of Cards S02E05</a></li>
+            <li><a href="#episode">Person of Interest S04E08</a></li>
+            <li><a href="#episode">Game of Thrones S01E01</a></li>
         </ul>
 
         <p><a href="#home" data-direction="reverse"
@@ -59,5 +66,62 @@
         <h4>Page Footer</h4>
     </div>
 </div>
+
+<!-- Episode -->
+<div data-role="page" id="episode" data-theme="a">
+    <div data-role="header">
+        <h1>Episode</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <a href="http://btdigg.org/search?q=Game%20of%20Thrones%20S03E03"
+           class="ui-btn ui-corner-all">Yaaaaaarrr !</a>
+        <a href="http://subscene.com/subtitles/release?q=Game%20of%20Thrones%20S03E03"
+           class="ui-btn ui-corner-all">Find subtitles</a>
+        <a href="#comments" class="ui-btn ui-corner-all">See the comments</a>
+
+        <p><a href="#latest-shows" data-direction="reverse"
+              class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
+
+    </div>
+
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div>
+</div>
+
+<!-- Comments -->
+<div data-role="page" id="comments" data-theme="a">
+    <div data-role="header">
+        <h1>Comments</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2>Comment form</h2>
+        <form id="comments-form">
+            <label for="comments-input-subject">Subject:</label>
+            <input type="text" id="comments-input-subject" value="Some subject">
+
+            <label for="comments-input-rating">Rating:</label>
+            <select id="comments-input-rating">
+                <option value="1">1 star</option>
+                <option value="2">2 star</option>
+                <option value="3">3 star</option>
+                <option value="4">4 star</option>
+                <option value="5">5 star</option>
+            </select>
+
+        </form>
+
+        <p><a href="#latest-shows" data-direction="reverse"
+              class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
+
+    </div>
+
+    <div data-role="footer">
+        <h4>Page Footer</h4>
+    </div>
+</div>
+
 </body>
 </html>

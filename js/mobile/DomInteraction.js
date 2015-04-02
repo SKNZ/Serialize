@@ -4,4 +4,4 @@ var DomInteraction = (function () {
 
         }
     }
-});
+})();

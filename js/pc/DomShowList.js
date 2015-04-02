@@ -1,7 +1,4 @@
 var DomShowList = (function () {
-    const _btdiggURL = 'http://btdigg.org/search?q=';
-    const _subsceneURL = 'http://subscene.com/subtitles/release?q=';
-
     var _addShow = function (show, tbody) {
         tbody.append(
             $('<tr>')
@@ -31,7 +28,7 @@ var DomShowList = (function () {
                             : '')
                         .text('Yaaaarrr !')
                         .attr('href',
-                        encodeURI(_btdiggURL +
+                        encodeURI(BTDIGG_URL +
                         show.name +
                         ' ' +
                         show.season +
@@ -49,7 +46,7 @@ var DomShowList = (function () {
                             : '')
                         .text('Subs !')
                         .attr('href',
-                        encodeURI(_subsceneURL +
+                        encodeURI(SUBSCENE_URL +
                         show.name +
                         ' ' +
                         show.season +
