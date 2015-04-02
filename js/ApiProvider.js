@@ -442,7 +442,7 @@ var ApiProvider = (function () {
                                         season: 'S03',
                                         episode: 'E05',
                                         episodeName: 'TopKek',
-                                        date: '26/12/2015'
+                                        date: '12/26/2015'
                                     },
                                     {
                                         id: 16,
@@ -450,7 +450,7 @@ var ApiProvider = (function () {
                                         season: 'S03',
                                         episode: 'E04',
                                         episodeName: 'Swaggens',
-                                        date: '25/12/2015'
+                                        date: '12/25/2015'
                                     },
                                     {
                                         id: 17,
@@ -458,7 +458,7 @@ var ApiProvider = (function () {
                                         season: 'S03',
                                         episode: 'E03',
                                         episodeName: 'Hipster',
-                                        date: '24/12/2015'
+                                        date: '12/25/2015'
                                     }
                                 ]
                             }
