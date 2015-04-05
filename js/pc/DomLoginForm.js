@@ -49,10 +49,9 @@ var DomLoginForm = (function () {
                 .submit(
                 function () {
                     // Hide any previous error messages
-                    $('#login-errors').fadeOut(function () {
-                        // Clear them out from DOM
-                        $('#login-error-messages').empty();
-                    });
+                    $('#login-errors').fadeOut('fast');
+                    // Clear them out from DOM
+                    $('#login-error-messages').empty();
 
                     $('#login-submit')
                         .prop('disabled', true)

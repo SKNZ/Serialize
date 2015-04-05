@@ -4,14 +4,16 @@ var DomShow = (function () {
             DomHelper.onJqmPageShow('show', function (e, ui) {
                 DomHelper.showLoading();
                 $('#show-errors')
-                    .fadeOut(function () {
-                        $(this).find('span').empty();
-                    });
+                    .fadeOut();
+
+                $('#your-shows-messages')
+                    .empty();
 
                 ApiProvider
                     .showData(DomStorage.show.showId)
                     .done(function (show) {
-                        $('#show').find('h1')
+                        $('#show')
+                            .find('h1')
                             .text(show.name);
 
                         $('#show-subscribe')
@@ -22,21 +24,28 @@ var DomShow = (function () {
                             .click(function () {
                                 DomHelper.showLoading();
                                 $('#show-errors')
-                                    .fadeOut(function () {
-                                        $(this).find('span').empty();
-                                    });
+                                    .fadeOut();
+
+                                $('#show-error-messages')
+                                    .empty();
 
                                 ApiProvider
-                                    .toggleSubscription(show.id)
+                                    .toggleSubscription(show.id,
+                                    !show.subscribed)
                                     .done(function (subscribed) {
                                         $('#show-subscribe')
                                             .text(subscribed
                                                 ? 'Unsubscribe'
                                                 : 'Subscribe');
+                                        show.subscribed = subscribed;
                                     })
                                     .fail(function (errors) {
                                         // Append errors to DOM
-                                        for (var i = 0; i < errors.length; ++i) {
+                                        for (var i = 0;
+                                            i <
+                                            errors.length;
+                                            ++i)
+                                        {
                                             $('#show-error-messages')
                                                 .append('- ',
                                                 errors[i],

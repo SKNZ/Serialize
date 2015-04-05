@@ -10,9 +10,10 @@ var DomSearch = (function () {
                         .prop('disabled',  true);
 
                     $('#search-errors')
-                        .fadeOut(function () {
-                            $(this).find('span').empty();
-                        });
+                        .fadeOut();
+
+                    $('#search-error-messages')
+                        .empty();
 
                     if (val) {
                         DomHelper.showLoading();

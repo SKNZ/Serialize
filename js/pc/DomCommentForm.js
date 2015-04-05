@@ -71,14 +71,12 @@ var DomCommentForm = (function () {
     };
 
     var _handleOpenAndClose = function () {// When modal opens, load comments
-        $('#comment-modal').on('show.bs.modal', function (event) {
+        $('#comment-modal').on('shown.bs.modal', function (event) {
             $('#comment-comments').empty();
             // Fetch content according to id
-            _episode = $(event.relatedTarget).data('episode');
+            _episode = $(event.relatedTarget).attr('data-episode');
             _loadComments();
-        });
 
-        $('#comment-modal').on('shown.bs.modal', function (event) {
             // Autofocus on subject field
             $('#comment-input-subject').focus();
 
@@ -146,15 +144,14 @@ var DomCommentForm = (function () {
                     .text('Working...');
 
                 // Hide any previous error messages
-                $('#comment-post-errors').fadeOut(function () {
-                    // Clear them out from DOM
-                    $('#comment-post-error-messages').empty();
-                });
+                $('#comment-post-errors').fadeOut('fast')
+                // Clear them out from DOM
+                $('#comment-post-error-messages').empty();
 
                 // Build comment request
                 var comment = {
                     subject: $('#comment-input-subject').val(),
-                    rating: $(this).find('comment-input-rating-star').length,
+                    rating: $(this).find('.comment-input-rating-star').length,
                     message: $('#comment-input-message').val()
                 };
 

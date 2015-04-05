@@ -165,10 +165,12 @@ var ApiProvider = (function () {
 
             return deferred.promise();
         },
-        toggleSubscription: function (showId) {
+        toggleSubscription: function (showId, subscribed) {
             var deferred = $.Deferred();
 
-            _apiRequest("show/" + showId + "/subscribe", "post")
+            _apiRequest("show/" + showId + "/subscribe", "post", {
+                subscribed: subscribed
+            })
                 .done(function (response) {
                     deferred.resolve(response.subscribed);
                 }).fail(function (response) {

@@ -70,20 +70,21 @@ var DomRegistrationForm = function () {
                     return;
                 }
 
+                var that = this;
                 // Schedule checking email address availabity in 1 second
-                emailAvailabilityCheck = setTimeout(function (that) {
+                emailAvailabilityCheck = setTimeout(function () {
                     // Show the helper text
                     $('#registration-input-email-ajax').fadeIn('fast');
 
                     // Send request to server
                     ApiProvider.isEmailInUse(value)
-                        .done(function () {
+                        .fail(function () {
                             // Error state if email in use
                             $(that).data('invalid', true)
                                 .closest('.form-group')
                                 .addClass('has-error');
                         })
-                        .fail(function () {
+                        .done(function () {
                             // Success state if email not in use
                             $(that).data('invalid', false)
                                 .closest('.form-group')
@@ -202,10 +203,9 @@ var DomRegistrationForm = function () {
                         .text('Working...');
 
                     // Hide any previous error messages
-                    $('#registration-errors').fadeOut(function () {
-                        // Clear them out from DOM
-                        $('#registration-error-messages').empty();
-                    });
+                    $('#registration-errors').fadeOut('fast');
+                    // Clear them out from DOM
+                    $('#registration-error-messages').empty();
 
                     // Build registration request
                     var accountInformation = {

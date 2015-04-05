@@ -9,9 +9,10 @@ var DomLogin = (function () {
                         .prop('disabled',  true);
 
                     $('#login-errors')
-                        .fadeOut(function () {
-                            $(this).find('span').empty();
-                        });
+                        .fadeOut();
+
+                    $('#login-error-messages')
+                        .empty();
 
                     var authCredentials = {
                         email: $('#login-input-email').val(),

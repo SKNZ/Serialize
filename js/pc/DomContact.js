@@ -66,10 +66,9 @@ var DomContact = (function () {
                         .text('Working...');
 
                     // Hide any previous error messages
-                    $('#contact-errors').fadeOut(function () {
-                        // Clear them out from DOM
-                        $('#contact-error-messages').empty();
-                    });
+                    $('#contact-errors').fadeOut('fast');
+                    // Clear them out from DOM
+                    $('#contact-error-messages').empty();
 
                     // Build comment request
                     var messageInformation = {

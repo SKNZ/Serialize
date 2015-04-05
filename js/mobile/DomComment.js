@@ -3,14 +3,18 @@ var DomComment = (function () {
         DomHelper.showLoading();
 
         $('#comments-errors')
-            .fadeOut(function () {
-                $(this).find('span').empty();
-            });
+            .fadeOut();
+
+        $('#comments-error-messages')
+            .empty();
 
         ApiProvider
             .commentsForEpisode(DomStorage.comment.episode)
             .done(function (comments) {
-                var where = $('#comments').find('div[role="main"]');
+                var where =
+                    $('#comments')
+                        .find('div[role="main"]');
+
                 comments.forEach(function (comment) {
                     where
                         .append(
@@ -63,7 +67,7 @@ var DomComment = (function () {
                 DomHelper.hideLoading();
                 $('#comments-form')
                     .find('input[type="submit"]')
-                    .prop('disabled',  false);
+                    .prop('disabled', false);
             });
     };
 
@@ -87,7 +91,7 @@ var DomComment = (function () {
 
                 $('#comments-form')
                     .find('input[type="submit"]')
-                    .prop('disabled',  true);
+                    .prop('disabled', true);
 
                 ApiProvider
                     .commentEpisode(DomStorage.comment.episode, comment)
@@ -112,7 +116,7 @@ var DomComment = (function () {
 
                         $('#comments-form')
                             .find('input[type="submit"]')
-                            .prop('disabled',  false);
+                            .prop('disabled', false);
 
                         DomHelper.hideLoading();
                     });

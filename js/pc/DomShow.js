@@ -1,4 +1,5 @@
 var DomShow = (function () {
+    var _show;
 
     return {
         initialize: function () {
@@ -9,10 +10,8 @@ var DomShow = (function () {
                 $('#show-shows-sample').hide();
                 $('#show-subscribe').hide();
                 $('#show-loading').fadeIn();
-                $('#show-errors').fadeOut(
-                    _bind(
-                        $('#show-error-messages'),
-                        $.prototype.empty));
+                $('#show-errors').fadeOut('fast');
+                $('#show-error-messages').empty();
 
                 var relatedTarget = $(event.relatedTarget);
 
@@ -21,19 +20,18 @@ var DomShow = (function () {
                 var showId = relatedTarget.data('show-id');
 
                 $('#show-subscribe')
-                    .click(function ( ) {
+                    .click(function () {
                         var that = $(this);
+
+                        $('#show-errors').fadeOut('fast');
+                        $('#show-error-messages').empty();
+                        var _textBefore = that.text();
 
                         that.text('Working...')
                             .addClass('disabled');
 
-                        $('#show-errors').fadeOut(
-                            _bind(
-                                $('#show-error-messages'),
-                                $.prototype.empty));
-
                         ApiProvider
-                            .toggleSubscription(showId)
+                            .toggleSubscription(showId, !_show.subscribed)
                             .done(function (subscribed) {
                                 that.toggleClass('btn-success', !subscribed)
                                     .toggleClass('btn-danger', subscribed)
@@ -41,6 +39,8 @@ var DomShow = (function () {
                                         ? 'Unsubscribe'
                                         : 'Subscribe')
                                     .fadeIn();
+
+                                _show.subscribed = subscribed;
                             })
                             .fail(function (errors) {
                                 // Append errors to DOM
@@ -49,6 +49,8 @@ var DomShow = (function () {
                                         .append('- ',
                                         errors[i],
                                         $('<br/>'));
+
+                                    that.text(_textBefore);
                                 }
 
                                 // Display errors
@@ -66,6 +68,7 @@ var DomShow = (function () {
                         $('#show-loading').hide();
                     })
                     .done(function (show) {
+                        _show = show;
                         $('#show-subscribe')
                             .toggleClass('btn-success', !show.subscribed)
                             .toggleClass('btn-danger', show.subscribed)

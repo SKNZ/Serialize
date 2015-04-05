@@ -64,9 +64,9 @@ var DomShowList = (function () {
                             : '')
                         .attr('data-episode', show.id)
                         .text('Comments')
-                        .click(function () {
+                        .click(function (e) {
                             if (ApiProvider.isLoggedIn()) {
-                                $('#comment-modal').modal();
+                                $('#comment-modal').modal('show', this);
                             } else {
                                 var alertRequiresLogin =
                                     $('#alert-requires-login');

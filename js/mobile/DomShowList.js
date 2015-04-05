@@ -70,9 +70,10 @@ var DomShowList = (function () {
         initialize: function () {
             DomHelper.showLoading();
             $('#latest-shows-errors')
-                .fadeOut(function () {
-                    $(this).find('span').empty();
-                });
+                .fadeOut();
+
+            $('#latest-shows-error-messages')
+                .empty();
 
             ApiProvider
                 .latestShows()
@@ -104,9 +105,10 @@ var DomShowList = (function () {
         loadYourShows: function () {
             DomHelper.showLoading();
             $('#your-shows-errors')
-                .fadeOut(function () {
-                    $(this).find('span').empty();
-                });
+                .fadeOut();
+
+            $('#your-shows-error-messages')
+                .empty();
 
             ApiProvider
                 .yourShows()
