@@ -11,10 +11,6 @@ var DomLoginForm = (function () {
             .prop('disabled', invalidInputCount > 0);
     };
 
-    // Email validation regex
-    // Taken from http://www.regular-expressions.info/email.html
-    var _emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-
     return {
         initialize: function () {
             // Initialize all fields as input as 'invalid', meaning that their
@@ -31,10 +27,8 @@ var DomLoginForm = (function () {
 
 
             $('#login-input-email').on('change input', function () {
-                _updateSubmitButtonStatus();
-
                 var value = $(this).val();
-                var valid = _emailRegex.test(value);
+                var valid = EMAIL_REGEX.test(value);
 
                 $(this).closest('.form-group')
                     .toggleClass('has-success', valid)
@@ -72,6 +66,7 @@ var DomLoginForm = (function () {
                     ApiProvider
                         .tryLogin(authCredentials)
                         .done(function () {
+                            $('#comments-form')[0].reset();
                             var loginModal = $('#login-modal');
                             loginModal.modal('hide');
 

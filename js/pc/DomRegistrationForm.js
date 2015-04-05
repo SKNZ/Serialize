@@ -222,7 +222,7 @@ var DomRegistrationForm = function () {
                     // Send registration request, handle result
                     ApiProvider
                         .tryRegister(accountInformation)
-                        .done(function (response) {
+                        .done(function () {
                             // Let's reset the form
                             var registrationModal =
                                 $('#registration-modal');
@@ -250,14 +250,12 @@ var DomRegistrationForm = function () {
                             // Show the alert about mail confirmation
                             $('#alert-mail-sent').slideDown();
                         })
-                        .fail(function (response) {
+                        .fail(function (errors) {
                             // Re-enable submit button if there were
                             // errors
                             $('#registration-submit')
                                 .prop('disabled', false)
                                 .text('Pitch me in !');
-
-                            var errors = response.errors;
 
                             // Append errors to DOM
                             for (var i = 0; i < errors.length; ++i) {

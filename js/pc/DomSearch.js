@@ -6,14 +6,14 @@ var DomSearch = (function () {
         ApiProvider
             .search(search)
             .always(_bind($('#home-search-results'), $.prototype.empty))
-            .done(function (results) {
+            .done(function (shows) {
                 $('#home-search-loading').hide();
-                if (!results.shows.length) {
+                if (!shows.length) {
                     $('#home-search-noresults').fadeIn();
                     return;
                 }
 
-                results.shows.forEach(function (show) {
+                shows.forEach(function (show) {
                     $('#home-search-results')
                         .append(
                         $('<span>')

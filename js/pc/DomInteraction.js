@@ -1,11 +1,11 @@
 var DomInteraction = (function () {
     return {
         initialize: function () {
-            // data-hide is a property you put on a clickable
-            // when it is clicked, it will search for the neareast element
+            // data-hide is a property you put on a clickable.
+            // When it is clicked, it will search for the neareast element
             // matching the selector specified
             // ex: <button data-hide="#toBeHidden"></button>
-            // will hide #toBeHidden when clicked
+            // will hide #toBeHidden when the button is clicked
             $('[data-hide]').on('click', function () {
                 var target = $(this).attr('data-hide');
                 $(this).closest(target).slideUp();

@@ -1,11 +1,10 @@
 var DomStorage = (function () {
     return {
-        episode: {
-            id: 22,
-            goBack: '#latest-shows'
+        comment: {
+            episode: 22
         },
         show: {
-            id: 13
+            showId: 13
         }
     }
 })();

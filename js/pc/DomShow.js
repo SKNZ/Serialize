@@ -21,7 +21,7 @@ var DomShow = (function () {
                 var showId = relatedTarget.data('show-id');
 
                 $('#show-subscribe')
-                    .click(function () {
+                    .click(function ( ) {
                         var that = $(this);
 
                         that.text('Working...')
@@ -37,7 +37,9 @@ var DomShow = (function () {
                             .done(function (subscribed) {
                                 that.toggleClass('btn-success', !subscribed)
                                     .toggleClass('btn-danger', subscribed)
-                                    .text(subscribed ? 'Unsubscribe' : 'Subscribe')
+                                    .text(subscribed
+                                        ? 'Unsubscribe'
+                                        : 'Subscribe')
                                     .fadeIn();
                             })
                             .fail(function (errors) {

@@ -6,15 +6,25 @@
     <title>Serialize</title>
     <link rel="stylesheet"
           href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet"
+          href="css/mobile.css">
     <link rel="shortcut icon" href="favicon.ico">
 
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script
-        src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/const.js"></script>
+    <!-- Minimize and unite for production use -->
     <script src="js/Utils.js"></script>
     <script src="js/ApiProvider.js"></script>
+    <script src="js/mobile/DomHelper.js"></script>
     <script src="js/mobile/DomStorage.js"></script>
+    <script src="js/mobile/DomShowList.js"></script>
+    <script src="js/mobile/DomShow.js"></script>
+    <script src="js/mobile/DomLoginStatus.js"></script>
+    <script src="js/mobile/DomComment.js"></script>
+    <script src="js/mobile/DomLogin.js"></script>
+    <script src="js/mobile/DomSearch.js"></script>
     <script src="js/mobile/DomInteraction.js"></script>
     <script src="js/SerializeApp.js"></script>
     <script src="js/main.js"></script>
@@ -28,16 +38,33 @@
     </div>
 
     <div role="main" class="ui-content">
-        <p><a href="#latest-shows" class="ui-btn ui-shadow ui-corner-all">Latest
-            shows</a></p>
-
-        <p><a href="#login" class="ui-btn ui-shadow ui-corner-all">Log in</a>
+        <p>
+            <a href="#search" id="search-link"
+               class="ui-btn ui-shadow ui-corner-all">
+                Search
+            </a>
         </p>
 
         <p>
-            <a href="#register" class="ui-btn ui-shadow ui-corner-all">
-                Registration
+            <a href="#your-shows" id="your-shows-link"
+               class="ui-btn ui-shadow ui-corner-all">
+                Your shows
             </a>
+        </p>
+
+        <p>
+            <a href="#latest-shows" class="ui-btn ui-shadow ui-corner-all">
+                Latest shows
+            </a>
+        </p>
+
+        <p>
+            <a id="login-link" href="#login"
+               class="ui-btn ui-shadow ui-corner-all">Log in</a>
+        </p>
+
+        <p>
+            <a id="disconnect" href="" class="ui-btn ui-shadow ui-corner-all">Disconnect</a>
         </p>
 
         <p>
@@ -48,8 +75,17 @@
         </p>
     </div>
 
-    <div data-role="footer" data-theme="a">
-        <h4>Page Footer</h4>
+    <div data-role="footer" class="footer">
+        <p>
+            <a id="footer-to-top" href="#">Back to
+                top</a><br/>
+
+            Created by <a href="http://sknz.info">Floran NARENJI</a> (<a
+                href="https://github.com/SKNZ">GitHub</a>)<br/>
+
+            Based on <a href="http://jquery.com/">jQuery &amp; jQuery Mobile</a>
+            | Powered by <a href="http://www.slimframework.com/">Slim</a>
+        </p>
     </div>
 </div>
 
@@ -59,44 +95,58 @@
         <h1>Latest shows</h1>
     </div>
 
-    <div role="main" class="ui-content">
-        <ul data-role="listview">
-            <li><a href="#episode">Game of Thrones S03E05</a></li>
-            <li><a href="#episode">House of Cards S02E05</a></li>
-            <li><a href="#episode">Person of Interest S04E08</a></li>
-            <li><a href="#episode">Game of Thrones S01E01</a></li>
-        </ul>
+    <p id="latest-shows-errors" class="error no-display">The following errors
+        were
+        raised:<br/>
+        <span id="latest-shows-messages">- Swag overload<br/></span></p>
 
-        <p><a href="#home" data-direction="reverse"
+    <div role="main" class="ui-content">
+        <p><a href="" data-rel="back" data-direction="reverse"
               class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
 
     </div>
 
-    <div data-role="footer">
-        <h4>Page Footer</h4>
+    <div data-role="footer" class="footer">
+        <p>
+            <a class="footer-to-top" href="#">Back to
+                top</a><br/>
+
+            Created by <a href="http://sknz.info">Floran NARENJI</a> (<a
+                href="https://github.com/SKNZ">GitHub</a>)<br/>
+
+            Based on <a href="http://jquery.com/">jQuery &amp; jQuery Mobile</a>
+            | Powered by <a href="http://www.slimframework.com/">Slim</a>
+        </p>
     </div>
 </div>
 
-<!-- Episode -->
-<div data-role="page" id="episode" data-theme="a">
+<!-- Your shows -->
+<div data-role="page" id="your-shows" data-theme="a">
     <div data-role="header">
-        <h1>Episode</h1>
+        <h1>Your shows</h1>
     </div>
 
-    <div role="main" class="ui-content">
-        <a href="http://btdigg.org/search?q=Game%20of%20Thrones%20S03E03"
-           class="ui-btn ui-corner-all">Yaaaaaarrr !</a>
-        <a href="http://subscene.com/subtitles/release?q=Game%20of%20Thrones%20S03E03"
-           class="ui-btn ui-corner-all">Find subtitles</a>
-        <a href="#comments" class="ui-btn ui-corner-all">See the comments</a>
+    <p id="your-shows-errors" class="error no-display">The following errors were
+        raised:<br/>
+        <span id="your-shows-messages">- Swag overload<br/></span></p>
 
-        <p><a href="#latest-shows" data-direction="reverse"
+    <div role="main" class="ui-content">
+        <p><a href="" data-rel="back" data-direction="reverse"
               class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
 
     </div>
 
-    <div data-role="footer">
-        <h4>Page Footer</h4>
+    <div data-role="footer" class="footer">
+        <p>
+            <a class="footer-to-top" href="#">Back to
+                top</a><br/>
+
+            Created by <a href="http://sknz.info">Floran NARENJI</a> (<a
+                href="https://github.com/SKNZ">GitHub</a>)<br/>
+
+            Based on <a href="http://jquery.com/">jQuery &amp; jQuery Mobile</a>
+            | Powered by <a href="http://www.slimframework.com/">Slim</a>
+        </p>
     </div>
 </div>
 
@@ -109,30 +159,168 @@
     <div role="main" class="ui-content">
         <h2>Comment form</h2>
 
-        <form id="comments-form">
+        <p id="comments-errors" class="error no-display">The following errors
+            were
+            raised:<br/>
+            <span id="comments-error-messages">- Swag overload<br/></span></p>
+
+        <form id="comments-form" data-ajax="false">
             <label for="comments-input-subject">Subject:</label>
-            <input type="text" id="comments-input-subject" value="Some subject">
+            <input type="text" id="comments-input-subject"
+                   placeholder="Some subject" autofocus="true">
 
             <label for="comments-input-rating">Rating:</label>
             <select id="comments-input-rating">
-                <option value="1">1 star</option>
-                <option value="2">2 star</option>
-                <option value="3">3 star</option>
-                <option value="4">4 star</option>
-                <option value="5">5 star</option>
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
             </select>
 
+            <label for="comments-input-message">Message:</label>
+                <textarea id="comments-input-message"
+                          placeholder="Your message"></textarea>
+
+            <input type="submit" value="Post it !">
         </form>
 
-        <p><a href="#latest-shows" data-direction="reverse"
+        <p><a href="" id="comments-submit" data-rel="back"
+              data-direction="reverse"
               class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
-
     </div>
 
-    <div data-role="footer">
-        <h4>Page Footer</h4>
+    <div data-role="footer" class="footer">
+        <p>
+            <a class="footer-to-top" href="#">Back to
+                top</a><br/>
+
+            Created by <a href="http://sknz.info">Floran NARENJI</a> (<a
+                href="https://github.com/SKNZ">GitHub</a>)<br/>
+
+            Based on <a href="http://jquery.com/">jQuery &amp; jQuery Mobile</a>
+            | Powered by <a href="http://www.slimframework.com/">Slim</a>
+        </p>
     </div>
 </div>
 
+<!-- Show -->
+<div data-role="page" id="show" data-theme="a">
+    <div data-role="header">
+        <h1>Show</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <button id="show-subscribe" class="ui-btn ui-corner-all">Subscribe
+        </button>
+
+        <p><a href="" data-rel="back" data-direction="reverse"
+              class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
+    </div>
+
+    <div data-role="footer" class="footer">
+        <p>
+            <a class="footer-to-top" href="#">Back to
+                top</a><br/>
+
+            Created by <a href="http://sknz.info">Floran NARENJI</a> (<a
+                href="https://github.com/SKNZ">GitHub</a>)<br/>
+
+            Based on <a href="http://jquery.com/">jQuery &amp; jQuery Mobile</a>
+            | Powered by <a href="http://www.slimframework.com/">Slim</a>
+        </p>
+    </div>
+</div>
+
+<!-- Login -->
+<div data-role="page" id="login" data-theme="a">
+    <div data-role="header">
+        <h1>Show</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <p id="login-errors" class="error no-display">The following errors were
+            raised:<br/>
+            <span id="login-error-messages">- Swag overload<br/></span></p>
+
+        <form id="login-form" data-ajax="false">
+            <fieldset class="ui-field-contain">
+                <label for="comments-input-subject">Email:</label>
+                <input type="email" id="login-input-email"
+                       placeholder="john@doe.com" autofocus="true">
+            </fieldset>
+
+            <fieldset class="ui-field-contain">
+                <label for="login-input-password">Password:</label>
+                <input type="password" id="login-input-password"
+                       placeholder="{\\y0ur_54f3_p@55w0rD\\/}">
+            </fieldset>
+
+            <input type="submit" value="Log me in !">
+        </form>
+
+
+        <p><a href="" data-rel="back" data-direction="reverse"
+              class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
+    </div>
+
+    <div data-role="footer" class="footer">
+        <p>
+            <a class="footer-to-top" href="#">Back to
+                top</a><br/>
+
+            Created by <a href="http://sknz.info">Floran NARENJI</a> (<a
+                href="https://github.com/SKNZ">GitHub</a>)<br/>
+
+            Based on <a href="http://jquery.com/">jQuery &amp; jQuery Mobile</a>
+            | Powered by <a href="http://www.slimframework.com/">Slim</a>
+        </p>
+    </div>
+</div>
+
+<!-- Search -->
+<div data-role="page" id="search" data-theme="a">
+    <div data-role="header">
+        <h1>Search</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <p id="search-errors" class="error no-display">The following errors were
+            raised:<br/>
+            <span id="search-error-messages">- Swag overload<br/></span></p>
+
+        <form id="search-form" data-ajax="false">
+            <input type="search" id="search-input-query"
+                   placeholder="Game of Thrones, Person of Interest, House of Cards..."
+                   autofocus="true">
+            <input type="submit" value="Search !">
+        </form>
+
+
+        <p><a href="" data-rel="back" data-direction="reverse"
+              class="ui-btn ui-shadow ui-corner-all ui-btn-b">Go back</a></p>
+    </div>
+
+    <div data-role="footer" class="footer">
+        <p>
+            <a class="footer-to-top" href="#">Back to
+                top</a><br/>
+
+            Created by <a href="http://sknz.info">Floran NARENJI</a> (<a
+                href="https://github.com/SKNZ">GitHub</a>)<br/>
+
+            Based on <a href="http://jquery.com/">jQuery &amp; jQuery Mobile</a>
+            | Powered by <a href="http://www.slimframework.com/">Slim</a>
+        </p>
+    </div>
+</div>
+
+<!-- Hacks for jQM loader overlay to span over the whole page... -->
+<div class="ui-loader-background">
+    <div id="ui-loader-background-img">
+        <img src="https://code.jquery.com/mobile/1.4.5/images/ajax-loader.gif">
+    </div>
+</div>
 </body>
+
 </html>

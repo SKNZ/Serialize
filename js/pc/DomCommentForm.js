@@ -23,7 +23,7 @@ var DomCommentForm = (function () {
                         .append(
                         $('<div>')
                             .append(
-                            $('<p>')
+                            $('<h5>')
                                 .append(
                                 _makeRatingStar(comment.rating < 1),
                                 _makeRatingStar(comment.rating < 2),
@@ -31,7 +31,13 @@ var DomCommentForm = (function () {
                                 _makeRatingStar(comment.rating < 4),
                                 _makeRatingStar(comment.rating < 5),
                                 '&nbsp;',
+                                comment.subject
+                            ))
+                            .append(
+                            ($('<p>'))
+                                .append(
                                 comment.message,
+                                '&nbsp;',
                                 $('<span>')
                                     .addClass('h6')
                                     .addClass('text-muted')
@@ -39,8 +45,8 @@ var DomCommentForm = (function () {
                                     ' posted by ',
                                     $('<a>')
                                         .text(comment.user.firstName +
-                                              ' ' +
-                                              comment.user.lastName),
+                                        ' ' +
+                                        comment.user.lastName),
                                     ' on ',
                                     comment.date))));
 
@@ -157,7 +163,7 @@ var DomCommentForm = (function () {
                 // Send comment request, handle result
                 ApiProvider
                     .commentEpisode(_episode, comment)
-                    .done(function (response) {
+                    .done(function () {
                         // Let's reset the form
                         var commentModal =
                             $('#comment-modal');
