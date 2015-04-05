@@ -34,9 +34,8 @@ var DomSearch = (function () {
                                 : '')));
                 });
             })
-            .fail(function (response) {
+            .fail(function (errors) {
                 $('#home-search-loading').hide();
-                var errors = response.errors;
 
                 // Append errors to DOM
                 for (var i = 0; i < errors.length; ++i) {

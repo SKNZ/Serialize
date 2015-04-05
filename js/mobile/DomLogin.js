@@ -24,9 +24,7 @@ var DomLogin = (function () {
                             $('#login-form')[0].reset();
                             $.mobile.changePage('#home');
                         })
-                        .fail(function (response) {
-                            var errors = response.errors;
-
+                        .fail(function (errors) {
                             // Append errors to DOM
                             for (var i = 0; i < errors.length; ++i) {
                                 $('#login-error-messages')

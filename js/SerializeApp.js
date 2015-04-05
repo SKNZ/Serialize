@@ -3,7 +3,9 @@ var SerializeApp = (function () {
     }
 
     SerializeApp.prototype.run = function () {
-        DomInteraction.initialize();
+        ApiProvider
+            .checkLogin()
+            .always(DomInteraction.initialize);
     };
 
     return SerializeApp;

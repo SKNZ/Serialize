@@ -34,9 +34,7 @@ var DomShow = (function () {
                                                 ? 'Unsubscribe'
                                                 : 'Subscribe');
                                     })
-                                    .fail(function (response) {
-                                        var errors = response.errors;
-
+                                    .fail(function (errors) {
                                         // Append errors to DOM
                                         for (var i = 0; i < errors.length; ++i) {
                                             $('#show-error-messages')
@@ -55,9 +53,7 @@ var DomShow = (function () {
 
                         DomShowList.loadShowShows(show.episodes);
                     })
-                    .fail(function (response) {
-                        var errors = response.errors;
-
+                    .fail(function (errors) {
                         // Append errors to DOM
                         for (var i = 0; i < errors.length; ++i) {
                             $('#show-error-messages')

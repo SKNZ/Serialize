@@ -7,18 +7,47 @@ var ApiProvider = (function () {
     var _apiRequest = function (call, method, data) {
         var deferred = $.Deferred();
 
-        data = JSON.stringify(data);
-        console.log("Sending " + method + ' to "' + call + '"');
-        console.log(data);
-
-        setTimeout(function () {
-            deferred.resolve({});
-        }, 1000);
+        console.log(JSON.stringify(data));
+        $.ajax({
+            url: _baseURI + call,
+            method: method,
+            data: JSON.stringify(data),
+            dataType: 'json'
+        }).done(function (data, textStatus, jqXHR) {
+            console.log('TOPKEK ' + textStatus);
+            console.log(data);
+            if (!data.success) {
+                deferred.reject(data)
+            } else {
+                deferred.resolve(data);
+            }
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.log('TOPKEK ' + textStatus);
+            console.log(errorThrown);
+            deferred.reject({errors: [errorThrown]});
+        });
 
         return deferred.promise();
     };
 
     return {
+        checkLogin: function () {
+            var deferred = $.Deferred();
+
+            _apiRequest('user/session', 'get')
+                .done(function (response) {
+                    _loggedIn = true;
+                    _currentUser = response.currentUser;
+                    deferred.resolve();
+                })
+                .fail(function () {
+                    _loggedIn = false;
+                    _currentUser = {};
+                    deferred.reject();
+                });
+
+            return deferred;
+        },
         isLoggedIn: function () {
             return _loggedIn;
         },
@@ -86,8 +115,7 @@ var ApiProvider = (function () {
                 });
 
             return deferred.promise();
-        }
-        ,
+        },
         yourShows: function () {
             var deferred = $.Deferred();
 
@@ -97,231 +125,82 @@ var ApiProvider = (function () {
                 });
 
             return deferred.promise();
-        }
-        ,
+        },
         commentsForEpisode: function (episode) {
-            var _deferred = $.Deferred();
+            var deferred = $.Deferred();
 
             _apiRequest('episode/' + episode + '/comment', "get")
-                .always(function (response) {
-                    _deferred.resolve(response.comments);
+                .done(function (response) {
+                    deferred.resolve(response.comments);
+                })
+                .fail(function (response) {
+                    deferred.reject(response.errors);
                 });
 
-            return _deferred;
-        }
-        ,
+            return deferred;
+        },
         commentEpisode: function (episode, comment) {
             var deferred = $.Deferred();
 
-            _apiRequest("episode/" + episode + "/", "post", {
+            _apiRequest("episode/" + episode + "/comment", "post", {
                 comment: comment
-            }).always(function (response) {
-                if (comment.subject != "cool") {<
-                    deferred.resolve(comment);
-                } else {
-                    response = {
-                        errors: [
-                            "Couldn't reach the database",
-                            "Your subject is invalid"
-                        ]
-                    };
-                    deferred.reject(response);
-                }
-            });
+            })
+                .done(_bind(deferred, deferred.resolve))
+                .fail(function (response) {
+                    deferred.reject(response.errors);
+                });
 
             return deferred.promise();
-        }
-        ,
+        },
         search: function (search) {
             var deferred = $.Deferred();
 
             _apiRequest("show/search", "post", {
                 search: search
-            }).always(function (response) {
-                if (search != "aze") {
-                    response = {
-                        shows: (search == "qsd" ? [] : [
-                            {
-                                id: 12,
-                                name: 'Game of Thrones',
-                                subscribed: false
-                            },
-                            {
-                                id: 13,
-                                name: 'House of Cards',
-                                subscribed: true
-                            },
-                            {
-                                id: 15,
-                                name: 'NCIS',
-                                subscribed: true
-                            },
-                            {
-                                id: 16,
-                                name: 'Person of Interest',
-                                subscribed: false
-                            },
-                            {
-                                id: 15,
-                                name: 'Person of Swagterest',
-                                subscribed: false
-                            },
-                            {
-                                id: 14,
-                                name: 'Tards of Interest',
-                                subscribed: false
-                            },
-                            {
-                                id: 13,
-                                name: 'Les hipsters a Miami',
-                                subscribed: false
-                            },
-                            {
-                                id: 13,
-                                name: 'Les hipsters a Miami',
-                                subscribed: false
-                            },
-                            {
-                                id: 13,
-                                name: 'Les hipsters a Miami',
-                                subscribed: false
-                            },
-                            {
-                                id: 13,
-                                name: 'Les hipsters a Miami',
-                                subscribed: false
-                            },
-                            {
-                                id: 13,
-                                name: 'Les hipsters a Miami',
-                                subscribed: false
-                            }
-                        ])
-                    };
-                    deferred.resolve(response.shows);
-                } else {
-                    response = {
-                        errors: [
-                            "Couldn't reach the database",
-                            "Your search request was invalid"
-                        ]
-                    };
-                    deferred.reject(response);
-                }
+            }).done(function (response) {
+                deferred.resolve(response.shows);
+            }).fail(function (response) {
+                deferred.reject(response.errors);
             });
 
             return deferred.promise();
-        }
-        ,
+        },
         toggleSubscription: function (showId) {
             var deferred = $.Deferred();
 
-            _apiRequest("show/subscribe", "post", {
-                show: showId
-            }).always(function (response) {
-                if (showId != 12) {
-                    response = {
-                        subscribed: false
-                    };
+            _apiRequest("show/" + showId + "/subscribe", "post")
+                .done(function (response) {
                     deferred.resolve(response.subscribed);
-                } else {
-                    response = {
-                        errors: [
-                            "Couldn't reach the database",
-                            "Your didn't pay for this DLC m8"
-                        ]
-                    };
+                }).fail(function (response) {
                     deferred.reject(response.errors);
-                }
-            });
+                });
 
             return deferred.promise();
-        }
-        ,
+        },
         showData: function (showId) {
             var deferred = $.Deferred();
 
             _apiRequest("show/" + showId, "get")
-                .always(function (response) {
-                    if (showId != 13) {
-                        response = {
-                            show: {
-                                id: showId,
-                                name: 'Game of thrones',
-                                subscribed: true,
-                                episodes: [
-                                    {
-                                        id: 15,
-                                        name: 'Gamotron',
-                                        season: 'S03',
-                                        episode: 'E05',
-                                        episodeName: 'TopKek',
-                                        date: '12/26/2015',
-                                        showId: 13
-
-                                    },
-                                    {
-                                        id: 16,
-                                        name: 'Gamotron',
-                                        season: 'S03',
-                                        episode: 'E04',
-                                        episodeName: 'Swaggens',
-                                        date: '12/25/2015',
-                                        showId: 13
-                                    },
-                                    {
-                                        id: 17,
-                                        name: 'Gamotron',
-                                        season: 'S03',
-                                        episode: 'E03',
-                                        episodeName: 'Hipster',
-                                        date: '12/25/2015',
-                                        showId: 13
-                                    }
-                                ]
-                            }
-                        };
-                        deferred.resolve(response.show);
-                    } else {
-                        response = {
-                            errors: [
-                                "Couldn't reach the database",
-                                "Your didn't pay for this DLC m8"
-                            ]
-                        };
-                        deferred.reject(response);
-                    }
+                .done(function (response) {
+                    deferred.resolve(response.show);
+                }).fail(function (response) {
+                    deferred.reject(response.errors);
                 });
 
             return deferred.promise();
-        }
-        ,
+        },
         contact: function (messageInformation) {
             var deferred = $.Deferred();
 
             _apiRequest("contact", "post", {
                 messageInformation: messageInformation
-            })
-                .always(function (response) {
-                    if (messageInformation.subject != "aze") {
-                        response = {
-                            success: true
-                        };
-                        deferred.resolve(response.success);
-                    } else {
-                        response = {
-                            errors: [
-                                "Couldn't reach the database",
-                                "Get your wallet out, this mail gonna cost you shit"
-                            ]
-                        };
-                        deferred.reject(response);
-                    }
-                });
+            }).done(function (response) {
+                deferred.resolve(response.success);
+            }).fail(function (response) {
+                deferred.reject(response.errors);
+            });
 
             return deferred.promise();
         }
-    }
-        ;
-})
-();
+    };
+})();

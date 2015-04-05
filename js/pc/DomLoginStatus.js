@@ -136,6 +136,7 @@ var DomLoginStatus = (function () {
     return {
         updateLoginStatus: function (init) {
             init = init || false;
+
             var loggedIn = ApiProvider.isLoggedIn();
 
             if (_wasLoggedIn == loggedIn && !init) {

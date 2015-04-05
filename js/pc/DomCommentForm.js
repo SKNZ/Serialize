@@ -58,9 +58,7 @@ var DomCommentForm = (function () {
                     $('#comment-modal').data('bs.modal').handleUpdate();
                 });
             })
-            .fail(function (response) {
-                var errors = response.errors;
-
+            .fail(function (errors) {
                 // Append errors to DOM
                 for (var i = 0; i < errors.length; ++i) {
                     $('#comment-messages-error-messages')
@@ -191,14 +189,12 @@ var DomCommentForm = (function () {
 
                         _updateSubmitButtonStatus();
                     })
-                    .fail(function (response) {
+                    .fail(function (errors) {
                         // Re-enable submit button if there were
                         // errors
                         $('#comment-submit')
                             .prop('disabled', false)
                             .text('Pitch me in !');
-
-                        var errors = response.errors;
 
                         // Append errors to DOM
                         for (var i = 0; i < errors.length; ++i) {

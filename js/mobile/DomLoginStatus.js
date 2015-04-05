@@ -4,8 +4,10 @@ var DomLoginStatus = (function () {
     return {
         updateLoginStatus: function (init) {
             init = init || false;
+
             var loggedIn = ApiProvider.isLoggedIn();
 
+            // If no change in login state and not initializing
             if (_wasLoggedIn == loggedIn && !init) {
                 return;
             }

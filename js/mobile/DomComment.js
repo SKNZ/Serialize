@@ -47,9 +47,7 @@ var DomComment = (function () {
                                 ))));
                 });
             })
-            .fail(function (response) {
-                var errors = response.errors;
-
+            .fail(function (errors) {
                 // Append errors to DOM
                 for (var i = 0; i < errors.length; ++i) {
                     $('#comments-error-messages')
@@ -77,14 +75,15 @@ var DomComment = (function () {
                 // Build comment request
                 var comment = {
                     subject: $('#comments-input-subject').val(),
-                    rating: $('comments-input-rating').val(),
+                    rating: $('#comments-input-rating').val(),
                     message: $('#comments-input-message').val()
                 };
 
                 $('#comments-errors')
-                    .fadeOut(function () {
-                        $(this).find('span').empty();
-                    });
+                    .fadeOut('fast');
+
+                $('#comments-error-messages')
+                    .empty();
 
                 $('#comments-form')
                     .find('input[type="submit"]')
@@ -97,9 +96,7 @@ var DomComment = (function () {
                         _loadComments();
                         $('#comments-form')[0].reset();
                     })
-                    .fail(function (response) {
-                        var errors = response.errors;
-
+                    .fail(function (errors) {
                         // Append errors to DOM
                         for (var i = 0; i < errors.length; ++i) {
                             $('#comments-error-messages')
@@ -109,7 +106,7 @@ var DomComment = (function () {
                         }
 
                         // Display errors
-                        $('#comments-errors').fadeIn();
+                        $('#comments-errors').fadeIn('fast');
                     })
                     .always(function () {
 

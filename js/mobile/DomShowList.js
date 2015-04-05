@@ -82,9 +82,7 @@ var DomShowList = (function () {
                         _addShow(where, show);
                     });
                 })
-                .fail(function (response) {
-                    var errors = response.errors;
-
+                .fail(function (errors) {
                     // Append errors to DOM
                     for (var i = 0; i < errors.length; ++i) {
                         $('#latest-shows-error-messages')
@@ -118,9 +116,7 @@ var DomShowList = (function () {
                         _addShow(where, show);
                     });
                 })
-                .fail(function (response) {
-                    var errors = response.errors;
-
+                .fail(function (errors) {
                     // Append errors to DOM
                     for (var i = 0; i < errors.length; ++i) {
                         $('#your-shows-error-messages')

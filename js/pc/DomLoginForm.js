@@ -66,7 +66,7 @@ var DomLoginForm = (function () {
                     ApiProvider
                         .tryLogin(authCredentials)
                         .done(function () {
-                            $('#comments-form')[0].reset();
+                            $('#comment-modal').find('form')[0].reset();
                             var loginModal = $('#login-modal');
                             loginModal.modal('hide');
 
@@ -96,14 +96,12 @@ var DomLoginForm = (function () {
                                 _bind(alertLoggedIn, $.prototype.slideUp),
                                 3000);
                         })
-                        .fail(function (response) {
+                        .fail(function (errors) {
                             // Re-enable submit button if there were
                             // errors
                             $('#login-submit')
                                 .prop('disabled', false)
                                 .text('Pitch me in !');
-
-                            var errors = response.errors;
 
                             // Append errors to DOM
                             for (var i = 0; i < errors.length; ++i) {

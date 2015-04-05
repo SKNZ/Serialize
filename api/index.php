@@ -6,24 +6,25 @@ session_start();
 use Slim\Slim;
 
 require 'vendor/autoload.php';
-$app = new Slim(array(
-//    'debug' => true
-//    'cookies.encrypt' => true,
-//    'cookies.secret_key' => 'Û³³ô²ÔÂøÊÛswegLelToPKe^kù1465qs56d4qs56d4^\ê¶',
-//    'cookies.cipher' => MCRYPT_RIJNDAEL_256,
-//    'cookies.cipher_mode' => MCRYPT_MODE_CBC
+$app = new Slim(array(//    'debug' => true
 ));
 
-function error(array $errors = ['An unknown error happened '], $errorCode = 400)
+function error(array $errors = ['An unknown error happened '], $errorCode = 200)
 {
     Slim::getInstance()->contentType('application/json');
-    Slim::getInstance()->halt(400, json_encode([
+    Slim::getInstance()->halt(200, json_encode([
+        'success' => false,
         'errors' => $errors
     ]));
 }
 
 function ok($response = null)
 {
+    $response =
+        $response != null
+            ? array_merge(['success' => true], $response)
+            : ['success' => true];
+
     Slim::getInstance()->contentType('application/json');
     Slim::getInstance()->response->body(json_encode($response));
 }
@@ -31,7 +32,7 @@ function ok($response = null)
 function auth()
 {
     if (!isset($_SESSION['auth'])) {
-        error(Slim::getInstance(), ['Authentication required']);
+        error(['Authentication required']);
     }
 }
 
@@ -88,6 +89,18 @@ $app->group('/user', function () use ($app) {
         $app->delete('/', 'auth', function () use ($app) {
             session_destroy();
         });
+
+        // Connected ?
+        $app->get('/', 'auth', function () use ($app) {
+            ok([
+                'currentUser' => [
+                    'email' => 'florandara@gmail.com',
+                    'emailHash' => 'e00cf05e1611a154bc3f5764cebbc822',
+                    'firstName' => 'Floran',
+                    'lastName' => 'NARENJI-SHESHKALANI'
+                ]
+            ]);
+        });
     });
 
     // Emails exists
@@ -120,7 +133,9 @@ $app->group('/user', function () use ($app) {
             $formErrors[] = 'You must specify a valid mail address';
         }
 
-        if (!isset($accountInformation->password)) {
+        if (!isset($accountInformation->password)
+            || empty($accountInformation->password)
+        ) {
             $formErrors[] = 'You must specify a password';
         } else {
 
@@ -145,17 +160,17 @@ $app->group('/user', function () use ($app) {
             }
         }
 
-        if (!isset($accountInformation->passwordConfirmation)) {
+        if (!isset($accountInformation->passwordConfirmation) || empty($accountInformation->passwordConfirmation)) {
             $formErrors[] = 'You must confirm your password';
         } else if (isset($accountInformation->password) && $accountInformation->passwordConfirmation != $accountInformation->password) {
             $formErrors[] = 'Your password confirmation does not match';
         }
 
-        if (!isset($accountInformation->firstName)) {
+        if (!isset($accountInformation->firstName) || empty($accountInformation->firstName)) {
             $formErrors[] = 'You must specify a first name';
         }
 
-        if (!isset($accountInformation->lastName)) {
+        if (!isset($accountInformation->lastName) || empty($accountInformation->lastName)) {
             $formErrors[] = 'You must specify a last name';
         }
 
@@ -287,6 +302,118 @@ $app->group('/show', function () use ($app) {
             ]
         ]);
     });
+
+    $app->post('/search', 'auth', function () use ($app) {
+        $jsonBody = json_decode($app->request->getBody());
+
+        if (!isset($jsonBody->search) || empty($jsonBody->search)) {
+            error('You must specify the search terms.');
+        }
+
+        if ($jsonBody->search == "aze") {
+            error(['TopKek ']);
+        }
+
+        if ($jsonBody->search == "qsd") {
+            ok(['shows' => []]);
+            return;
+        }
+
+        ok([
+            'shows' => [
+                [
+                    'id' => 12,
+                    'name' => 'Game of Thrones',
+                    'subscribed' => false
+                ],
+                [
+                    'id' => 13,
+                    'name' => 'House of Cards',
+                    'subscribed' => true
+                ],
+                [
+                    'id' => 15,
+                    'name' => 'NCIS',
+                    'subscribed' => true
+                ],
+                [
+                    'id' => 16,
+                    'name' => 'Person of Interest',
+                    'subscribed' => false
+                ],
+                [
+                    'id' => 15,
+                    'name' => 'Person of Swagterest',
+                    'subscribed' => false
+                ],
+                [
+                    'id' => 14,
+                    'name' => 'Tards of Interest',
+                    'subscribed' => false
+                ],
+                [
+                    'id' => 13,
+                    'name' => 'Les hipsters a Miami',
+                    'subscribed' => false
+                ]
+            ]
+        ]);
+    });
+
+    $app->post('/:id/subscribe', 'auth', function ($id) use ($app) {
+        if (!filter_var($id, FILTER_VALIDATE_INT)) {
+            error(['Invalid parameter ']);
+        }
+
+        ok(['subscribed' => false]);
+    });
+
+    $app->get('/:id', function ($id) use ($app) {
+        if (!filter_var($id, FILTER_VALIDATE_INT)) {
+            error(['Invalid parameter']);
+        }
+
+        if ($id == 13) {
+            error(["SWEG", "TOPCAKE"]);
+        }
+
+        ok([
+            'show' => [
+                'id' => $id,
+                'name' => 'Game of Thrones',
+                'subscribed' => true,
+                'episodes' => [
+                    [
+                        'id' => 15,
+                        'name' => 'Gamotron',
+                        'season' => 'S03',
+                        'episode' => 'E05',
+                        'episodeName' => 'TopKek',
+                        'date' => '12/26/2015',
+                        'showId' => 13
+                    ],
+                    [
+                        'id' => 16,
+                        'name' => 'Gamotron',
+                        'season' => 'S03',
+                        'episode' => 'E04',
+                        'episodeName' => 'Swaggens',
+                        'date' => '12/25/2015',
+                        'showId' => 13
+                    ],
+                    [
+                        'id' => 17,
+                        'name' => 'Gamotron',
+                        'season' => 'S03',
+                        'episode' => 'E03',
+                        'episodeName' => 'Hipster',
+                        'date' => '12/25/2015',
+                        'showId' => '13'
+                    ],
+                ]
+            ]
+        ]);
+    });
 });
 
 $app->group('/episode', function () use ($app) {
@@ -296,67 +423,67 @@ $app->group('/episode', function () use ($app) {
                 error('Invalid parameter');
             }
 
-            ok(
-                [
-                    'comments' =>
+            ok([
+                'success' => true,
+                'comments' =>
+                    [
                         [
-                            [
-                                'id' => 14,
-                                'date' => '12/10/2015',
-                                'user' => [
-                                    'firstName' => "Jean",
-                                    'lastName' => "Balbien"
-                                ],
-                                'rating' => 5,
-                                'subject' => 'ASSALA MALECOUM',
-                                'message' => "Coucou, je suis le vomi."
+                            'id' => 14,
+                            'date' => '12/10/2015',
+                            'user' => [
+                                'firstName' => "Jean",
+                                'lastName' => "Balbien"
                             ],
-                            [
-                                'id' => 13,
-                                'date' => '12/10/2015',
-                                'user' => [
-                                    'firstName' => "Jean",
-                                    'lastName' => "Sairien"
-                                ],
-                                'rating' => 4,
-                                'subject' => 'HELLO CAY BAIE DEUX OS',
-                                'message' => "J'AIME LES PATES, SURTOUT AVEC DE LA SAUCE AUX PATES."
+                            'rating' => 5,
+                            'subject' => 'ASSALA MALECOUM',
+                            'message' => "Coucou, je suis le vomi."
+                        ],
+                        [
+                            'id' => 13,
+                            'date' => '12/10/2015',
+                            'user' => [
+                                'firstName' => "Jean",
+                                'lastName' => "Sairien"
                             ],
-                            [
-                                'id' => 12,
-                                'date' => '12/10/2015',
-                                'user' => [
-                                    'firstName' => "Jean",
-                                    'lastName' => "Bombeur"
-                                ],
-                                'rating' => 3,
-                                'subject' => 'VROOM VROOM RATATATATATA',
-                                'message' => "SALUT C COOL LE SON SORS DES ENCEINTES."
+                            'rating' => 4,
+                            'subject' => 'HELLO CAY BAIE DEUX OS',
+                            'message' => "J'AIME LES PATES, SURTOUT AVEC DE LA SAUCE AUX PATES."
+                        ],
+                        [
+                            'id' => 12,
+                            'date' => '12/10/2015',
+                            'user' => [
+                                'firstName' => "Jean",
+                                'lastName' => "Bombeur"
                             ],
-                            [
-                                'id' => 11,
-                                'date' => '12/10/2015',
-                                'user' => [
-                                    'firstName' => "Jean",
-                                    'lastName' => "Kuhl-Tamer"
-                                ],
-                                'rating' => 2,
-                                'subject' => 'IMACHOUBALAHABESSOULEIMACHOUB DJAMILA POPOPOPOA',
-                                'message' => "Salut j'ai le swag, je suis un hipster mdr swag yolo. Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo."
+                            'rating' => 3,
+                            'subject' => 'VROOM VROOM RATATATATATA',
+                            'message' => "SALUT C COOL LE SON SORS DES ENCEINTES."
+                        ],
+                        [
+                            'id' => 11,
+                            'date' => '12/10/2015',
+                            'user' => [
+                                'firstName' => "Jean",
+                                'lastName' => "Kuhl-Tamer"
                             ],
-                            [
-                                'id' => 10,
-                                'date' => '11/10/2015',
-                                'user' => [
-                                    'firstName' => "Jean",
-                                    'lastName' => "Peuplu"
-                                ],
-                                'rating' => 1,
-                                'subject' => 'BRUUUUUBRUUUUUUUBRAAAAAH',
-                                'message' => "Salut j'ai le swag, je suis un hipster mdr swag yolo. Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo."
-                            ]
+                            'rating' => 2,
+                            'subject' => 'IMACHOUBALAHABESSOULEIMACHOUB DJAMILA POPOPOPOA',
+                            'message' => "Salut j'ai le swag, je suis un hipster mdr swag yolo. Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo."
+                        ],
+                        [
+                            'id' => 10,
+                            'date' => '11/10/2015',
+                            'user' => [
+                                'firstName' => "Jean",
+                                'lastName' => "Peuplu"
+                            ],
+                            'rating' => 1,
+                            'subject' => 'BRUUUUUBRUUUUUUUBRAAAAAH',
+                            'message' => "Salut j'ai le swag, je suis un hipster mdr swag yolo. Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo."
                         ]
-                ]);
+                    ]
+            ]);
         });
 
         $app->post('/', function ($id) use ($app) {
@@ -371,12 +498,17 @@ $app->group('/episode', function () use ($app) {
 
             $comment = $jsonBody->comment;
             $formErrors = [];
-            if (!isset($comment->subject)) {
-                $formErrors[]  = 'You must specify a subject';
+
+            if (!isset($comment->subject) || empty($comment->subject)) {
+                $formErrors[] = 'You must specify a subject';
             }
 
-            if (!isset($comment->rating) || !filter_var($comment->rating, FILTER_VALIDATE_INT)) {
-                $formErrors[] = 'You must specify a numeric rating';
+            if (!isset($comment->rating)
+                || !filter_var($comment->rating, FILTER_VALIDATE_INT)
+                || empty($comment->rating)
+                || !($comment->rating >= 1 && $comment->rating <= 5)
+            ) {
+                $formErrors[] = 'You must specify a numeric rating between 1 and 5 ' . $comment->rating;
             }
 
             if (!isset($comment->message)) {
@@ -387,13 +519,49 @@ $app->group('/episode', function () use ($app) {
                 error($formErrors);
             }
 
-            if ($comment->subject == 'coo') {
-                error([ 'FAYEUL ']);
+            if ($comment->subject == 'cool') {
+                error(['FAYEUL ']);
             }
 
             ok();
         });
     });
+});
+
+$app->post('/contact', function () use ($app) {
+    $jsonBody = json_decode($app->request->getBody());
+    if (!isset($jsonBody->messageInformation)) {
+        error(['Invalid data format']);
+    }
+
+    $messageInformation = $jsonBody->messageInformation;
+    $formErrors = [];
+
+    if (!isset($messageInformation->email)
+        || !filter_var($messageInformation->email, FILTER_VALIDATE_EMAIL)
+    ) {
+        $formErrors[] = 'You must specify a valid mail address';
+    }
+
+    if (!isset($messageInformation->subject) || empty($messageInformation->subject)) {
+        $formErrors[] = 'You must specify a subject';
+    }
+
+    if (!isset($messageInformation->message) || empty($messageInformation->message)) {
+        $formErrors[] = 'Your message was empty';
+    }
+
+    if (count($formErrors)) {
+        error($formErrors);
+    }
+
+    if ($messageInformation->subject == 'aze') {
+        error(['You fucked up m8']);
+    }
+
+    ok([
+        'success' => true
+    ]);
 });
 
 $app->run();
