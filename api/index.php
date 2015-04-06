@@ -413,11 +413,11 @@ $app->group('/show',
         DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
         _show.id AS showId,
         `_show`.name
-FROM episode
-JOIN `_show` ON episode.showId = `_show`.id
-WHERE date > NOW()
-ORDER BY date ASC
-LIMIT 5)
+        FROM episode
+        JOIN `_show` ON episode.showId = `_show`.id
+        WHERE date > NOW()
+        ORDER BY date ASC
+        LIMIT 5)
 UNION
 (SELECT episode.id,
         episode.showId,
@@ -427,19 +427,27 @@ UNION
         DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
         _show.id AS showId,
         `_show`.name
-FROM episode
-JOIN `_show` ON episode.showId = `_show`.id
-WHERE date < NOW()
-ORDER BY date DESC
-LIMIT 5)
+        FROM episode
+        JOIN `_show` ON episode.showId = `_show`.id
+        WHERE date < NOW()
+        ORDER BY date DESC
+        LIMIT 5)
 SQL
                     );
 
                     $stmt->execute();
                     $shows = $stmt->fetchAll();
                 } catch (PDOException $e) {
-                    error(['Unknown database error']);
+                    error(['Unknown database error', $e->getMessage()]);
                 }
+
+                usort($shows,
+                    function ($a, $b) {
+                        return
+                            DateTime::createFromFormat('Y-m-d G:i', $a['date'])
+                            < DateTime::createFromFormat('Y-m-d G:i',
+                                                         $b['date']);
+                    });
 
                 ok([
                        'latestShows' => $shows
@@ -462,13 +470,13 @@ SQL
         DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
         _show.id AS showId,
         `_show`.name
-FROM episode
-JOIN `_show` ON episode.showId = `_show`.id
-JOIN user_show ON user_show.showId = `_show`.id
-WHERE date > NOW()
-  AND user_show.userId = :user
-ORDER BY date ASC
-LIMIT 5)
+        FROM episode
+        JOIN `_show` ON episode.showId = `_show`.id
+        JOIN user_show ON user_show.showId = `_show`.id
+        WHERE date > NOW()
+          AND user_show.userId = :user
+        ORDER BY date ASC
+        LIMIT 5)
 UNION
 (SELECT episode.id,
         episode.showId,
@@ -478,21 +486,29 @@ UNION
         DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
         _show.id AS showId,
         `_show`.name
-FROM episode
-JOIN `_show` ON episode.showId = `_show`.id
-JOIN user_show ON user_show.showId = `_show`.id
-WHERE date < NOW()
-  AND user_show.userId = :user
-ORDER BY date DESC
-LIMIT 5)
+        FROM episode
+        JOIN `_show` ON episode.showId = `_show`.id
+        JOIN user_show ON user_show.showId = `_show`.id
+        WHERE date < NOW()
+          AND user_show.userId = :user
+        ORDER BY date DESC
+        LIMIT 5)
 SQL
                     );
 
                     $stmt->execute([':user' => $_SESSION['currentUser']['id']]);
                     $shows = $stmt->fetchAll();
                 } catch (PDOException $e) {
-                    error(['Unknown database error', $e->getMessage()]);
+                    error(['Unknown database error']);
                 }
+
+                usort($shows,
+                    function ($a, $b) {
+                        return
+                            DateTime::createFromFormat('Y-m-d G:i', $a['date'])
+                            < DateTime::createFromFormat('Y-m-d G:i',
+                                                         $b['date']);
+                    });
 
                 ok([
                        'yourShows' => $shows
@@ -517,6 +533,7 @@ SQL
 SELECT _show.*, IF(us.userId = :user, TRUE, FALSE) AS subscribed
 FROM `_show`
 LEFT JOIN (SELECT * FROM user_show WHERE userId = :user) AS us ON us.showId = `_show`.id
+WHERE MATCH (name) AGAINST (:search)
 ORDER BY name ASC;
 SQL;
 
@@ -616,7 +633,8 @@ SQL
                     );
                     $stmt->execute([
                                        'show' => $id,
-                                       'user' => isset($_SESSION['auth']) ? $_SESSION['currentUser']['id'] : -1
+                                       'user' => isset($_SESSION['auth'])
+                                           ? $_SESSION['currentUser']['id'] : -1
                                    ]);
                     $show = $stmt->fetch();
 
