@@ -74,7 +74,7 @@ var DomLoginStatus = (function () {
                         .append(
                         $('<img>')
                             .addClass('img-responsive')
-                            .addClass('img-circle')
+                            .addClass('img-rounded')
                             .addClass('navbar-gravatar')
                             .attr('src', 'https://www.gravatar.com/avatar/' +
                             currentUser.emailHash +
