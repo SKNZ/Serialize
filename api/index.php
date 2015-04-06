@@ -308,10 +308,6 @@ SQL
                     error($formErrors);
                 }
 
-                if ($accountInformation->firstName != 'Floran') {
-                    error($formErrors);
-                }
-
                 $db = db::conn();
                 try {
                     $stmt = $db->prepare(<<<'SQL'
