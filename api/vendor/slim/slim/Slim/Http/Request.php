@@ -187,7 +187,7 @@ class Request
      * Fetch GET and POST data
      *
      * This method returns a union of GET and POST data as a key-value array, or the value
-     * of the array key if requested; if the array key does not exist, NULL is returned,
+     * of the array key if requested; if the array key does not exist, null is returned,
      * unless there is a default value specified.
      *
      * @param  string           $key
@@ -208,7 +208,7 @@ class Request
      * Fetch GET data
      *
      * This method returns a key-value array of data sent in the HTTP request query string, or
-     * the value of the array key if requested; if the array key does not exist, NULL is returned.
+     * the value of the array key if requested; if the array key does not exist, null is returned.
      *
      * @param  string           $key
      * @param  mixed            $default Default return value when key does not exist
@@ -240,7 +240,7 @@ class Request
      * Fetch POST data
      *
      * This method returns a key-value array of data sent in the HTTP request body, or
-     * the value of a hash key if requested; if the array key does not exist, NULL is returned.
+     * the value of a hash key if requested; if the array key does not exist, null is returned.
      *
      * @param  string           $key
      * @param  mixed            $default Default return value when key does not exist
@@ -314,7 +314,7 @@ class Request
      * Fetch COOKIE data
      *
      * This method returns a key-value array of Cookie data sent in the HTTP request, or
-     * the value of a array key if requested; if the array key does not exist, NULL is returned.
+     * the value of a array key if requested; if the array key does not exist, null is returned.
      *
      * @param  string            $key
      * @return array|string|null
@@ -356,7 +356,7 @@ class Request
      * Get Headers
      *
      * This method returns a key-value array of headers sent in the HTTP request, or
-     * the value of a hash key if requested; if the array key does not exist, NULL is returned.
+     * the value of a hash key if requested; if the array key does not exist, null is returned.
      *
      * @param  string $key
      * @param  mixed  $default The default value returned if the requested header is not available

@@ -5,7 +5,7 @@ session_start();
 
 class db {
 
-    private static $pdo = NULL;
+    private static $pdo = null;
 
 
     /**
@@ -94,7 +94,7 @@ $app->group('/user',
                             error(['Your must specify a password']);
                         }
 
-                        $user = NULL;
+                        $user = null;
                         try {
                             $db = db::conn();
                             $stmt = $db->prepare(<<<'SQL'
@@ -584,7 +584,7 @@ $app->group('/show',
                 if (!isset($jsonBody->subscribed)
                     || filter_var($jsonBody->subscribed,
                                   FILTER_VALIDATE_BOOLEAN,
-                                  FILTER_NULL_ON_FAILURE) === NULL
+                                  FILTER_null_ON_FAILURE) === null
                 ) {
                     error(['Invalid data format']);
                 }

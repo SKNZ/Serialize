@@ -320,7 +320,7 @@ class Slim
      * This method defines application settings and acts as a setter and a getter.
      *
      * If only one argument is specified and that argument is a string, the value
-     * of the setting identified by the first argument will be returned, or NULL if
+     * of the setting identified by the first argument will be returned, or null if
      * that setting does not exist.
      *
      * If only one argument is specified and that argument is an associative array,
@@ -881,7 +881,7 @@ class Slim
      * Get value of HTTP cookie from the current HTTP request
      *
      * Return the value of a cookie from the current HTTP request,
-     * or return NULL if cookie does not exist. Cookies created during
+     * or return null if cookie does not exist. Cookies created during
      * the current request will not be available until the next request.
      *
      * @param  string      $name
@@ -941,7 +941,7 @@ class Slim
      * Get value of encrypted HTTP cookie
      *
      * Return the value of an encrypted cookie from the current HTTP request,
-     * or return NULL if cookie does not exist. Encrypted cookies created during
+     * or return null if cookie does not exist. Encrypted cookies created during
      * the current request will not be available until the next request.
      *
      * @param  string       $name
@@ -959,7 +959,7 @@ class Slim
      * Remove a Cookie from the client. This method will overwrite an existing Cookie
      * with a new, empty, auto-expiring Cookie. This method's arguments must match
      * the original Cookie's respective arguments for the original Cookie to be
-     * removed. If any of this method's arguments are omitted or set to NULL, the
+     * removed. If any of this method's arguments are omitted or set to null, the
      * default Cookie setting values (set during Slim::init) will be used instead.
      *
      * @param string    $name       The cookie name
