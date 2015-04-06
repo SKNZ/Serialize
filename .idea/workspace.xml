@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/index.php" afterPath="$PROJECT_DIR$/api/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile.html" afterPath="$PROJECT_DIR$/mobile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="" />
     <ignored path="pc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -50,7 +45,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25" vertical-offset="7140" max-vertical-offset="11700">
+            <state vertical-scroll-proportion="0.0" vertical-offset="7140" max-vertical-offset="11700">
               <caret line="527" column="18" selection-start-line="527" selection-start-column="18" selection-end-line="527" selection-end-column="18" />
               <folding>
                 <element signature="e#4742#4861#1#PHP" expanded="false" />
@@ -93,8 +88,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50332594" vertical-offset="2906" max-vertical-offset="12735">
-              <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.38691795" vertical-offset="2906" max-vertical-offset="12735">
+              <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
               <folding>
                 <marker date="1428350706845" expanded="true" signature="925:1088" placeholder="..." />
               </folding>
@@ -145,7 +140,7 @@
       <file leaf-file-name="aze.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/aze.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
+            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1320">
               <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
               <folding>
                 <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
@@ -411,7 +406,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2713348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27680525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -486,7 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3071" max-vertical-offset="5040">
           <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,7 +488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3071" max-vertical-offset="5040">
           <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5950324" vertical-offset="4084" max-vertical-offset="5370">
           <caret line="309" column="24" selection-start-line="309" selection-start-column="18" selection-end-line="309" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,7 +857,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25" vertical-offset="7140" max-vertical-offset="11700">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7140" max-vertical-offset="11700">
           <caret line="527" column="18" selection-start-line="527" selection-start-column="18" selection-end-line="527" selection-end-column="18" />
           <folding>
             <element signature="e#4742#4861#1#PHP" expanded="false" />
@@ -908,13 +900,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.024390243" vertical-offset="1387" max-vertical-offset="5040">
           <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/aze.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
+        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1320">
           <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
           <folding>
             <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
@@ -927,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50332594" vertical-offset="2906" max-vertical-offset="12735">
-          <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.38691795" vertical-offset="2906" max-vertical-offset="12735">
+          <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
           <folding>
             <marker date="1428350706845" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
