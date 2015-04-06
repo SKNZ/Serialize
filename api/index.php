@@ -405,7 +405,7 @@ $app->group('/show',
                 $shows = [];
                 try {
                     $stmt = db::conn()->prepare(<<<'SQL'
-SELECT episode.id,
+(SELECT episode.id,
         episode.showId,
         CONCAT('E', LPAD(episode.episode, IF(episode > 99, 3, 2), '0')) AS episode,
         CONCAT('S', LPAD(episode.season, 2, '0')) AS season,
@@ -415,9 +415,23 @@ SELECT episode.id,
         `_show`.name
 FROM episode
 JOIN `_show` ON episode.showId = `_show`.id
-WHERE date BETWEEN DATE_SUB(NOW(), INTERVAL 10 DAY) AND NOW()
+WHERE date > NOW()
+ORDER BY date ASC
+LIMIT 5)
+UNION
+(SELECT episode.id,
+        episode.showId,
+        CONCAT('E', LPAD(episode.episode, IF(episode > 99, 3, 2), '0')) AS episode,
+        CONCAT('S', LPAD(episode.season, 2, '0')) AS season,
+        episode.episodeName,
+        DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
+        _show.id AS showId,
+        `_show`.name
+FROM episode
+JOIN `_show` ON episode.showId = `_show`.id
+WHERE date < NOW()
 ORDER BY date DESC
-LIMIT 10;
+LIMIT 5)
 SQL
                     );
 
@@ -440,7 +454,7 @@ SQL
                 $shows = [];
                 try {
                     $stmt = db::conn()->prepare(<<<'SQL'
-SELECT episode.id,
+(SELECT episode.id,
         episode.showId,
         CONCAT('E', LPAD(episode.episode, IF(episode > 99, 3, 2), '0')) AS episode,
         CONCAT('S', LPAD(episode.season, 2, '0')) AS season,
@@ -452,13 +466,29 @@ FROM episode
 JOIN `_show` ON episode.showId = `_show`.id
 JOIN user_show ON user_show.showId = `_show`.id
 WHERE date > NOW()
-  AND user_show.userId = ?
+  AND user_show.userId = :user
+ORDER BY date ASC
+LIMIT 5)
+UNION
+(SELECT episode.id,
+        episode.showId,
+        CONCAT('E', LPAD(episode.episode, IF(episode > 99, 3, 2), '0')) AS episode,
+        CONCAT('S', LPAD(episode.season, 2, '0')) AS season,
+        episode.episodeName,
+        DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
+        _show.id AS showId,
+        `_show`.name
+FROM episode
+JOIN `_show` ON episode.showId = `_show`.id
+JOIN user_show ON user_show.showId = `_show`.id
+WHERE date < NOW()
+  AND user_show.userId = :user
 ORDER BY date DESC
-LIMIT 10;
+LIMIT 5)
 SQL
                     );
 
-                    $stmt->execute([$_SESSION['currentUser']['id']]);
+                    $stmt->execute([':user' => $_SESSION['currentUser']['id']]);
                     $shows = $stmt->fetchAll();
                 } catch (PDOException $e) {
                     error(['Unknown database error', $e->getMessage()]);
@@ -481,12 +511,25 @@ SQL
 
                 $shows = [];
                 try {
-                    $stmt = db::conn()->prepare(<<<'SQL'
+
+
+                    $sql = <<<'SQL'
 SELECT _show.*, IF(us.userId = :user, TRUE, FALSE) AS subscribed
 FROM `_show`
 LEFT JOIN (SELECT * FROM user_show WHERE userId = :user) AS us ON us.showId = `_show`.id
-WHERE MATCH (name) AGAINST (:search);
-SQL
+ORDER BY name ASC;
+SQL;
+
+                    if ($jsonBody->search == '*') {
+                        $sql = <<<'SQL'
+SELECT _show.*, IF(us.userId = :user, TRUE, FALSE) AS subscribed
+FROM `_show`
+LEFT JOIN (SELECT * FROM user_show WHERE userId = :user) AS us ON us.showId = `_show`.id
+ORDER BY name ASC;
+SQL;
+                    }
+
+                    $stmt = db::conn()->prepare($sql
                     );
 
                     $stmt->execute([':search' => $jsonBody->search,

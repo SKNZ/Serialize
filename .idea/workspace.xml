@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/index.php" afterPath="$PROJECT_DIR$/api/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile.html" afterPath="$PROJECT_DIR$/mobile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,48 +47,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33259425" vertical-offset="6585" max-vertical-offset="11055">
-              <caret line="484" column="0" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.25" vertical-offset="7140" max-vertical-offset="11700">
+              <caret line="527" column="18" selection-start-line="527" selection-start-column="18" selection-end-line="527" selection-end-column="18" />
               <folding>
                 <element signature="e#4742#4861#1#PHP" expanded="false" />
                 <element signature="e#5255#5885#1#PHP" expanded="false" />
                 <element signature="e#5750#5848#0#PHP" expanded="false" />
-                <marker date="1428340589137" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-                <marker date="1428340589137" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-                <marker date="1428340589137" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-                <marker date="1428340589137" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-                <marker date="1428340589137" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
-                <marker date="1428340589137" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
-                <marker date="1428340589137" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
-                <marker date="1428340589137" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
-                <marker date="1428340589137" expanded="true" signature="13956:14429" placeholder="SELECT episo..episode..." />
-                <marker date="1428340589137" expanded="true" signature="14992:15497" placeholder="SELECT episo..episode..." />
-                <marker date="1428340589137" expanded="true" signature="16338:16541" placeholder="SELECT _show.._show..." />
-                <marker date="1428340589137" expanded="true" signature="16427:16471" placeholder="SELECT * FRO..user_show..." />
-                <marker date="1428340589137" expanded="true" signature="16503:16541" placeholder="SELECT _show.._show..." />
-                <marker date="1428340589137" expanded="true" signature="17930:17974" placeholder="REPLACE INTO..." />
-                <marker date="1428340589137" expanded="true" signature="18321:18382" placeholder="DELETE FROM ..." />
-                <marker date="1428340589137" expanded="true" signature="19200:19395" placeholder="SELECT id, n.._show..." />
-                <marker date="1428340589137" expanded="true" signature="19200:19400" placeholder="SELECT id, n.._show..." />
-                <marker date="1428340589137" expanded="true" signature="19306:19350" placeholder="SELECT * FRO..user_show..." />
-                <marker date="1428340589137" expanded="true" signature="19772:20087" placeholder="SELECT *, CO..episode..." />
-                <marker date="1428340589137" expanded="true" signature="21089:21318" placeholder="SELECT episo..episode_comments..." />
-                <marker date="1428340589137" expanded="true" signature="23750:23900" placeholder="INSERT INTO ..." />
+                <marker date="1428350189446" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+                <marker date="1428350189446" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+                <marker date="1428350189446" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+                <marker date="1428350189446" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+                <marker date="1428350189446" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+                <marker date="1428350189446" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
+                <marker date="1428350189446" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
+                <marker date="1428350189446" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
+                <marker date="1428350189446" expanded="true" signature="13956:14824" placeholder="(SELECT epis..." />
+                <marker date="1428350189446" expanded="true" signature="13957:14384" placeholder="SELECT episo..episode..." />
+                <marker date="1428350189446" expanded="true" signature="13957:14385" placeholder="SELECT episo..episode..." />
+                <marker date="1428350189446" expanded="true" signature="14394:14823" placeholder="SELECT episo..episode..." />
+                <marker date="1428350189446" expanded="true" signature="15386:16412" placeholder="(SELECT epis..." />
+                <marker date="1428350189446" expanded="true" signature="15387:15893" placeholder="SELECT episo..episode..." />
+                <marker date="1428350189446" expanded="true" signature="15387:15894" placeholder="SELECT episo..episode..." />
+                <marker date="1428350189446" expanded="true" signature="15903:16411" placeholder="SELECT episo..episode..." />
+                <marker date="1428350189446" expanded="true" signature="17244:17428" placeholder="SELECT _show.._show..." />
+                <marker date="1428350189446" expanded="true" signature="17333:17377" placeholder="SELECT * FRO..user_show..." />
+                <marker date="1428350189446" expanded="true" signature="17528:17712" placeholder="SELECT _show.._show..." />
+                <marker date="1428350189446" expanded="true" signature="17617:17661" placeholder="SELECT * FRO..user_show..." />
+                <marker date="1428350189446" expanded="true" signature="19178:19222" placeholder="REPLACE INTO..." />
+                <marker date="1428350189446" expanded="true" signature="19569:19630" placeholder="DELETE FROM ..." />
+                <marker date="1428350189446" expanded="true" signature="20448:20643" placeholder="SELECT id, n.._show..." />
+                <marker date="1428350189446" expanded="true" signature="20448:20648" placeholder="SELECT id, n.._show..." />
+                <marker date="1428350189446" expanded="true" signature="20554:20598" placeholder="SELECT * FRO..user_show..." />
+                <marker date="1428350189446" expanded="true" signature="21020:21335" placeholder="SELECT *, CO..episode..." />
+                <marker date="1428350189446" expanded="true" signature="22337:22566" placeholder="SELECT episo..episode_comments..." />
+                <marker date="1428350189446" expanded="true" signature="24998:25148" placeholder="INSERT INTO ..." />
+                <marker date="1428350189446" expanded="true" signature="24998:25182" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.0" vertical-offset="354" max-vertical-offset="12705">
-              <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.50332594" vertical-offset="2906" max-vertical-offset="12735">
+              <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
               <folding>
-                <marker date="1428337425657" expanded="true" signature="925:1088" placeholder="..." />
+                <marker date="1428350706845" expanded="true" signature="925:1088" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -94,7 +105,7 @@
       <file leaf-file-name="DomLoginStatus.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/mobile/DomLoginStatus.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="450">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
@@ -134,7 +145,7 @@
       <file leaf-file-name="aze.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/aze.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1320">
+            <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
               <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
               <folding>
                 <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
@@ -142,16 +153,6 @@
                 <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
                 <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3071" max-vertical-offset="5040">
-              <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -184,7 +185,6 @@
         <option value="$PROJECT_DIR$/js/mobile/DomLoginStatus.js" />
         <option value="$PROJECT_DIR$/js/SerializeApp.js" />
         <option value="$PROJECT_DIR$/js/mobile/DomLogin.js" />
-        <option value="$PROJECT_DIR$/mobile.html" />
         <option value="$PROJECT_DIR$/js/pc/DomLoginForm.js" />
         <option value="$PROJECT_DIR$/js/pc/DomRegistrationForm.js" />
         <option value="$PROJECT_DIR$/api/aze.php" />
@@ -200,10 +200,11 @@
         <option value="$PROJECT_DIR$/js/mobile/DomShowList.js" />
         <option value="$PROJECT_DIR$/api/db.php" />
         <option value="$PROJECT_DIR$/js/mobile/DomInteraction.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
         <option value="$PROJECT_DIR$/api/index.php" />
+        <option value="$PROJECT_DIR$/mobile.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -334,7 +335,7 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="SearchEverywhereHistoryKey" value="Domlog&#9;FILE&#9;file:///home/sknz/Development/Serialize/js/pc/DomLoginStatus.js&#10;DomLog&#9;FILE&#9;file:///home/sknz/Development/Serialize/js/mobile/DomLoginStatus.js&#10;main.&#9;FILE&#9;file:///home/sknz/Development/Serialize/css/main.css&#10;DomReg&#9;FILE&#9;file:///home/sknz/Development/Serialize/js/pc/DomRegistrationForm.js&#10;index&#9;FILE&#9;file:///home/sknz/Development/Serialize/api/index.php" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///home/sknz/Development/Serialize/index.html&#10;mobil&#9;FILE&#9;file:///home/sknz/Development/Serialize/mobile.html&#10;Domlog&#9;FILE&#9;file:///home/sknz/Development/Serialize/js/pc/DomLoginStatus.js&#10;DomLog&#9;FILE&#9;file:///home/sknz/Development/Serialize/js/mobile/DomLoginStatus.js&#10;main.&#9;FILE&#9;file:///home/sknz/Development/Serialize/css/main.css&#10;DomReg&#9;FILE&#9;file:///home/sknz/Development/Serialize/js/pc/DomRegistrationForm.js" />
     <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
@@ -407,10 +408,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="956" height="1055" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26586434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2713348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -509,7 +510,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1428337425657" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1428350706845" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -533,7 +534,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1428337425657" expanded="true" signature="925:1088" placeholder="..." />
+            <marker date="1428350706845" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -822,19 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/aze.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1320">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-          <folding>
-            <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
-            <marker date="1428319497639" expanded="true" signature="848:882" placeholder="REPLACE INTO..." />
-            <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
-            <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/pc/DomInteraction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="1695">
@@ -851,29 +839,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3071" max-vertical-offset="5040">
-          <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5950324" vertical-offset="4084" max-vertical-offset="5370">
           <caret line="309" column="24" selection-start-line="309" selection-start-column="18" selection-end-line="309" selection-end-column="24" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0" vertical-offset="354" max-vertical-offset="12705">
-          <caret line="46" column="37" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
-          <folding>
-            <marker date="1428337425657" expanded="true" signature="925:1088" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,33 +865,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33259425" vertical-offset="6585" max-vertical-offset="11055">
-          <caret line="484" column="0" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.25" vertical-offset="7140" max-vertical-offset="11700">
+          <caret line="527" column="18" selection-start-line="527" selection-start-column="18" selection-end-line="527" selection-end-column="18" />
           <folding>
             <element signature="e#4742#4861#1#PHP" expanded="false" />
             <element signature="e#5255#5885#1#PHP" expanded="false" />
             <element signature="e#5750#5848#0#PHP" expanded="false" />
-            <marker date="1428340589137" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-            <marker date="1428340589137" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-            <marker date="1428340589137" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-            <marker date="1428340589137" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-            <marker date="1428340589137" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
-            <marker date="1428340589137" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
-            <marker date="1428340589137" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
-            <marker date="1428340589137" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
-            <marker date="1428340589137" expanded="true" signature="13956:14429" placeholder="SELECT episo..episode..." />
-            <marker date="1428340589137" expanded="true" signature="14992:15497" placeholder="SELECT episo..episode..." />
-            <marker date="1428340589137" expanded="true" signature="16338:16541" placeholder="SELECT _show.._show..." />
-            <marker date="1428340589137" expanded="true" signature="16427:16471" placeholder="SELECT * FRO..user_show..." />
-            <marker date="1428340589137" expanded="true" signature="16503:16541" placeholder="SELECT _show.._show..." />
-            <marker date="1428340589137" expanded="true" signature="17930:17974" placeholder="REPLACE INTO..." />
-            <marker date="1428340589137" expanded="true" signature="18321:18382" placeholder="DELETE FROM ..." />
-            <marker date="1428340589137" expanded="true" signature="19200:19395" placeholder="SELECT id, n.._show..." />
-            <marker date="1428340589137" expanded="true" signature="19200:19400" placeholder="SELECT id, n.._show..." />
-            <marker date="1428340589137" expanded="true" signature="19306:19350" placeholder="SELECT * FRO..user_show..." />
-            <marker date="1428340589137" expanded="true" signature="19772:20087" placeholder="SELECT *, CO..episode..." />
-            <marker date="1428340589137" expanded="true" signature="21089:21318" placeholder="SELECT episo..episode_comments..." />
-            <marker date="1428340589137" expanded="true" signature="23750:23900" placeholder="INSERT INTO ..." />
+            <marker date="1428350189446" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+            <marker date="1428350189446" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+            <marker date="1428350189446" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+            <marker date="1428350189446" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+            <marker date="1428350189446" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+            <marker date="1428350189446" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
+            <marker date="1428350189446" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
+            <marker date="1428350189446" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
+            <marker date="1428350189446" expanded="true" signature="13956:14824" placeholder="(SELECT epis..." />
+            <marker date="1428350189446" expanded="true" signature="13957:14384" placeholder="SELECT episo..episode..." />
+            <marker date="1428350189446" expanded="true" signature="13957:14385" placeholder="SELECT episo..episode..." />
+            <marker date="1428350189446" expanded="true" signature="14394:14823" placeholder="SELECT episo..episode..." />
+            <marker date="1428350189446" expanded="true" signature="15386:16412" placeholder="(SELECT epis..." />
+            <marker date="1428350189446" expanded="true" signature="15387:15893" placeholder="SELECT episo..episode..." />
+            <marker date="1428350189446" expanded="true" signature="15387:15894" placeholder="SELECT episo..episode..." />
+            <marker date="1428350189446" expanded="true" signature="15903:16411" placeholder="SELECT episo..episode..." />
+            <marker date="1428350189446" expanded="true" signature="17244:17428" placeholder="SELECT _show.._show..." />
+            <marker date="1428350189446" expanded="true" signature="17333:17377" placeholder="SELECT * FRO..user_show..." />
+            <marker date="1428350189446" expanded="true" signature="17528:17712" placeholder="SELECT _show.._show..." />
+            <marker date="1428350189446" expanded="true" signature="17617:17661" placeholder="SELECT * FRO..user_show..." />
+            <marker date="1428350189446" expanded="true" signature="19178:19222" placeholder="REPLACE INTO..." />
+            <marker date="1428350189446" expanded="true" signature="19569:19630" placeholder="DELETE FROM ..." />
+            <marker date="1428350189446" expanded="true" signature="20448:20643" placeholder="SELECT id, n.._show..." />
+            <marker date="1428350189446" expanded="true" signature="20448:20648" placeholder="SELECT id, n.._show..." />
+            <marker date="1428350189446" expanded="true" signature="20554:20598" placeholder="SELECT * FRO..user_show..." />
+            <marker date="1428350189446" expanded="true" signature="21020:21335" placeholder="SELECT *, CO..episode..." />
+            <marker date="1428350189446" expanded="true" signature="22337:22566" placeholder="SELECT episo..episode_comments..." />
+            <marker date="1428350189446" expanded="true" signature="24998:25148" placeholder="INSERT INTO ..." />
+            <marker date="1428350189446" expanded="true" signature="24998:25182" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.024390243" vertical-offset="1387" max-vertical-offset="5040">
+          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/aze.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
+          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+          <folding>
+            <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
+            <marker date="1428319497639" expanded="true" signature="848:882" placeholder="REPLACE INTO..." />
+            <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
+            <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50332594" vertical-offset="2906" max-vertical-offset="12735">
+          <caret line="224" column="14" selection-start-line="224" selection-start-column="14" selection-end-line="224" selection-end-column="14" />
+          <folding>
+            <marker date="1428350706845" expanded="true" signature="925:1088" placeholder="..." />
           </folding>
         </state>
       </provider>
