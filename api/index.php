@@ -375,15 +375,14 @@ SQL
 
                     mail($accountInformation->email,
                          'Serialize account activation',
-                         'Please activate your Serialize account '
-                         . '<a href="http'
+                         'Please activate your Serialize account at: '
+                         . 'http'
                          . (isset($_SERVER['HTTPS']) ? 's' : '')
                          . '://'
                          . $_SERVER['HTTP_HOST']
                          . $app->request->getRootUri()
                          . '/user/confirm/'
-                         . urlencode($randString)
-                         . '">by clicking here</a>.');
+                         . urlencode($randString));
 
                     $db->commit();
                 } catch (PDOException $e) {
