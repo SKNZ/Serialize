@@ -573,7 +573,7 @@ SQL
                     );
                     $stmt->execute([
                                        'show' => $id,
-                                       'user' => $_SESSION['currentUser']['id']
+                                       'user' => $_SESSION['auth'] ? $_SESSION['currentUser']['id'] : -1
                                    ]);
                     $show = $stmt->fetch();
 
