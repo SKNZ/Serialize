@@ -482,9 +482,9 @@ SQL
                 $shows = [];
                 try {
                     $stmt = db::conn()->prepare(<<<'SQL'
-SELECT _show.*, IF(user_show.userId = :user, TRUE, FALSE) AS subscribed
+SELECT _show.*, IF(us.userId = :user, TRUE, FALSE) AS subscribed
 FROM `_show`
-LEFT JOIN user_show ON `_show`.id = user_show.showId
+LEFT JOIN (SELECT * FROM user_show WHERE userId = :user) AS us ON us.showId = `_show`.id
 WHERE MATCH (name) AGAINST (:search);
 SQL
                     );
@@ -565,15 +565,15 @@ SQL
                     $stmt = db::conn()->prepare(<<<'SQL'
 SELECT id,
         name,
-        IF(user_show.userId = :user, TRUE, FALSE) AS subscribed
+        IF(us.userId = :user, TRUE, FALSE) AS subscribed
 FROM `_show`
-LEFT JOIN user_show ON user_show.showId = `_show`.id
+LEFT JOIN (SELECT * FROM user_show WHERE userId = :user) AS us ON us.showId = `_show`.id
 WHERE id = :show
 SQL
                     );
                     $stmt->execute([
                                        'show' => $id,
-                                       'user' => $_SESSION['currentUser']['id']
+                                       'user' => isset($_SESSION['auth']) ? $_SESSION['currentUser']['id'] : -1
                                    ]);
                     $show = $stmt->fetch();
 
