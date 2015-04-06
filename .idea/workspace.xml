@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomLoginStatus.js" afterPath="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/index.php" afterPath="$PROJECT_DIR$/api/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,30 +47,30 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54102" vertical-offset="7792" max-vertical-offset="11055">
-              <caret line="577" column="20" selection-start-line="577" selection-start-column="20" selection-end-line="577" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.5077605" vertical-offset="7792" max-vertical-offset="11055">
+              <caret line="575" column="39" selection-start-line="575" selection-start-column="39" selection-end-line="575" selection-end-column="39" />
               <folding>
                 <element signature="e#4742#4861#1#PHP" expanded="false" />
                 <element signature="e#5255#5885#1#PHP" expanded="false" />
                 <element signature="e#5750#5848#0#PHP" expanded="false" />
-                <marker date="1428339133807" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-                <marker date="1428339133807" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-                <marker date="1428339133807" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-                <marker date="1428339133807" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-                <marker date="1428339133807" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
-                <marker date="1428339133807" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
-                <marker date="1428339133807" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
-                <marker date="1428339133807" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
-                <marker date="1428339133807" expanded="true" signature="13956:14429" placeholder="SELECT episo..episode..." />
-                <marker date="1428339133807" expanded="true" signature="14992:15497" placeholder="SELECT episo..episode..." />
-                <marker date="1428339133807" expanded="true" signature="16338:16512" placeholder="SELECT _show.._show..." />
-                <marker date="1428339133807" expanded="true" signature="16474:16512" placeholder="SELECT _show.._show..." />
-                <marker date="1428339133807" expanded="true" signature="17901:17945" placeholder="REPLACE INTO..." />
-                <marker date="1428339133807" expanded="true" signature="18292:18353" placeholder="DELETE FROM ..." />
-                <marker date="1428339133807" expanded="true" signature="19171:19342" placeholder="SELECT id, n.._show..." />
-                <marker date="1428339133807" expanded="true" signature="19716:20031" placeholder="SELECT *, CO..episode..." />
-                <marker date="1428339133807" expanded="true" signature="21033:21262" placeholder="SELECT episo..episode_comments..." />
-                <marker date="1428339133807" expanded="true" signature="23694:23844" placeholder="INSERT INTO ..." />
+                <marker date="1428339202894" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+                <marker date="1428339202894" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+                <marker date="1428339202894" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+                <marker date="1428339202894" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+                <marker date="1428339202894" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+                <marker date="1428339202894" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
+                <marker date="1428339202894" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
+                <marker date="1428339202894" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
+                <marker date="1428339202894" expanded="true" signature="13956:14429" placeholder="SELECT episo..episode..." />
+                <marker date="1428339202894" expanded="true" signature="14992:15497" placeholder="SELECT episo..episode..." />
+                <marker date="1428339202894" expanded="true" signature="16338:16512" placeholder="SELECT _show.._show..." />
+                <marker date="1428339202894" expanded="true" signature="16474:16512" placeholder="SELECT _show.._show..." />
+                <marker date="1428339202894" expanded="true" signature="17901:17945" placeholder="REPLACE INTO..." />
+                <marker date="1428339202894" expanded="true" signature="18292:18353" placeholder="DELETE FROM ..." />
+                <marker date="1428339202894" expanded="true" signature="19171:19342" placeholder="SELECT id, n.._show..." />
+                <marker date="1428339202894" expanded="true" signature="19682:19997" placeholder="SELECT *, CO..episode..." />
+                <marker date="1428339202894" expanded="true" signature="20999:21228" placeholder="SELECT episo..episode_comments..." />
+                <marker date="1428339202894" expanded="true" signature="23660:23810" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -894,30 +892,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54102" vertical-offset="7792" max-vertical-offset="11055">
-          <caret line="577" column="20" selection-start-line="577" selection-start-column="20" selection-end-line="577" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.5077605" vertical-offset="7792" max-vertical-offset="11055">
+          <caret line="575" column="39" selection-start-line="575" selection-start-column="39" selection-end-line="575" selection-end-column="39" />
           <folding>
             <element signature="e#4742#4861#1#PHP" expanded="false" />
             <element signature="e#5255#5885#1#PHP" expanded="false" />
             <element signature="e#5750#5848#0#PHP" expanded="false" />
-            <marker date="1428339133807" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-            <marker date="1428339133807" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-            <marker date="1428339133807" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-            <marker date="1428339133807" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-            <marker date="1428339133807" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
-            <marker date="1428339133807" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
-            <marker date="1428339133807" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
-            <marker date="1428339133807" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
-            <marker date="1428339133807" expanded="true" signature="13956:14429" placeholder="SELECT episo..episode..." />
-            <marker date="1428339133807" expanded="true" signature="14992:15497" placeholder="SELECT episo..episode..." />
-            <marker date="1428339133807" expanded="true" signature="16338:16512" placeholder="SELECT _show.._show..." />
-            <marker date="1428339133807" expanded="true" signature="16474:16512" placeholder="SELECT _show.._show..." />
-            <marker date="1428339133807" expanded="true" signature="17901:17945" placeholder="REPLACE INTO..." />
-            <marker date="1428339133807" expanded="true" signature="18292:18353" placeholder="DELETE FROM ..." />
-            <marker date="1428339133807" expanded="true" signature="19171:19342" placeholder="SELECT id, n.._show..." />
-            <marker date="1428339133807" expanded="true" signature="19716:20031" placeholder="SELECT *, CO..episode..." />
-            <marker date="1428339133807" expanded="true" signature="21033:21262" placeholder="SELECT episo..episode_comments..." />
-            <marker date="1428339133807" expanded="true" signature="23694:23844" placeholder="INSERT INTO ..." />
+            <marker date="1428339202894" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+            <marker date="1428339202894" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+            <marker date="1428339202894" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+            <marker date="1428339202894" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+            <marker date="1428339202894" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+            <marker date="1428339202894" expanded="true" signature="10491:10530" placeholder="SELECT * FRO..user..." />
+            <marker date="1428339202894" expanded="true" signature="10873:11067" placeholder="INSERT INTO ..." />
+            <marker date="1428339202894" expanded="true" signature="12710:12757" placeholder="INSERT INTO ..." />
+            <marker date="1428339202894" expanded="true" signature="13956:14429" placeholder="SELECT episo..episode..." />
+            <marker date="1428339202894" expanded="true" signature="14992:15497" placeholder="SELECT episo..episode..." />
+            <marker date="1428339202894" expanded="true" signature="16338:16512" placeholder="SELECT _show.._show..." />
+            <marker date="1428339202894" expanded="true" signature="16474:16512" placeholder="SELECT _show.._show..." />
+            <marker date="1428339202894" expanded="true" signature="17901:17945" placeholder="REPLACE INTO..." />
+            <marker date="1428339202894" expanded="true" signature="18292:18353" placeholder="DELETE FROM ..." />
+            <marker date="1428339202894" expanded="true" signature="19171:19342" placeholder="SELECT id, n.._show..." />
+            <marker date="1428339202894" expanded="true" signature="19682:19997" placeholder="SELECT *, CO..episode..." />
+            <marker date="1428339202894" expanded="true" signature="20999:21228" placeholder="SELECT episo..episode_comments..." />
+            <marker date="1428339202894" expanded="true" signature="23660:23810" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
