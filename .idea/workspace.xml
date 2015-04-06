@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/aze.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/vendor/slim/slim/Slim/Http/Request.php" afterPath="$PROJECT_DIR$/api/vendor/slim/slim/Slim/Http/Request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/vendor/slim/slim/Slim/Slim.php" afterPath="$PROJECT_DIR$/api/vendor/slim/slim/Slim/Slim.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ApiProvider.js" afterPath="$PROJECT_DIR$/js/ApiProvider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mobile/DomComment.js" afterPath="$PROJECT_DIR$/js/mobile/DomComment.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomCommentForm.js" afterPath="$PROJECT_DIR$/js/pc/DomCommentForm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomContact.js" afterPath="$PROJECT_DIR$/js/pc/DomContact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mobile/DomSearch.js" afterPath="$PROJECT_DIR$/js/mobile/DomSearch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomSearch.js" afterPath="$PROJECT_DIR$/js/pc/DomSearch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/mobile/DomShow.js" afterPath="$PROJECT_DIR$/js/mobile/DomShow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomShow.js" afterPath="$PROJECT_DIR$/js/pc/DomShow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pc/DomShowList.js" afterPath="$PROJECT_DIR$/js/pc/DomShowList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/aze.php" afterPath="$PROJECT_DIR$/api/aze.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/index.php" afterPath="$PROJECT_DIR$/api/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -53,35 +61,76 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="7725">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state vertical-scroll-proportion="-33.125" vertical-offset="4650" max-vertical-offset="10740">
+              <caret line="414" column="18" selection-start-line="414" selection-start-column="8" selection-end-line="414" selection-end-column="18" />
               <folding>
-                <element signature="e#1908#4621#1#PHP" expanded="false" />
                 <element signature="e#4742#4861#1#PHP" expanded="false" />
                 <element signature="e#5255#5885#1#PHP" expanded="false" />
                 <element signature="e#5750#5848#0#PHP" expanded="false" />
-                <element signature="e#5938#6883#1#PHP" expanded="false" />
-                <element signature="e#6946#13855#1#PHP" expanded="false" />
-                <marker date="1428279111315" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-                <marker date="1428279111315" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-                <marker date="1428279111315" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-                <marker date="1428279111315" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-                <marker date="1428279111315" expanded="true" signature="6162:6235" placeholder="DELETE FROM ..." />
-                <marker date="1428279111315" expanded="true" signature="10592:10631" placeholder="SELECT * FRO..user..." />
-                <marker date="1428279111315" expanded="true" signature="10974:11168" placeholder="INSERT INTO ..." />
-                <marker date="1428279111315" expanded="true" signature="12811:12858" placeholder="INSERT INTO ..." />
+                <element signature="e#5962#6907#1#PHP" expanded="false" />
+                <marker date="1428326416801" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+                <marker date="1428326416801" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+                <marker date="1428326416801" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+                <marker date="1428326416801" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+                <marker date="1428326416801" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+                <marker date="1428326416801" expanded="true" signature="10616:10655" placeholder="SELECT * FRO..user..." />
+                <marker date="1428326416801" expanded="true" signature="10998:11192" placeholder="INSERT INTO ..." />
+                <marker date="1428326416801" expanded="true" signature="12835:12882" placeholder="INSERT INTO ..." />
+                <marker date="1428326416801" expanded="true" signature="14139:14612" placeholder="SELECT episo..episode..." />
+                <marker date="1428326416801" expanded="true" signature="15175:15680" placeholder="SELECT episo..episode..." />
+                <marker date="1428326416801" expanded="true" signature="16521:16695" placeholder="SELECT _show.._show..." />
+                <marker date="1428326416801" expanded="true" signature="16657:16695" placeholder="SELECT _show.._show..." />
+                <marker date="1428326416801" expanded="true" signature="18084:18128" placeholder="REPLACE INTO..." />
+                <marker date="1428326416801" expanded="true" signature="18475:18536" placeholder="DELETE FROM ..." />
+                <marker date="1428326416801" expanded="true" signature="19354:19525" placeholder="SELECT id, n.._show..." />
+                <marker date="1428326416801" expanded="true" signature="19865:20180" placeholder="SELECT *, CO..episode..." />
+                <marker date="1428326416801" expanded="true" signature="21182:21411" placeholder="SELECT episo..episode_comments..." />
+                <marker date="1428326416801" expanded="true" signature="23843:23993" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aze.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DomShow.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/mobile/DomShow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.16008538" vertical-offset="0" max-vertical-offset="1365">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomShowList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mobile/DomShowList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="2295">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomContact.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/pc/DomContact.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="531" max-vertical-offset="2040">
+              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aze.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/aze.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5" vertical-offset="75" max-vertical-offset="1050">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
+              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
               <folding>
-                <marker date="1428281761678" expanded="true" signature="834:912" placeholder="INSERT INTO ..." />
+                <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
+                <marker date="1428319497639" expanded="true" signature="848:882" placeholder="REPLACE INTO..." />
+                <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
+                <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -90,78 +139,8 @@
       <file leaf-file-name="DomRegistrationForm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pc/DomRegistrationForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="4320">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1639" max-vertical-offset="4320">
               <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySQL - serialize@localhost" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/caa52642/30e921b0-f0e7-42d8-bf50-1e5e61c2bf3d/">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiProvider.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ApiProvider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1095">
-              <caret line="128" column="23" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
-              <folding>
-                <element signature="e#445#682#0" expanded="false" />
-                <element signature="e#558#611#0" expanded="false" />
-                <element signature="e#617#672#0" expanded="false" />
-                <element signature="e#731#883#0" expanded="false" />
-                <element signature="e#1108#1262#0" expanded="false" />
-                <element signature="e#1298#1434#0" expanded="false" />
-                <element signature="e#1510#1551#0" expanded="false" />
-                <element signature="e#1598#2213#0" expanded="false" />
-                <element signature="e#1690#1754#0" expanded="false" />
-                <element signature="e#1798#1966#0" expanded="false" />
-                <element signature="e#2010#2161#0" expanded="false" />
-                <element signature="e#2243#2579#0" expanded="false" />
-                <element signature="e#2390#2527#0" expanded="false" />
-                <element signature="e#2617#2661#0" expanded="false" />
-                <element signature="e#2881#3261#0" expanded="false" />
-                <element signature="e#2965#3035#0" expanded="false" />
-                <element signature="e#3136#3209#0" expanded="false" />
-                <element signature="e#3296#3559#0" expanded="false" />
-                <element signature="e#3428#3507#0" expanded="false" />
-                <element signature="e#3592#3851#0" expanded="false" />
-                <element signature="e#3722#3799#0" expanded="false" />
-                <element signature="e#4052#4128#0" expanded="false" />
-                <element signature="e#4172#4245#0" expanded="false" />
-                <element signature="e#4341#4726#0" expanded="false" />
-                <element signature="e#4452#4500#0" expanded="false" />
-                <element signature="e#4601#4674#0" expanded="false" />
-                <element signature="e#4762#5135#0" expanded="false" />
-                <element signature="e#4853#4899#0" expanded="false" />
-                <element signature="e#4926#4991#0" expanded="false" />
-                <element signature="e#5018#5083#0" expanded="false" />
-                <element signature="e#5402#5480#0" expanded="false" />
-                <element signature="e#5507#5580#0" expanded="false" />
-                <element signature="e#5670#6029#0" expanded="false" />
-                <element signature="e#5805#5877#0" expanded="false" />
-                <element signature="e#5904#5977#0" expanded="false" />
-                <element signature="e#6078#6473#0" expanded="false" />
-                <element signature="e#6165#6235#0" expanded="false" />
-                <element signature="e#6262#6329#0" expanded="false" />
-                <element signature="e#6356#6421#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomCommentForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/pc/DomCommentForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2115" max-vertical-offset="3570">
-              <caret line="154" column="58" selection-start-line="154" selection-start-column="58" selection-end-line="154" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -170,8 +149,38 @@
       <file leaf-file-name="DomShowList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pc/DomShowList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2370">
-              <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
+              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomShow.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/pc/DomShow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1935">
+              <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DomSearch.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/mobile/DomSearch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mobile.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.666667" vertical-offset="2921" max-vertical-offset="5040">
+              <caret line="215" column="22" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -204,26 +213,26 @@
         <option value="$PROJECT_DIR$/js/mobile/DomInteraction.js" />
         <option value="$PROJECT_DIR$/js/mobile/DomStorage.js" />
         <option value="$PROJECT_DIR$/css/mobile.css" />
-        <option value="$PROJECT_DIR$/js/pc/DomSearch.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/pc/DomLoginStatus.js" />
         <option value="$PROJECT_DIR$/js/mobile/DomLoginStatus.js" />
         <option value="$PROJECT_DIR$/js/SerializeApp.js" />
-        <option value="$PROJECT_DIR$/js/ApiProvider.js" />
-        <option value="$PROJECT_DIR$/js/mobile/DomComment.js" />
-        <option value="$PROJECT_DIR$/js/mobile/DomShow.js" />
         <option value="$PROJECT_DIR$/js/mobile/DomLogin.js" />
-        <option value="$PROJECT_DIR$/js/mobile/DomSearch.js" />
         <option value="$PROJECT_DIR$/mobile.html" />
-        <option value="$PROJECT_DIR$/js/mobile/DomShowList.js" />
-        <option value="$PROJECT_DIR$/js/pc/DomContact.js" />
         <option value="$PROJECT_DIR$/js/pc/DomLoginForm.js" />
-        <option value="$PROJECT_DIR$/js/pc/DomShow.js" />
-        <option value="$PROJECT_DIR$/js/pc/DomShowList.js" />
-        <option value="$PROJECT_DIR$/js/pc/DomCommentForm.js" />
         <option value="$PROJECT_DIR$/js/pc/DomRegistrationForm.js" />
-        <option value="$PROJECT_DIR$/api/index.php" />
         <option value="$PROJECT_DIR$/api/aze.php" />
+        <option value="$PROJECT_DIR$/js/pc/DomSearch.js" />
+        <option value="$PROJECT_DIR$/js/ApiProvider.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/pc/DomCommentForm.js" />
+        <option value="$PROJECT_DIR$/js/mobile/DomComment.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomContact.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomShowList.js" />
+        <option value="$PROJECT_DIR$/js/pc/DomShow.js" />
+        <option value="$PROJECT_DIR$/js/mobile/DomShow.js" />
+        <option value="$PROJECT_DIR$/js/mobile/DomSearch.js" />
+        <option value="$PROJECT_DIR$/js/mobile/DomShowList.js" />
+        <option value="$PROJECT_DIR$/api/index.php" />
       </list>
     </option>
   </component>
@@ -237,7 +246,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="962" />
+    <option name="x" value="2" />
     <option name="y" value="23" />
     <option name="width" value="956" />
     <option name="height" value="1055" />
@@ -284,7 +293,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,6 +341,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -426,28 +435,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="962" y="23" width="956" height="1055" extended-state="0" />
+    <frame x="2" y="23" width="956" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2502674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25054705" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8609958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3100304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3100304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -489,7 +498,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/ApiProvider.js</url>
+          <line>23</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="14" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -647,7 +663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="14054" max-vertical-offset="34620">
           <caret line="949" column="18" selection-start-line="949" selection-start-column="18" selection-end-line="949" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32258064" vertical-offset="0" max-vertical-offset="465">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67741936" vertical-offset="150" max-vertical-offset="615">
           <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,14 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1275">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/SerializeApp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19354838" vertical-offset="0" max-vertical-offset="465">
@@ -737,26 +742,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13084112" vertical-offset="8149" max-vertical-offset="12690">
-          <caret line="547" column="57" selection-start-line="547" selection-start-column="57" selection-end-line="547" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/mobile/DomLogin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
           <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mobile/DomSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3548387" vertical-offset="45" max-vertical-offset="1140">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -777,50 +766,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomContact.js">
+    <entry file="file://$PROJECT_DIR$/js/pc/DomSearch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="931" max-vertical-offset="2040">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2796158" vertical-offset="23" max-vertical-offset="1275">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/mobile/DomShowList.js">
+    <entry file="file://$PROJECT_DIR$/js/ApiProvider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1514" max-vertical-offset="2295">
-          <caret line="130" column="53" selection-start-line="130" selection-start-column="52" selection-end-line="130" selection-end-column="53" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
+          <caret line="26" column="62" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+          <folding>
+            <element signature="e#558#611#0" expanded="false" />
+            <element signature="e#617#672#0" expanded="false" />
+            <element signature="e#1132#1286#0" expanded="false" />
+            <element signature="e#1322#1458#0" expanded="false" />
+            <element signature="e#1534#1575#0" expanded="false" />
+            <element signature="e#1622#2237#0" expanded="false" />
+            <element signature="e#1714#1778#0" expanded="false" />
+            <element signature="e#1822#1990#0" expanded="false" />
+            <element signature="e#2034#2185#0" expanded="false" />
+            <element signature="e#2267#2603#0" expanded="false" />
+            <element signature="e#2414#2551#0" expanded="false" />
+            <element signature="e#2641#2685#0" expanded="false" />
+            <element signature="e#2905#3285#0" expanded="false" />
+            <element signature="e#2989#3059#0" expanded="false" />
+            <element signature="e#3160#3233#0" expanded="false" />
+            <element signature="e#3320#3583#0" expanded="false" />
+            <element signature="e#3452#3531#0" expanded="false" />
+            <element signature="e#3616#3875#0" expanded="false" />
+            <element signature="e#3746#3823#0" expanded="false" />
+            <element signature="e#4076#4152#0" expanded="false" />
+            <element signature="e#4196#4269#0" expanded="false" />
+            <element signature="e#4365#4750#0" expanded="false" />
+            <element signature="e#4476#4524#0" expanded="false" />
+            <element signature="e#4625#4698#0" expanded="false" />
+            <element signature="e#4786#5159#0" expanded="false" />
+            <element signature="e#4877#4923#0" expanded="false" />
+            <element signature="e#4950#5015#0" expanded="false" />
+            <element signature="e#5042#5107#0" expanded="false" />
+            <element signature="e#5426#5504#0" expanded="false" />
+            <element signature="e#5531#5604#0" expanded="false" />
+            <element signature="e#5694#6053#0" expanded="false" />
+            <element signature="e#5829#5901#0" expanded="false" />
+            <element signature="e#5928#6001#0" expanded="false" />
+            <element signature="e#6102#6497#0" expanded="false" />
+            <element signature="e#6189#6259#0" expanded="false" />
+            <element signature="e#6286#6353#0" expanded="false" />
+            <element signature="e#6380#6445#0" expanded="false" />
+            <marker date="1428320953036" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1428320953036" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.125" vertical-offset="9855" max-vertical-offset="12690">
+          <caret line="694" column="47" selection-start-line="694" selection-start-column="47" selection-end-line="694" selection-end-column="47" />
+          <folding>
+            <marker date="1428323001079" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/aze.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
+          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+          <folding>
+            <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
+            <marker date="1428319497639" expanded="true" signature="848:882" placeholder="REPLACE INTO..." />
+            <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
+            <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/mobile/DomComment.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="2130">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.60832447" vertical-offset="135" max-vertical-offset="2130">
+          <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile.html">
+    <entry file="file://$PROJECT_DIR$/js/pc/DomCommentForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="2106" max-vertical-offset="5040">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mobile/DomShow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6939502" vertical-offset="0" max-vertical-offset="1365">
-          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomShow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5436409" vertical-offset="225" max-vertical-offset="1935">
-          <caret line="83" column="41" selection-start-line="83" selection-start-column="41" selection-end-line="83" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.5517609" vertical-offset="203" max-vertical-offset="3570">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -833,108 +869,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ApiProvider.js">
+    <entry file="file://$PROJECT_DIR$/js/pc/DomContact.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="1095">
-          <caret line="128" column="23" selection-start-line="128" selection-start-column="23" selection-end-line="128" selection-end-column="23" />
-          <folding>
-            <element signature="e#445#682#0" expanded="false" />
-            <element signature="e#558#611#0" expanded="false" />
-            <element signature="e#617#672#0" expanded="false" />
-            <element signature="e#731#883#0" expanded="false" />
-            <element signature="e#1108#1262#0" expanded="false" />
-            <element signature="e#1298#1434#0" expanded="false" />
-            <element signature="e#1510#1551#0" expanded="false" />
-            <element signature="e#1598#2213#0" expanded="false" />
-            <element signature="e#1690#1754#0" expanded="false" />
-            <element signature="e#1798#1966#0" expanded="false" />
-            <element signature="e#2010#2161#0" expanded="false" />
-            <element signature="e#2243#2579#0" expanded="false" />
-            <element signature="e#2390#2527#0" expanded="false" />
-            <element signature="e#2617#2661#0" expanded="false" />
-            <element signature="e#2881#3261#0" expanded="false" />
-            <element signature="e#2965#3035#0" expanded="false" />
-            <element signature="e#3136#3209#0" expanded="false" />
-            <element signature="e#3296#3559#0" expanded="false" />
-            <element signature="e#3428#3507#0" expanded="false" />
-            <element signature="e#3592#3851#0" expanded="false" />
-            <element signature="e#3722#3799#0" expanded="false" />
-            <element signature="e#4052#4128#0" expanded="false" />
-            <element signature="e#4172#4245#0" expanded="false" />
-            <element signature="e#4341#4726#0" expanded="false" />
-            <element signature="e#4452#4500#0" expanded="false" />
-            <element signature="e#4601#4674#0" expanded="false" />
-            <element signature="e#4762#5135#0" expanded="false" />
-            <element signature="e#4853#4899#0" expanded="false" />
-            <element signature="e#4926#4991#0" expanded="false" />
-            <element signature="e#5018#5083#0" expanded="false" />
-            <element signature="e#5402#5480#0" expanded="false" />
-            <element signature="e#5507#5580#0" expanded="false" />
-            <element signature="e#5670#6029#0" expanded="false" />
-            <element signature="e#5805#5877#0" expanded="false" />
-            <element signature="e#5904#5977#0" expanded="false" />
-            <element signature="e#6078#6473#0" expanded="false" />
-            <element signature="e#6165#6235#0" expanded="false" />
-            <element signature="e#6262#6329#0" expanded="false" />
-            <element signature="e#6356#6421#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="531" max-vertical-offset="2040">
+          <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/pc/DomShowList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="2370">
-          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomCommentForm.js">
+    <entry file="file://$PROJECT_DIR$/js/pc/DomRegistrationForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2115" max-vertical-offset="3570">
-          <caret line="154" column="58" selection-start-line="154" selection-start-column="58" selection-end-line="154" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1639" max-vertical-offset="4320">
+          <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pc/DomShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1935">
+          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.666667" vertical-offset="2921" max-vertical-offset="5040">
+          <caret line="215" column="22" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mobile/DomSearch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mobile/DomShowList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="2295">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="7725">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="-33.125" vertical-offset="4650" max-vertical-offset="10740">
+          <caret line="414" column="18" selection-start-line="414" selection-start-column="8" selection-end-line="414" selection-end-column="18" />
           <folding>
-            <element signature="e#1908#4621#1#PHP" expanded="false" />
             <element signature="e#4742#4861#1#PHP" expanded="false" />
             <element signature="e#5255#5885#1#PHP" expanded="false" />
             <element signature="e#5750#5848#0#PHP" expanded="false" />
-            <element signature="e#5938#6883#1#PHP" expanded="false" />
-            <element signature="e#6946#13855#1#PHP" expanded="false" />
-            <marker date="1428279111315" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-            <marker date="1428279111315" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-            <marker date="1428279111315" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-            <marker date="1428279111315" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-            <marker date="1428279111315" expanded="true" signature="6162:6235" placeholder="DELETE FROM ..." />
-            <marker date="1428279111315" expanded="true" signature="10592:10631" placeholder="SELECT * FRO..user..." />
-            <marker date="1428279111315" expanded="true" signature="10974:11168" placeholder="INSERT INTO ..." />
-            <marker date="1428279111315" expanded="true" signature="12811:12858" placeholder="INSERT INTO ..." />
+            <element signature="e#5962#6907#1#PHP" expanded="false" />
+            <marker date="1428326416801" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+            <marker date="1428326416801" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+            <marker date="1428326416801" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+            <marker date="1428326416801" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+            <marker date="1428326416801" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+            <marker date="1428326416801" expanded="true" signature="10616:10655" placeholder="SELECT * FRO..user..." />
+            <marker date="1428326416801" expanded="true" signature="10998:11192" placeholder="INSERT INTO ..." />
+            <marker date="1428326416801" expanded="true" signature="12835:12882" placeholder="INSERT INTO ..." />
+            <marker date="1428326416801" expanded="true" signature="14139:14612" placeholder="SELECT episo..episode..." />
+            <marker date="1428326416801" expanded="true" signature="15175:15680" placeholder="SELECT episo..episode..." />
+            <marker date="1428326416801" expanded="true" signature="16521:16695" placeholder="SELECT _show.._show..." />
+            <marker date="1428326416801" expanded="true" signature="16657:16695" placeholder="SELECT _show.._show..." />
+            <marker date="1428326416801" expanded="true" signature="18084:18128" placeholder="REPLACE INTO..." />
+            <marker date="1428326416801" expanded="true" signature="18475:18536" placeholder="DELETE FROM ..." />
+            <marker date="1428326416801" expanded="true" signature="19354:19525" placeholder="SELECT id, n.._show..." />
+            <marker date="1428326416801" expanded="true" signature="19865:20180" placeholder="SELECT *, CO..episode..." />
+            <marker date="1428326416801" expanded="true" signature="21182:21411" placeholder="SELECT episo..episode_comments..." />
+            <marker date="1428326416801" expanded="true" signature="23843:23993" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pc/DomRegistrationForm.js">
+    <entry file="file://$PROJECT_DIR$/js/mobile/DomShow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="4320">
-          <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.16008538" vertical-offset="0" max-vertical-offset="1365">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/aze.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="75" max-vertical-offset="1050">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <marker date="1428281761678" expanded="true" signature="834:912" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>

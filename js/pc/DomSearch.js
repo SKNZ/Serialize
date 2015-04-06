@@ -17,7 +17,7 @@ var DomSearch = (function () {
                     $('#home-search-results')
                         .append(
                         $('<span>')
-                            .addClass('col-md-2')
+                            .addClass('col-md-4')
                             .addClass('btn')
                             .attr('data-toggle', 'modal')
                             .attr('href', '#show-modal')

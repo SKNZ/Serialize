@@ -34,6 +34,21 @@ $episodeName = null;
 $season = null;
 $episode = null;
 
+$stmt3 = db::conn()->prepare(<<<'SQL'
+INSERT IGNORE INTO `_show` (name) VALUES (:name)
+SQL
+);
+
+$stmt3->bindParam(':name', $showName);
+
+$stmt2 = db::conn()->prepare(<<<'SQL'
+SELECT id
+FROM `_show`
+WHERE name = :name;
+SQL
+);
+
+$stmt2->bindParam(':name', $showName);
 
 $stmt = db::conn()->prepare(<<<'SQL'
 INSERT INTO episode VALUES (DEFAULT, :name, :season, :episode, :date, :showId)
@@ -43,20 +58,23 @@ SQL
 $stmt->bindParam(':name', $episodeName);
 $stmt->bindParam(':season', $season);
 $stmt->bindParam(':episode', $episode);
-$stmt->bindParam(':date', $date);
+$stmt->bindParam(':date', $time);
 $stmt->bindParam(':showId', $showId);
 
 foreach ($schedule as $day) {
     $date = $day['attr'];
     foreach ($day as $hour) {
-        $time = $hour['attr'];
+        $time = $date . ' ' . $hour['attr'];
 
         foreach ($hour as $show) {
             $showName = $show['name'];
             $episodeName = $show->title;
             $season = strtok($show->ep, 'x');
             $episode = strtok('x');
-            echo $date . ' | ' . $time . ' | ' . $showName . ' | ' . $episodeName . ' | ' . $season . ' | ' . $episode . '<br/>';
+            echo $showId . ' | ' . $time . ' | ' . $showName . ' | ' . $episodeName . ' | ' . $season . ' | ' . $episode . '<br/>';
+            $stmt3->execute();
+            $stmt2->execute();
+            $showId = $stmt2->fetchColumn();
             $stmt->execute();
         }
     }

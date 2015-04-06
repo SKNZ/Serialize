@@ -9,17 +9,34 @@
     <schema name="" catalog="serialize"/>
     <table name="_show" schema="" catalog="serialize" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="episode_ibfk_1" table="episode" schema="" catalog="serialize" columns="showId"/>
+      <exported-key name="user_show_ibfk_2" table="user_show" schema="" catalog="serialize" columns="showId"/>
+      <index name="name" unique="true" columns="name"/>
+      <index name="idxsearch" unique="false" columns="name"/>
     </table>
     <table name="episode" schema="" catalog="serialize" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="name" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="episodeName" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
       <column name="season" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="episode" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <column name="showId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="episode_ibfk_1" columns="showId" ref-table="_show" ref-schema="" ref-catalog="serialize" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="episode_comments_ibfk_1" table="episode_comments" schema="" catalog="serialize" columns="episodeId"/>
+    </table>
+    <table name="episode_comments" schema="" catalog="serialize" type="TABLE">
+      <column name="episodeId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="userId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="rating" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="subject" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="message" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <primary-key name="PRIMARY" columns="episodeId,userId"/>
+      <foreign-key name="episode_comments_ibfk_1" columns="episodeId" ref-table="episode" ref-schema="" ref-catalog="serialize" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="episode_comments_ibfk_2" columns="userId" ref-table="user" ref-schema="" ref-catalog="serialize" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="user" schema="" catalog="serialize" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -31,17 +48,24 @@
       <column name="weeklyDigest" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
       <column name="newsletter" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
       <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="episode_comments_ibfk_2" table="episode_comments" schema="" catalog="serialize" columns="userId"/>
+      <exported-key name="user_email_validation_ibfk_1" table="user_email_validation" schema="" catalog="serialize" columns="id"/>
+      <exported-key name="user_show_ibfk_1" table="user_show" schema="" catalog="serialize" columns="userId"/>
       <index name="email" unique="true" columns="email"/>
     </table>
     <table name="user_email_validation" schema="" catalog="serialize" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="token" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="user_email_validation_ibfk_1" columns="id" ref-table="user" ref-schema="" ref-catalog="serialize" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="token" unique="true" columns="token"/>
     </table>
     <table name="user_show" schema="" catalog="serialize" type="TABLE">
-      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="show_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="userId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="showId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="userId,showId"/>
+      <foreign-key name="user_show_ibfk_1" columns="userId" ref-table="user" ref-schema="" ref-catalog="serialize" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="user_show_ibfk_2" columns="showId" ref-table="_show" ref-schema="" ref-catalog="serialize" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
   </data-source>
 </component>

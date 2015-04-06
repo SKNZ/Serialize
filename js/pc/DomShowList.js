@@ -9,7 +9,7 @@ var DomShowList = (function () {
                     $('<a>')
                         .attr('data-toggle', 'modal')
                         .attr('href', '#show-modal')
-                        .data('show-id', show.id)
+                        .data('show-id', show.showId)
                         .data('show-name', show.name)
                         .text(show.name)),
                 $('<td>').text(show.season),

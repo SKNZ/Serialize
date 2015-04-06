@@ -24,7 +24,7 @@ var ApiProvider = (function () {
         }).fail(function (jqXHR, textStatus, errorThrown) {
             console.log('TOPKEK ' + textStatus);
             console.log(errorThrown);
-            deferred.reject({errors: [errorThrown]});
+            deferred.reject({errors: ['Unknown server error', errorThrown]});
         });
 
         return deferred.promise();

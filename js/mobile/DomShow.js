@@ -6,7 +6,7 @@ var DomShow = (function () {
                 $('#show-errors')
                     .fadeOut();
 
-                $('#your-shows-messages')
+                $('#show-error-messages')
                     .empty();
 
                 ApiProvider

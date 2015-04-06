@@ -44,9 +44,9 @@ var DomCommentForm = (function () {
                                     .append(
                                     ' posted by ',
                                     $('<a>')
-                                        .text(comment.user.firstName +
+                                        .text(comment.firstName +
                                         ' ' +
-                                        comment.user.lastName),
+                                        comment.lastName),
                                     ' on ',
                                     comment.date))));
 

@@ -43,9 +43,9 @@ var DomComment = (function () {
                                     $('<a>')
                                         .attr('href', '')
                                         .text(
-                                        comment.user.firstName
+                                        comment.firstName
                                         + ' '
-                                        + comment.user.lastName),
+                                        + comment.lastName),
                                     ' on ',
                                     comment.date
                                 ))));

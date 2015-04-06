@@ -72,7 +72,7 @@ var DomContact = (function () {
 
                     // Build comment request
                     var messageInformation = {
-                        email: $('contact-input-contact').val(),
+                        email: $('#contact-input-email').val(),
                         subject: $('#contact-input-subject').val(),
                         message: $('#contact-input-message').val()
                     };

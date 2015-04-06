@@ -188,6 +188,7 @@ SQL
                 ok();
             });
 
+        // Mail confirm
         $app->get('/confirm/:token',
             function ($token) use ($app) {
                 if (empty($token)) {
@@ -406,54 +407,33 @@ $app->group('/show',
         // Latest shows
         $app->get('/latest',
             function () use ($app) {
+                $shows = [];
+                try {
+                    $stmt = db::conn()->prepare(<<<'SQL'
+SELECT episode.id,
+        episode.showId,
+        CONCAT('E', LPAD(episode.episode, IF(episode > 99, 3, 2), '0')) AS episode,
+        CONCAT('S', LPAD(episode.season, 2, '0')) AS season,
+        episode.episodeName,
+        DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
+        _show.id AS showId,
+        `_show`.name
+FROM episode
+JOIN `_show` ON episode.showId = `_show`.id
+WHERE date BETWEEN DATE_SUB(NOW(), INTERVAL 10 DAY) AND NOW()
+ORDER BY date DESC
+LIMIT 10;
+SQL
+                    );
+
+                    $stmt->execute();
+                    $shows = $stmt->fetchAll();
+                } catch (PDOException $e) {
+                    error(['Unknown database error']);
+                }
+
                 ok([
-                       'latestShows' => [
-                           [
-                               'id' => 30,
-                               'date' => '12/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E05',
-                               'episodeName' => 'Swag',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 29,
-                               'date' => '06/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E04',
-                               'episodeName' => 'Swag',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 28,
-                               'date' => '02/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E03',
-                               'episodeName' => 'CupidityAzerty',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 27,
-                               'date' => '28/09/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E02',
-                               'episodeName' => 'Aazekpqsdk',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 26,
-                               'date' => '22/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E01',
-                               'episodeName' => 'Hipster',
-                               'showId' => 13
-                           ]
-                       ]
+                       'latestShows' => $shows
                    ]);
             });
 
@@ -461,54 +441,36 @@ $app->group('/show',
         $app->get('/your',
                   'auth',
             function () use ($app) {
+
+                $shows = [];
+                try {
+                    $stmt = db::conn()->prepare(<<<'SQL'
+SELECT episode.id,
+        episode.showId,
+        CONCAT('E', LPAD(episode.episode, IF(episode > 99, 3, 2), '0')) AS episode,
+        CONCAT('S', LPAD(episode.season, 2, '0')) AS season,
+        episode.episodeName,
+        DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date,
+        _show.id AS showId,
+        `_show`.name
+FROM episode
+JOIN `_show` ON episode.showId = `_show`.id
+JOIN user_show ON user_show.showId = `_show`.id
+WHERE date > NOW()
+  AND user_show.userId = ?
+ORDER BY date DESC
+LIMIT 10;
+SQL
+                    );
+
+                    $stmt->execute([$_SESSION['currentUser']['id']]);
+                    $shows = $stmt->fetchAll();
+                } catch (PDOException $e) {
+                    error(['Unknown database error', $e->getMessage()]);
+                }
+
                 ok([
-                       'yourShows' => [
-                           [
-                               'id' => 30,
-                               'date' => '12/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E05',
-                               'episodeName' => 'Swag',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 29,
-                               'date' => '06/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E04',
-                               'episodeName' => 'Swag',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 28,
-                               'date' => '02/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E03',
-                               'episodeName' => 'CupidityAzerty',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 27,
-                               'date' => '28/09/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E02',
-                               'episodeName' => 'Aazekpqsdk',
-                               'showId' => 13
-                           ],
-                           [
-                               'id' => 26,
-                               'date' => '22/10/2015',
-                               'name' => 'Game of Thrones',
-                               'season' => 'S03',
-                               'episode' => 'E01',
-                               'episodeName' => 'Hipster',
-                               'showId' => 13
-                           ]
-                       ]
+                       'yourShows' => $shows
                    ]);
             });
 
@@ -522,53 +484,29 @@ $app->group('/show',
                     error(['You must specify the search terms.']);
                 }
 
-                if ($jsonBody->search == "aze") {
-                    error(['TopKek ']);
+                $shows = [];
+                try {
+                    $stmt = db::conn()->prepare(<<<'SQL'
+SELECT _show.*, IF(user_show.userId = :user, TRUE, FALSE) AS subscribed
+FROM `_show`
+LEFT JOIN user_show ON `_show`.id = user_show.showId
+WHERE MATCH (name) AGAINST (:search);
+SQL
+                    );
+
+                    $stmt->execute([':search' => $jsonBody->search,
+                                    ':user' => $_SESSION['currentUser']['id']]);
+                    $shows = $stmt->fetchAll();
+                } catch (PDOException $e) {
+                    error(['Unknown database error', $e->getMessage()]);
                 }
 
-                if ($jsonBody->search == "qsd") {
-                    ok(['shows' => []]);
-                    return;
+                foreach ($shows as &$show) {
+                    $show['subscribed'] = boolval($show['subscribed']);
                 }
 
                 ok([
-                       'shows' => [
-                           [
-                               'id' => 12,
-                               'name' => 'Game of Thrones',
-                               'subscribed' => false
-                           ],
-                           [
-                               'id' => 13,
-                               'name' => 'House of Cards',
-                               'subscribed' => true
-                           ],
-                           [
-                               'id' => 15,
-                               'name' => 'NCIS',
-                               'subscribed' => true
-                           ],
-                           [
-                               'id' => 16,
-                               'name' => 'Person of Interest',
-                               'subscribed' => false
-                           ],
-                           [
-                               'id' => 15,
-                               'name' => 'Person of Swagterest',
-                               'subscribed' => false
-                           ],
-                           [
-                               'id' => 14,
-                               'name' => 'Tards of Interest',
-                               'subscribed' => false
-                           ],
-                           [
-                               'id' => 13,
-                               'name' => 'Les hipsters a Miami',
-                               'subscribed' => false
-                           ]
-                       ]
+                       'shows' => $shows
                    ]);
             });
 
@@ -584,9 +522,37 @@ $app->group('/show',
                 if (!isset($jsonBody->subscribed)
                     || filter_var($jsonBody->subscribed,
                                   FILTER_VALIDATE_BOOLEAN,
-                                  FILTER_null_ON_FAILURE) === null
+                                  FILTER_NULL_ON_FAILURE) === null
                 ) {
                     error(['Invalid data format']);
+                }
+
+                try {
+                    if (boolval($jsonBody->subscribed)) {
+                        $stmt = db::conn()->prepare(<<<'SQL'
+REPLACE INTO user_show VALUES (:user, :show)
+SQL
+                        );
+
+                        $stmt->execute(
+                            [
+                                ':user' => $_SESSION['currentUser']['id'],
+                                ':show' => $id
+                            ]);
+                    } else {
+                        $stmt = db::conn()->prepare(<<<'SQL'
+DELETE FROM user_show WHERE showId = :show AND userId = :user
+SQL
+                        );
+                        $stmt->execute(
+                            [
+                                ':user' => $_SESSION['currentUser']['id'],
+                                ':show' => $id
+                            ]);
+                    }
+
+                } catch (PDOException $e) {
+                    error(['Unknown database error', $e->getMessage()]);
                 }
 
                 ok(['subscribed' => $jsonBody->subscribed]);
@@ -599,45 +565,45 @@ $app->group('/show',
                     error(['Invalid parameter']);
                 }
 
-                if ($id == 13) {
-                    error(["SWEG", "TOPCAKE"]);
+                $show = null;
+                try {
+                    $stmt = db::conn()->prepare(<<<'SQL'
+SELECT id,
+        name,
+        IF(user_show.userId = :user, TRUE, FALSE) AS subscribed
+FROM `_show`
+LEFT JOIN user_show ON user_show.showId = `_show`.id
+WHERE id = :show
+SQL
+                    );
+                    $stmt->execute([
+                                       'show' => $id,
+                                       'user' => $_SESSION['currentUser']['id']
+                                   ]);
+                    $show = $stmt->fetch();
+
+                    $stmt = db::conn()->prepare(<<<'SQL'
+SELECT *,
+        CONCAT('E', LPAD(episode.episode, IF(episode > 99, 3, 2), '0')) AS episode,
+        CONCAT('S', LPAD(episode.season, 2, '0')) AS season,
+        DATE_FORMAT(episode.date, '%Y-%m-%d %k:%i') AS date
+FROM episode
+JOIN `_show` ON `_show`.id = episode.showId
+WHERE episode.showId = ?
+ORDER BY date DESC
+SQL
+                    );
+
+                    $stmt->execute([$id]);
+
+                    $show['subscribed'] = boolval($show['subscribed']);
+                    $show['episodes'] = $stmt->fetchAll();
+                } catch (PDOException $e) {
+                    error(['Unknown database error', $e->getMessage()]);
                 }
 
                 ok([
-                       'show' => [
-                           'id' => $id,
-                           'name' => 'Game of Thrones',
-                           'subscribed' => true,
-                           'episodes' => [
-                               [
-                                   'id' => 15,
-                                   'name' => 'Gamotron',
-                                   'season' => 'S03',
-                                   'episode' => 'E05',
-                                   'episodeName' => 'TopKek',
-                                   'date' => '12/26/2015',
-                                   'showId' => 13
-                               ],
-                               [
-                                   'id' => 16,
-                                   'name' => 'Gamotron',
-                                   'season' => 'S03',
-                                   'episode' => 'E04',
-                                   'episodeName' => 'Swaggens',
-                                   'date' => '12/25/2015',
-                                   'showId' => 13
-                               ],
-                               [
-                                   'id' => 17,
-                                   'name' => 'Gamotron',
-                                   'season' => 'S03',
-                                   'episode' => 'E03',
-                                   'episodeName' => 'Hipster',
-                                   'date' => '12/25/2015',
-                                   'showId' => '13'
-                               ],
-                           ]
-                       ]
+                       'show' => $show
                    ]);
             });
     });
@@ -654,66 +620,31 @@ $app->group('/episode',
                             error(['Invalid parameter']);
                         }
 
+                        $comments = [];
+                        try {
+                            $stmt = db::conn()->prepare(<<<'SQL'
+SELECT episode_comments.*,
+      user.firstName,
+      user.lastName,
+        DATE_FORMAT(date, '%Y-%m-%d %k:%i') AS date
+FROM episode_comments
+JOIN user ON user.id = episode_comments.userId
+WHERE episodeId = ?
+ORDER BY date DESC
+SQL
+                            );
+                            $stmt->execute([$id]);
+                            $comments = $stmt->fetchAll();
+
+                            foreach ($comments as &$comment) {
+                                unset($comment['userId']);
+                            }
+                        } catch (PDOException $e) {
+                            error(['Unknown database error', $e->getMessage()]);
+                        }
+
                         ok([
-                               'success' => true,
-                               'comments' =>
-                                   [
-                                       [
-                                           'id' => 14,
-                                           'date' => '12/10/2015',
-                                           'user' => [
-                                               'firstName' => "Jean",
-                                               'lastName' => "Balbien"
-                                           ],
-                                           'rating' => 5,
-                                           'subject' => 'ASSALA MALECOUM',
-                                           'message' => "Coucou, je suis le vomi."
-                                       ],
-                                       [
-                                           'id' => 13,
-                                           'date' => '12/10/2015',
-                                           'user' => [
-                                               'firstName' => "Jean",
-                                               'lastName' => "Sairien"
-                                           ],
-                                           'rating' => 4,
-                                           'subject' => 'HELLO CAY BAIE DEUX OS',
-                                           'message' => "J'AIME LES PATES, SURTOUT AVEC DE LA SAUCE AUX PATES."
-                                       ],
-                                       [
-                                           'id' => 12,
-                                           'date' => '12/10/2015',
-                                           'user' => [
-                                               'firstName' => "Jean",
-                                               'lastName' => "Bombeur"
-                                           ],
-                                           'rating' => 3,
-                                           'subject' => 'VROOM VROOM RATATATATATA',
-                                           'message' => "SALUT C COOL LE SON SORS DES ENCEINTES."
-                                       ],
-                                       [
-                                           'id' => 11,
-                                           'date' => '12/10/2015',
-                                           'user' => [
-                                               'firstName' => "Jean",
-                                               'lastName' => "Kuhl-Tamer"
-                                           ],
-                                           'rating' => 2,
-                                           'subject' => 'IMACHOUBALAHABESSOULEIMACHOUB DJAMILA POPOPOPOA',
-                                           'message' => "Salut j'ai le swag, je suis un hipster mdr swag yolo. Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo."
-                                       ],
-                                       [
-                                           'id' => 10,
-                                           'date' => '11/10/2015',
-                                           'user' => [
-                                               'firstName' => "Jean",
-                                               'lastName' => "Peuplu"
-                                           ],
-                                           'rating' => 1,
-                                           'subject' => 'BRUUUUUBRUUUUUUUBRAAAAAH',
-                                           'message' => "Salut j'ai le swag, je suis un hipster mdr swag yolo. Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo.Salut j'ai le swag, je suis un hipster mdr swag yolo."
-                                       ]
-                                   ]
+                               'comments' => $comments
                            ]);
                     });
 
@@ -760,6 +691,26 @@ $app->group('/episode',
                             error(['FAYEUL ']);
                         }
 
+                        try {
+                            $stmt = db::conn()->prepare(<<<'SQL'
+INSERT INTO episode_comments
+        (episodeId, userId, date, rating, subject, message)
+VALUES  (:episode, :user, NOW(), :rating, :subject, :message)
+SQL
+                            );
+                            $stmt->bindParam(':episode', $id, PDO::PARAM_INT);
+                            $stmt->bindParam(':user',
+                                             $_SESSION['currentUser']['id'],
+                                             PDO::PARAM_INT);
+                            $stmt->bindParam(':rating', $comment->rating);
+                            $stmt->bindParam(':subject', $comment->subject);
+                            $stmt->bindParam(':message', $comment->message);
+
+                            $stmt->execute();
+                        } catch (PDOException $e) {
+                            error(['Unknown database error']);
+                        }
+
                         ok();
                     });
             });
@@ -797,9 +748,10 @@ $app->post('/contact',
             error($formErrors);
         }
 
-        if ($messageInformation->subject == 'aze') {
-            error(['You fucked up m8']);
-        }
+        mail('florandara@gmail.com',
+             '[Serialize] ' . $messageInformation->subject,
+             $messageInformation->message,
+             'From: ' . $messageInformation->email);
 
         ok([
                'success' => true

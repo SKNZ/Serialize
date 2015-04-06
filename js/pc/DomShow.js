@@ -3,6 +3,49 @@ var DomShow = (function () {
 
     return {
         initialize: function () {
+            $('#show-subscribe')
+                .click(function () {
+                    var that = $(this);
+
+                    $('#show-errors').fadeOut('fast');
+                    $('#show-error-messages').empty();
+                    var _textBefore = that.text();
+
+                    that.text('Working...')
+                        .addClass('disabled');
+
+                    ApiProvider
+                        .toggleSubscription(_show.id, !_show.subscribed)
+                        .done(function (subscribed) {
+                            that.toggleClass('btn-success', !subscribed)
+                                .toggleClass('btn-danger', subscribed)
+                                .text(subscribed
+                                    ? 'Unsubscribe'
+                                    : 'Subscribe')
+                                .fadeIn();
+
+                            _show.subscribed = subscribed;
+                        })
+                        .fail(function (errors) {
+                            // Append errors to DOM
+                            for (var i = 0; i < errors.length; ++i) {
+                                $('#show-error-messages')
+                                    .append('- ',
+                                    errors[i],
+                                    $('<br/>'));
+
+                                that.text(_textBefore);
+                            }
+
+                            // Display errors
+                            $('#show-errors').fadeIn();
+                        })
+                        .always(function () {
+                            $('#show-subscribe')
+                                .removeClass('disabled');
+                        });
+                });
+
             var closedByThis = false;
 
             $('#show-modal').on('show.bs.modal', function (event) {
@@ -18,49 +61,6 @@ var DomShow = (function () {
                 $('#show-name').text(relatedTarget.data('show-name'));
 
                 var showId = relatedTarget.data('show-id');
-
-                $('#show-subscribe')
-                    .click(function () {
-                        var that = $(this);
-
-                        $('#show-errors').fadeOut('fast');
-                        $('#show-error-messages').empty();
-                        var _textBefore = that.text();
-
-                        that.text('Working...')
-                            .addClass('disabled');
-
-                        ApiProvider
-                            .toggleSubscription(showId, !_show.subscribed)
-                            .done(function (subscribed) {
-                                that.toggleClass('btn-success', !subscribed)
-                                    .toggleClass('btn-danger', subscribed)
-                                    .text(subscribed
-                                        ? 'Unsubscribe'
-                                        : 'Subscribe')
-                                    .fadeIn();
-
-                                _show.subscribed = subscribed;
-                            })
-                            .fail(function (errors) {
-                                // Append errors to DOM
-                                for (var i = 0; i < errors.length; ++i) {
-                                    $('#show-error-messages')
-                                        .append('- ',
-                                        errors[i],
-                                        $('<br/>'));
-
-                                    that.text(_textBefore);
-                                }
-
-                                // Display errors
-                                $('#show-errors').fadeIn();
-                            })
-                            .always(function () {
-                                $('#show-subscribe')
-                                    .removeClass('disabled');
-                            });
-                    });
 
                 ApiProvider
                     .showData(showId)

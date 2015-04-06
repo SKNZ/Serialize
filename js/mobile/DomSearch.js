@@ -38,8 +38,8 @@ var DomSearch = (function () {
                                             .text(show.name)
                                             .click(function () {
                                                 DomStorage.show.showId =
-                                                    show.showId;
-                                            }))
+                                                    show.id;
+                                            }));
                                 })
                             })
                             .fail(function (errors) {
