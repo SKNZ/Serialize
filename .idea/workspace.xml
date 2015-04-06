@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="" />
+    <list default="true" id="3d585750-1bfe-4458-bd42-1b3f320f1197" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="pc.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -42,65 +44,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-33.125" vertical-offset="4650" max-vertical-offset="10740">
-              <caret line="414" column="18" selection-start-line="414" selection-start-column="8" selection-end-line="414" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.4490022" vertical-offset="0" max-vertical-offset="10740">
+              <caret line="27" column="63" selection-start-line="4" selection-start-column="0" selection-end-line="27" selection-end-column="63" />
               <folding>
                 <element signature="e#4742#4861#1#PHP" expanded="false" />
                 <element signature="e#5255#5885#1#PHP" expanded="false" />
                 <element signature="e#5750#5848#0#PHP" expanded="false" />
                 <element signature="e#5962#6907#1#PHP" expanded="false" />
-                <marker date="1428326416801" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-                <marker date="1428326416801" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-                <marker date="1428326416801" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-                <marker date="1428326416801" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-                <marker date="1428326416801" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
-                <marker date="1428326416801" expanded="true" signature="10616:10655" placeholder="SELECT * FRO..user..." />
-                <marker date="1428326416801" expanded="true" signature="10998:11192" placeholder="INSERT INTO ..." />
-                <marker date="1428326416801" expanded="true" signature="12835:12882" placeholder="INSERT INTO ..." />
-                <marker date="1428326416801" expanded="true" signature="14139:14612" placeholder="SELECT episo..episode..." />
-                <marker date="1428326416801" expanded="true" signature="15175:15680" placeholder="SELECT episo..episode..." />
-                <marker date="1428326416801" expanded="true" signature="16521:16695" placeholder="SELECT _show.._show..." />
-                <marker date="1428326416801" expanded="true" signature="16657:16695" placeholder="SELECT _show.._show..." />
-                <marker date="1428326416801" expanded="true" signature="18084:18128" placeholder="REPLACE INTO..." />
-                <marker date="1428326416801" expanded="true" signature="18475:18536" placeholder="DELETE FROM ..." />
-                <marker date="1428326416801" expanded="true" signature="19354:19525" placeholder="SELECT id, n.._show..." />
-                <marker date="1428326416801" expanded="true" signature="19865:20180" placeholder="SELECT *, CO..episode..." />
-                <marker date="1428326416801" expanded="true" signature="21182:21411" placeholder="SELECT episo..episode_comments..." />
-                <marker date="1428326416801" expanded="true" signature="23843:23993" placeholder="INSERT INTO ..." />
+                <marker date="1428328656720" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+                <marker date="1428328656720" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+                <marker date="1428328656720" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+                <marker date="1428328656720" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+                <marker date="1428328656720" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+                <marker date="1428328656720" expanded="true" signature="10616:10655" placeholder="SELECT * FRO..user..." />
+                <marker date="1428328656720" expanded="true" signature="10998:11192" placeholder="INSERT INTO ..." />
+                <marker date="1428328656720" expanded="true" signature="12835:12882" placeholder="INSERT INTO ..." />
+                <marker date="1428328656720" expanded="true" signature="14139:14612" placeholder="SELECT episo..episode..." />
+                <marker date="1428328656720" expanded="true" signature="15175:15680" placeholder="SELECT episo..episode..." />
+                <marker date="1428328656720" expanded="true" signature="16521:16695" placeholder="SELECT _show.._show..." />
+                <marker date="1428328656720" expanded="true" signature="16657:16695" placeholder="SELECT _show.._show..." />
+                <marker date="1428328656720" expanded="true" signature="18084:18128" placeholder="REPLACE INTO..." />
+                <marker date="1428328656720" expanded="true" signature="18475:18536" placeholder="DELETE FROM ..." />
+                <marker date="1428328656720" expanded="true" signature="19354:19525" placeholder="SELECT id, n.._show..." />
+                <marker date="1428328656720" expanded="true" signature="19865:20180" placeholder="SELECT *, CO..episode..." />
+                <marker date="1428328656720" expanded="true" signature="21182:21411" placeholder="SELECT episo..episode_comments..." />
+                <marker date="1428328656720" expanded="true" signature="23843:23993" placeholder="INSERT INTO ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomShow.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/mobile/DomShow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45570973" vertical-offset="428" max-vertical-offset="1365">
-              <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomShowList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/mobile/DomShowList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="2295">
-              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomContact.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/pc/DomContact.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="531" max-vertical-offset="2040">
-              <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -116,56 +88,6 @@
                 <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
                 <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomRegistrationForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/pc/DomRegistrationForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1639" max-vertical-offset="4320">
-              <caret line="79" column="36" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomShowList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/pc/DomShowList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
-              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomShow.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/pc/DomShow.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1935">
-              <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomSearch.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/mobile/DomSearch.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
-              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.666667" vertical-offset="2921" max-vertical-offset="5040">
-              <caret line="215" column="22" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -216,6 +138,7 @@
         <option value="$PROJECT_DIR$/js/mobile/DomShow.js" />
         <option value="$PROJECT_DIR$/js/mobile/DomSearch.js" />
         <option value="$PROJECT_DIR$/js/mobile/DomShowList.js" />
+        <option value="$PROJECT_DIR$/api/db.php" />
         <option value="$PROJECT_DIR$/api/index.php" />
       </list>
     </option>
@@ -277,6 +200,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,7 +249,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -420,15 +343,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="956" height="1055" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2502674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24945295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8609958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928064" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -439,6 +361,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8609958" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3100304" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -494,13 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="116" column="13" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ApiProvider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -512,7 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -534,7 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -690,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2580645" vertical-offset="0" max-vertical-offset="465">
           <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="915">
           <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="48854" max-vertical-offset="155100">
           <caret line="3277" column="12" selection-start-line="3277" selection-start-column="12" selection-end-line="3277" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19354838" vertical-offset="0" max-vertical-offset="465">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26021504" vertical-offset="1934" max-vertical-offset="2400">
           <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="150" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1035">
           <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="672" max-vertical-offset="1995">
           <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2796158" vertical-offset="23" max-vertical-offset="1275">
           <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,8 +705,6 @@
             <element signature="e#6189#6259#0" expanded="false" />
             <element signature="e#6286#6353#0" expanded="false" />
             <element signature="e#6380#6445#0" expanded="false" />
-            <marker date="1428320953036" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1428320953036" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -810,22 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-23.125" vertical-offset="9855" max-vertical-offset="12690">
           <caret line="694" column="47" selection-start-line="694" selection-start-column="47" selection-end-line="694" selection-end-column="47" />
-          <folding>
-            <marker date="1428323001079" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/aze.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-          <folding>
-            <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
-            <marker date="1428319497639" expanded="true" signature="848:882" placeholder="REPLACE INTO..." />
-            <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
-            <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,7 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60832447" vertical-offset="135" max-vertical-offset="2130">
           <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5517609" vertical-offset="203" max-vertical-offset="3570">
           <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,7 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="430">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,7 +771,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.666667" vertical-offset="2921" max-vertical-offset="5040">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2921" max-vertical-offset="5040">
           <caret line="215" column="22" selection-start-line="215" selection-start-column="22" selection-end-line="215" selection-end-column="22" />
           <folding />
         </state>
@@ -909,42 +793,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/mobile/DomShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31948882" vertical-offset="405" max-vertical-offset="1365">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/aze.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="405" max-vertical-offset="1320">
+          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+          <folding>
+            <marker date="1428319497639" expanded="true" signature="834:882" placeholder="INSERT IGNOR..." />
+            <marker date="1428319497639" expanded="true" signature="848:882" placeholder="REPLACE INTO..." />
+            <marker date="1428319497639" expanded="true" signature="969:1010" placeholder="SELECT id FR.._show..." />
+            <marker date="1428319497639" expanded="true" signature="1097:1175" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-33.125" vertical-offset="4650" max-vertical-offset="10740">
-          <caret line="414" column="18" selection-start-line="414" selection-start-column="8" selection-end-line="414" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.4490022" vertical-offset="0" max-vertical-offset="10740">
+          <caret line="27" column="63" selection-start-line="4" selection-start-column="0" selection-end-line="27" selection-end-column="63" />
           <folding>
             <element signature="e#4742#4861#1#PHP" expanded="false" />
             <element signature="e#5255#5885#1#PHP" expanded="false" />
             <element signature="e#5750#5848#0#PHP" expanded="false" />
             <element signature="e#5962#6907#1#PHP" expanded="false" />
-            <marker date="1428326416801" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
-            <marker date="1428326416801" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
-            <marker date="1428326416801" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
-            <marker date="1428326416801" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
-            <marker date="1428326416801" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
-            <marker date="1428326416801" expanded="true" signature="10616:10655" placeholder="SELECT * FRO..user..." />
-            <marker date="1428326416801" expanded="true" signature="10998:11192" placeholder="INSERT INTO ..." />
-            <marker date="1428326416801" expanded="true" signature="12835:12882" placeholder="INSERT INTO ..." />
-            <marker date="1428326416801" expanded="true" signature="14139:14612" placeholder="SELECT episo..episode..." />
-            <marker date="1428326416801" expanded="true" signature="15175:15680" placeholder="SELECT episo..episode..." />
-            <marker date="1428326416801" expanded="true" signature="16521:16695" placeholder="SELECT _show.._show..." />
-            <marker date="1428326416801" expanded="true" signature="16657:16695" placeholder="SELECT _show.._show..." />
-            <marker date="1428326416801" expanded="true" signature="18084:18128" placeholder="REPLACE INTO..." />
-            <marker date="1428326416801" expanded="true" signature="18475:18536" placeholder="DELETE FROM ..." />
-            <marker date="1428326416801" expanded="true" signature="19354:19525" placeholder="SELECT id, n.._show..." />
-            <marker date="1428326416801" expanded="true" signature="19865:20180" placeholder="SELECT *, CO..episode..." />
-            <marker date="1428326416801" expanded="true" signature="21182:21411" placeholder="SELECT episo..episode_comments..." />
-            <marker date="1428326416801" expanded="true" signature="23843:23993" placeholder="INSERT INTO ..." />
+            <marker date="1428328656720" expanded="true" signature="2987:3021" placeholder="SELECT * FRO..user..." />
+            <marker date="1428328656720" expanded="true" signature="3661:3764" placeholder="SELECT * FRO..user..." />
+            <marker date="1428328656720" expanded="true" signature="3661:3765" placeholder="SELECT * FRO..user..." />
+            <marker date="1428328656720" expanded="true" signature="5507:5541" placeholder="SELECT * FRO..user..." />
+            <marker date="1428328656720" expanded="true" signature="6186:6259" placeholder="DELETE FROM ..." />
+            <marker date="1428328656720" expanded="true" signature="10616:10655" placeholder="SELECT * FRO..user..." />
+            <marker date="1428328656720" expanded="true" signature="10998:11192" placeholder="INSERT INTO ..." />
+            <marker date="1428328656720" expanded="true" signature="12835:12882" placeholder="INSERT INTO ..." />
+            <marker date="1428328656720" expanded="true" signature="14139:14612" placeholder="SELECT episo..episode..." />
+            <marker date="1428328656720" expanded="true" signature="15175:15680" placeholder="SELECT episo..episode..." />
+            <marker date="1428328656720" expanded="true" signature="16521:16695" placeholder="SELECT _show.._show..." />
+            <marker date="1428328656720" expanded="true" signature="16657:16695" placeholder="SELECT _show.._show..." />
+            <marker date="1428328656720" expanded="true" signature="18084:18128" placeholder="REPLACE INTO..." />
+            <marker date="1428328656720" expanded="true" signature="18475:18536" placeholder="DELETE FROM ..." />
+            <marker date="1428328656720" expanded="true" signature="19354:19525" placeholder="SELECT id, n.._show..." />
+            <marker date="1428328656720" expanded="true" signature="19865:20180" placeholder="SELECT *, CO..episode..." />
+            <marker date="1428328656720" expanded="true" signature="21182:21411" placeholder="SELECT episo..episode_comments..." />
+            <marker date="1428328656720" expanded="true" signature="23843:23993" placeholder="INSERT INTO ..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mobile/DomShow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45570973" vertical-offset="428" max-vertical-offset="1365">
-          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
